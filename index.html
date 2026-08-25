@@ -7,23 +7,35 @@
 <title>ExamSathi Odisha | Odisha Govt Exam Preparation</title>
 
 <meta name="description"
-content="ExamSathi Odisha - Odisha Government Exam Preparation, PYQ Practice, Mock Tests, GK, Study Materials and Exam Practice.">
+content="ExamSathi Odisha - Odisha Government Exam Preparation, PYQ Practice, Mock Tests, Daily GK and Study Materials.">
 
 <meta name="theme-color" content="#071a3d">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-html{scroll-behavior:smooth}
+html{
+  scroll-behavior:smooth;
+}
 
 body{
-  font-family:Arial,"Noto Sans Oriya",sans-serif;
+  font-family:Arial,"Noto Sans Oriya","Noto Sans Odia",sans-serif;
   background:#f5f7fb;
   color:#14213d;
   line-height:1.6;
 }
 
-button,input,select{font:inherit}
+button,input,select{
+  font:inherit;
+}
+
+button{
+  cursor:pointer;
+}
 
 header{
   position:sticky;
@@ -78,7 +90,6 @@ header{
   color:white;
   padding:8px 9px;
   border-radius:8px;
-  cursor:pointer;
 }
 
 .navLinks button:hover{
@@ -92,7 +103,6 @@ header{
   padding:8px 12px;
   border-radius:9px;
   font-weight:bold;
-  cursor:pointer;
 }
 
 .hero{
@@ -129,7 +139,9 @@ header{
   margin-bottom:15px;
 }
 
-.hero h1 span{color:#ffd54a}
+.hero h1 span{
+  color:#ffd54a;
+}
 
 .hero p{
   color:#dbe5f5;
@@ -149,11 +161,12 @@ header{
   padding:11px 17px;
   border-radius:10px;
   font-weight:bold;
-  cursor:pointer;
   transition:.2s;
 }
 
-.btn:hover{transform:translateY(-2px)}
+.btn:hover{
+  transform:translateY(-2px);
+}
 
 .gold{
   background:#ffd54a;
@@ -165,6 +178,21 @@ header{
   color:#071a3d;
 }
 
+.dark{
+  background:#071a3d;
+  color:white;
+}
+
+.green{
+  background:#20a85a;
+  color:white;
+}
+
+.light{
+  background:#eef4ff;
+  color:#0b4ba5;
+}
+
 .heroCard{
   background:rgba(255,255,255,.08);
   border:1px solid rgba(255,255,255,.16);
@@ -172,7 +200,9 @@ header{
   padding:23px;
 }
 
-.heroCard h3{color:#ffd54a}
+.heroCard h3{
+  color:#ffd54a;
+}
 
 .stat{
   display:flex;
@@ -235,7 +265,9 @@ header{
   font-size:14px;
 }
 
-.card .btn{margin-top:13px}
+.card .btn{
+  margin-top:13px;
+}
 
 .searchBox{
   max-width:850px;
@@ -248,6 +280,11 @@ header{
   border:1px solid #d9e0ec;
   border-radius:12px;
   outline:none;
+  background:white;
+}
+
+.searchBox input:focus{
+  border-color:#0b4ba5;
 }
 
 .filters{
@@ -263,12 +300,28 @@ header{
   background:white;
   padding:8px 13px;
   border-radius:20px;
-  cursor:pointer;
 }
 
 .filter.active{
   background:#071a3d;
   color:white;
+}
+
+.selectRow{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  max-width:1000px;
+  margin:0 auto 20px;
+}
+
+.selectBox{
+  width:100%;
+  padding:11px;
+  border:1px solid #d9e0ec;
+  border-radius:10px;
+  background:white;
+  color:#14213d;
 }
 
 .studyGrid{
@@ -292,6 +345,31 @@ header{
   color:#0b4ba5;
   font-size:12px;
   margin-bottom:8px;
+}
+
+.questionMeta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin:10px 0;
+}
+
+.meta{
+  padding:4px 8px;
+  border-radius:20px;
+  background:#f0f3f8;
+  color:#59667c;
+  font-size:11px;
+}
+
+.meta.greenMeta{
+  background:#e9f9ef;
+  color:#18753f;
+}
+
+.meta.goldMeta{
+  background:#fff8dc;
+  color:#8a6900;
 }
 
 .mockCard{
@@ -318,6 +396,7 @@ header{
   width:0;
   height:100%;
   background:#ffd54a;
+  transition:.3s;
 }
 
 .question{
@@ -341,10 +420,11 @@ header{
   padding:13px;
   border-radius:10px;
   margin:8px 0;
-  cursor:pointer;
 }
 
-.option:hover{background:#eef4ff}
+.option:hover{
+  background:#eef4ff;
+}
 
 .option.correct{
   background:#e9f9ef;
@@ -363,12 +443,6 @@ header{
   background:#f7faff;
 }
 
-.pdfGrid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px;
-}
-
 .notice{
   background:#fff8dc;
   border:1px solid #f0dc84;
@@ -384,6 +458,22 @@ header{
   margin:10px 0 20px;
   color:#65718a;
   font-size:14px;
+}
+
+.empty{
+  text-align:center;
+  padding:25px;
+  color:#68748b;
+  background:white;
+  border-radius:15px;
+  grid-column:1/-1;
+}
+
+.loading{
+  text-align:center;
+  padding:25px;
+  color:#65718a;
+  grid-column:1/-1;
 }
 
 .whatsapp{
@@ -405,7 +495,10 @@ footer{
   gap:30px;
 }
 
-footer h3{color:#ffd54a;margin-bottom:9px}
+footer h3{
+  color:#ffd54a;
+  margin-bottom:9px;
+}
 
 footer a{
   display:block;
@@ -436,7 +529,6 @@ footer a{
   border-radius:50%;
   background:#ffd54a;
   font-size:25px;
-  cursor:pointer;
   box-shadow:0 7px 22px rgba(0,0,0,.25);
 }
 
@@ -503,6 +595,8 @@ footer a{
   opacity:0;
   transition:.3s;
   z-index:3000;
+  max-width:90%;
+  text-align:center;
 }
 
 .toast.show{
@@ -510,36 +604,58 @@ footer a{
   transform:translateX(-50%) translateY(0);
 }
 
-.empty{
-  text-align:center;
-  padding:25px;
-  color:#68748b;
-  background:white;
-  border-radius:15px;
-}
-
 @media(max-width:900px){
-  .heroInner{grid-template-columns:1fr}
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .studyGrid{grid-template-columns:repeat(2,1fr)}
-  .pdfGrid{grid-template-columns:repeat(2,1fr)}
+
+  .heroInner{
+    grid-template-columns:1fr;
+  }
+
+  .grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .studyGrid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .selectRow{
+    grid-template-columns:repeat(2,1fr);
+  }
 }
 
 @media(max-width:650px){
-  .navbar{flex-wrap:wrap}
+
+  .navbar{
+    flex-wrap:wrap;
+  }
+
   .navLinks{
     width:100%;
     overflow:auto;
     justify-content:flex-start;
     order:3;
   }
+
   .grid,
-  .studyGrid,
-  .pdfGrid{
+  .studyGrid{
     grid-template-columns:1fr;
   }
-  .footerInner{grid-template-columns:1fr}
-  .hero{padding-top:40px}
+
+  .selectRow{
+    grid-template-columns:1fr;
+  }
+
+  .footerInner{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding-top:40px;
+  }
+
+  .botBox{
+    width:290px;
+  }
 }
 </style>
 </head>
@@ -547,6 +663,7 @@ footer a{
 <body>
 
 <header>
+
 <div class="navbar">
 
   <div class="logo">
@@ -560,7 +677,7 @@ footer a{
     <button onclick="go('pyq')">📖 PYQ</button>
     <button onclick="go('mock')">📝 Mock</button>
     <button onclick="go('gk')">🧠 Daily GK</button>
-    <button onclick="go('pdf')">📄 Study</button>
+    <button onclick="go('study')">📄 Study</button>
   </nav>
 
   <button class="langBtn" onclick="toggleLanguage()">
@@ -568,10 +685,11 @@ footer a{
   </button>
 
 </div>
+
 </header>
 
 
-<!-- HOME -->
+<!-- ================= HOME ================= -->
 
 <section id="home" class="hero">
 
@@ -579,7 +697,9 @@ footer a{
 
 <div>
 
-  <div class="badge">🇮🇳 Odisha Competitive Exam Study Platform</div>
+  <div class="badge">
+    🇮🇳 Odisha Competitive Exam Study Platform
+  </div>
 
   <h1>
     Prepare Smart.<br>
@@ -587,18 +707,22 @@ footer a{
   </h1>
 
   <p id="heroText">
-    Odisha Government Exams ପାଇଁ PYQ, Answer, Mock Test,
+    Odisha Government Exams ପାଇଁ PYQ, Mock Tests,
     Daily GK ଏବଂ Study Materials — ସବୁ ଗୋଟିଏ ସ୍ଥାନରେ।
   </p>
 
   <div class="heroButtons">
-    <button class="btn gold" onclick="go('mock')">
+
+    <button class="btn gold"
+      onclick="go('mock')">
       📝 Start Mock Test
     </button>
 
-    <button class="btn white" onclick="go('pyq')">
+    <button class="btn white"
+      onclick="go('pyq')">
       📖 Practice PYQ
     </button>
+
   </div>
 
 </div>
@@ -613,12 +737,17 @@ footer a{
 
   <div class="stat">
     <span>📖 PYQ</span>
-    <b>2020–2026</b>
+    <b>Unlimited</b>
   </div>
 
   <div class="stat">
     <span>📝 Mock</span>
-    <b>Practice</b>
+    <b>Unlimited</b>
+  </div>
+
+  <div class="stat">
+    <span>🧠 GK</span>
+    <b>Daily</b>
   </div>
 
   <div class="stat">
@@ -629,193 +758,337 @@ footer a{
 </div>
 
 </div>
+
 </section>
 
 
-<!-- SEARCH -->
+<!-- ================= SEARCH ================= -->
 
 <section class="container">
 
 <div class="sectionHead">
+
   <h2>🔎 Search Study Content</h2>
-  <p>Exam, subject, PYQ କିମ୍ବା topic search କରନ୍ତୁ</p>
+
+  <p>
+    Exam, subject, topic, PYQ କିମ୍ବା question search କରନ୍ତୁ
+  </p>
+
 </div>
 
 <div class="searchBox">
+
   <input
     id="searchInput"
     placeholder="OPSC, OSSC, CT, B.Ed, OTET, GK..."
-    oninput="searchAll()">
+    oninput="debouncedSearch()">
+
 </div>
 
-<div id="searchResults" class="grid" style="margin-top:20px"></div>
+<div id="searchStatus"
+     class="status">
+</div>
+
+<div id="searchResults"
+     class="grid"
+     style="margin-top:20px">
+</div>
 
 </section>
 
 
-<!-- EXAMS -->
+<!-- ================= EXAMS ================= -->
 
 <section id="exams" class="container">
 
 <div class="sectionHead">
+
   <h2>🎯 Odisha Govt Exam Preparation</h2>
-  <p>ଯେଉଁ exam ପାଇଁ ପଢିବାକୁ ଚାହୁଁଛନ୍ତି select କରନ୍ତୁ</p>
+
+  <p>
+    ଯେଉଁ exam ପାଇଁ ପଢିବାକୁ ଚାହୁଁଛନ୍ତି select କରନ୍ତୁ
+  </p>
+
 </div>
 
-<div id="examStatus" class="status">
+<div id="examStatus"
+     class="status">
   Loading exams...
 </div>
 
-<div id="examGrid" class="grid"></div>
+<div id="examGrid"
+     class="grid">
+</div>
 
 </section>
 
 
-<!-- PYQ -->
+<!-- ================= PYQ ================= -->
 
 <section id="pyq" class="container">
 
 <div class="sectionHead">
+
   <h2>📖 Previous Year Question Practice</h2>
-  <p>2020 → 2026 • Question + Answer + Explanation</p>
+
+  <p>
+    Database PYQ • Question + Answer + Explanation
+  </p>
+
 </div>
 
 <div class="notice">
-  📚 PYQ Practice ରେ ପ୍ରଥମେ question solve କରନ୍ତୁ,
-  ପରେ answer ଦେଖନ୍ତୁ।
-</div>
 
-<div class="filters" id="yearFilters">
-
-  <button class="filter active"
-    onclick="setYear('All',this)">All</button>
-
-  <button class="filter"
-    onclick="setYear('2020',this)">2020</button>
-
-  <button class="filter"
-    onclick="setYear('2021',this)">2021</button>
-
-  <button class="filter"
-    onclick="setYear('2022',this)">2022</button>
-
-  <button class="filter"
-    onclick="setYear('2023',this)">2023</button>
-
-  <button class="filter"
-    onclick="setYear('2024',this)">2024</button>
-
-  <button class="filter"
-    onclick="setYear('2025',this)">2025</button>
-
-  <button class="filter"
-    onclick="setYear('2026',this)">2026</button>
+  📚 ପ୍ରଥମେ question solve କରନ୍ତୁ,
+  ପରେ answer ଏବଂ explanation ଦେଖନ୍ତୁ।
 
 </div>
 
-<div id="pyqGrid" class="studyGrid"></div>
+
+<div class="selectRow">
+
+  <select id="pyqExam"
+          class="selectBox"
+          onchange="resetPYQ()">
+
+    <option value="">All Exams</option>
+
+  </select>
+
+
+  <select id="pyqSubject"
+          class="selectBox"
+          onchange="resetPYQ()">
+
+    <option value="">All Subjects</option>
+
+  </select>
+
+
+  <select id="pyqYear"
+          class="selectBox"
+          onchange="resetPYQ()">
+
+    <option value="">All Years</option>
+    <option value="2026">2026</option>
+    <option value="2025">2025</option>
+    <option value="2024">2024</option>
+    <option value="2023">2023</option>
+    <option value="2022">2022</option>
+    <option value="2021">2021</option>
+    <option value="2020">2020</option>
+
+  </select>
+
+
+  <select id="pyqDifficulty"
+          class="selectBox"
+          onchange="resetPYQ()">
+
+    <option value="">All Difficulty</option>
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option>
+    <option value="hard">Hard</option>
+
+  </select>
+
+</div>
+
+
+<div id="pyqStatus"
+     class="status">
+</div>
+
+<div id="pyqGrid"
+     class="studyGrid">
+</div>
+
+
+<div style="text-align:center;margin-top:20px">
+
+  <button id="pyqMoreBtn"
+          class="btn gold"
+          onclick="loadMorePYQ()"
+          style="display:none">
+
+    Load More Questions →
+
+  </button>
+
+</div>
 
 </section>
 
 
-<!-- DAILY GK -->
+<!-- ================= DAILY GK ================= -->
 
 <section id="gk" class="container">
 
 <div class="sectionHead">
+
   <h2>🧠 Daily GK & Current Affairs</h2>
-  <p>ପ୍ରତିଦିନ practice କରନ୍ତୁ</p>
+
+  <p>
+    ପ୍ରତିଦିନ databaseରୁ GK practice କରନ୍ତୁ
+  </p>
+
 </div>
+
 
 <div class="mockCard card">
 
-  <div class="question" id="gkQuestion">
+  <div class="question"
+       id="gkQuestion">
+
     Loading Daily GK...
+
   </div>
 
-  <div id="gkOptions"></div>
+  <div id="gkMeta"
+       class="questionMeta">
+  </div>
+
+  <div id="gkOptions">
+  </div>
 
   <div id="gkAnswer"
        class="resultBox"
        style="display:none;margin-top:15px">
   </div>
 
+  <button id="nextGKBtn"
+          class="btn gold"
+          onclick="loadNextGK()"
+          style="display:none;margin-top:12px">
+
+    Next GK →
+
+  </button>
+
 </div>
 
 </section>
 
 
-<!-- MOCK -->
+<!-- ================= MOCK ================= -->
 
 <section id="mock" class="container">
 
 <div class="sectionHead">
+
   <h2>📝 Mock Test Center</h2>
-  <p>Subject-wise + Full Mock + Easy + Medium + Hard</p>
-</div>
 
-<div class="filters">
-
-  <button class="filter active"
-    onclick="startMock('General')">
-    General
-  </button>
-
-  <button class="filter"
-    onclick="startMock('Odisha GK')">
-    Odisha GK
-  </button>
-
-  <button class="filter"
-    onclick="startMock('CT')">
-    CT
-  </button>
-
-  <button class="filter"
-    onclick="startMock('B.Ed')">
-    B.Ed
-  </button>
-
-  <button class="filter"
-    onclick="startMock('Teacher')">
-    Teacher
-  </button>
-
-  <button class="filter"
-    onclick="startMock('Competitive')">
-    Competitive
-  </button>
+  <p>
+    Unlimited database questions • Random Practice
+  </p>
 
 </div>
+
+
+<div class="selectRow">
+
+  <select id="mockExam"
+          class="selectBox">
+
+    <option value="">All Exams</option>
+
+  </select>
+
+
+  <select id="mockSubject"
+          class="selectBox">
+
+    <option value="">All Subjects</option>
+
+  </select>
+
+
+  <select id="mockDifficulty"
+          class="selectBox">
+
+    <option value="">All Difficulty</option>
+    <option value="easy">Easy</option>
+    <option value="medium">Medium</option>
+    <option value="hard">Hard</option>
+
+  </select>
+
+
+  <select id="mockCountSelect"
+          class="selectBox">
+
+    <option value="20">20 Questions</option>
+    <option value="50">50 Questions</option>
+    <option value="100">100 Questions</option>
+
+  </select>
+
+</div>
+
+
+<div style="text-align:center;margin-bottom:20px">
+
+  <button class="btn gold"
+          onclick="startDatabaseMock()">
+
+    🚀 Start Database Mock Test
+
+  </button>
+
+</div>
+
 
 <div class="mockCard card">
 
   <div class="mockTop">
-    <b id="mockTitle">General Mock Test</b>
-    <span id="mockCount">Question 1</span>
+
+    <b id="mockTitle">
+      Database Mock Test
+    </b>
+
+    <span id="mockCount">
+      Ready
+    </span>
+
   </div>
+
 
   <div class="progress">
-    <div id="progressBar" class="progressBar"></div>
+
+    <div id="progressBar"
+         class="progressBar">
+    </div>
+
   </div>
 
-  <div id="mockQuestion" class="question">
-    Loading...
+
+  <div id="mockQuestion"
+       class="question">
+
+    Select exam and start Mock Test.
+
   </div>
+
 
   <div id="mockQuestionSub"
        class="questionSub">
   </div>
 
-  <div id="mockOptions"></div>
+
+  <div id="mockOptions">
+  </div>
+
 
   <button
     id="nextBtn"
     class="btn gold"
     onclick="nextQuestion()"
-    style="margin-top:10px">
+    style="display:none;margin-top:10px">
+
     Next →
+
   </button>
+
 
   <div id="mockResult"
        style="display:none;margin-top:20px">
@@ -826,95 +1099,100 @@ footer a{
 </section>
 
 
-<!-- STUDY -->
+<!-- ================= STUDY ================= -->
 
-<section id="pdf" class="container">
+<section id="study" class="container">
 
 <div class="sectionHead">
+
   <h2>📄 Study Materials</h2>
-  <p>Exam preparation materials</p>
-</div>
 
-<div class="pdfGrid">
-
-  <div class="card">
-    <div class="icon">📘</div>
-    <h3>Syllabus</h3>
-    <p>Exam-wise syllabus study କରନ୍ତୁ।</p>
-    <button class="btn gold"
-      onclick="toast('Syllabus section ready')">
-      Open
-    </button>
-  </div>
-
-  <div class="card">
-    <div class="icon">📖</div>
-    <h3>PYQ PDF</h3>
-    <p>Previous year paper resources.</p>
-    <button class="btn gold"
-      onclick="toast('PYQ PDF section ready')">
-      Open
-    </button>
-  </div>
-
-  <div class="card">
-    <div class="icon">📝</div>
-    <h3>Notes</h3>
-    <p>Topic-wise study notes.</p>
-    <button class="btn gold"
-      onclick="toast('Notes section ready')">
-      Open
-    </button>
-  </div>
-
-  <div class="card">
-    <div class="icon">✅</div>
-    <h3>Answer & Explanation</h3>
-    <p>Correct answer ସହ explanation ପଢନ୍ତୁ।</p>
-    <button class="btn gold"
-      onclick="go('pyq')">
-      Practice
-    </button>
-  </div>
+  <p>
+    Exam-wise study resources
+  </p>
 
 </div>
 
-</section>
-
-
-<!-- RESULT -->
-
-<section class="container">
-
-<div class="sectionHead">
-  <h2>📊 My Practice Result</h2>
-  <p>ଏହି device ରେ ତୁମ practice progress</p>
-</div>
 
 <div class="grid">
 
   <div class="card">
-    <div class="icon">🎯</div>
-    <h3 id="totalScore">0</h3>
-    <p>Latest Score</p>
+
+    <div class="icon">📘</div>
+
+    <h3>Syllabus</h3>
+
+    <p>
+      Exam-wise syllabus open କରନ୍ତୁ।
+    </p>
+
+    <button class="btn gold"
+            onclick="openSelectedSyllabus()">
+
+      📘 Open Syllabus
+
+    </button>
+
   </div>
 
-  <div class="card">
-    <div class="icon">📈</div>
-    <h3 id="totalPercent">0%</h3>
-    <p>Percentage</p>
-  </div>
 
   <div class="card">
+
+    <div class="icon">🌐</div>
+
+    <h3>Official Website</h3>
+
+    <p>
+      Examର official website visit କରନ୍ତୁ।
+    </p>
+
+    <button class="btn gold"
+            onclick="openSelectedOfficial()">
+
+      🌐 Open Official Site
+
+    </button>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="icon">📖</div>
+
+    <h3>PYQ Practice</h3>
+
+    <p>
+      Previous Year Questions databaseରୁ practice କରନ୍ତୁ।
+    </p>
+
+    <button class="btn gold"
+            onclick="go('pyq')">
+
+      📖 Practice PYQ
+
+    </button>
+
+  </div>
+
+
+  <div class="card">
+
     <div class="icon">📝</div>
-    <h3 id="testsTaken">0</h3>
-    <p>Tests Completed</p>
-  </div>
 
-  <div class="card">
-    <div class="icon">🔥</div>
-    <h3 id="studyDays">1</h3>
-    <p>Study Day</p>
+    <h3>Mock Test</h3>
+
+    <p>
+      Unlimited question bankରୁ random mock test।
+    </p>
+
+    <button class="btn gold"
+            onclick="go('mock')">
+
+      📝 Start Mock
+
+    </button>
+
   </div>
 
 </div>
@@ -922,7 +1200,80 @@ footer a{
 </section>
 
 
-<!-- SUPPORT -->
+<!-- ================= RESULT ================= -->
+
+<section class="container">
+
+<div class="sectionHead">
+
+  <h2>📊 My Practice Result</h2>
+
+  <p>
+    ଏହି deviceରେ ତୁମ practice progress
+  </p>
+
+</div>
+
+
+<div class="grid">
+
+  <div class="card">
+
+    <div class="icon">🎯</div>
+
+    <h3 id="totalScore">0</h3>
+
+    <p>
+      Latest Score
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="icon">📈</div>
+
+    <h3 id="totalPercent">0%</h3>
+
+    <p>
+      Percentage
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="icon">📝</div>
+
+    <h3 id="testsTaken">0</h3>
+
+    <p>
+      Tests Completed
+    </p>
+
+  </div>
+
+
+  <div class="card">
+
+    <div class="icon">🔥</div>
+
+    <h3 id="studyDays">1</h3>
+
+    <p>
+      Study Day
+    </p>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SUPPORT ================= -->
 
 <section class="container">
 
@@ -938,7 +1289,9 @@ footer a{
     class="btn whatsapp"
     style="margin-top:15px"
     onclick="openWhatsApp()">
+
     💬 WhatsApp Support
+
   </button>
 
 </div>
@@ -946,11 +1299,14 @@ footer a{
 </section>
 
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
 <div class="footerInner">
 
 <div>
+
   <h3>🇮🇳 ExamSathi Odisha</h3>
 
   <p>
@@ -960,49 +1316,65 @@ footer a{
   <p style="margin-top:8px">
     Odisha Government Exam Preparation Platform.
   </p>
+
 </div>
 
+
 <div>
+
   <h3>Study</h3>
+
   <a href="#exams">Exams</a>
   <a href="#pyq">PYQ</a>
   <a href="#mock">Mock Tests</a>
   <a href="#gk">Daily GK</a>
+
 </div>
+
 
 <div>
+
   <h3>Materials</h3>
-  <a href="#pdf">Study Materials</a>
+
+  <a href="#study">Study Materials</a>
   <a href="#mock">Practice</a>
   <a href="#home">Home</a>
+
 </div>
 
 </div>
+
 
 <div class="copy">
+
   © 2026 ExamSathi Odisha • Study Free
+
 </div>
 
 </footer>
 
 
-<!-- BOT -->
+<!-- ================= BOT ================= -->
 
 <div class="bot">
 
-<div id="botBox" class="botBox">
+<div id="botBox"
+     class="botBox">
 
   <div class="botHeader">
     🤖 ExamSathi Study Bot
   </div>
 
-  <div id="botMessages" class="botMessages">
+
+  <div id="botMessages"
+       class="botMessages">
 
     <div class="msg">
       Namaskar 🙏 Exam related question pacharantu.
     </div>
 
   </div>
+
 
   <div class="botInput">
 
@@ -1011,33 +1383,41 @@ footer a{
       placeholder="Ask exam doubt..."
       onkeydown="if(event.key==='Enter')sendBot()">
 
-    <button onclick="sendBot()">➤</button>
+    <button onclick="sendBot()">
+      ➤
+    </button>
 
   </div>
 
 </div>
 
+
 <button class="botButton"
-  onclick="toggleBot()">
+        onclick="toggleBot()">
+
   🤖
+
 </button>
 
 </div>
 
 
-<div id="toast" class="toast"></div>
+<div id="toast"
+     class="toast">
+</div>
 
 
 <script>
 
-/* =====================================================
+/* =========================================================
    EXAMSATHI ODISHA
-   STUDY-ONLY FRONTEND
-   NO BACKEND / NO SERVICE ROLE KEY
-   ===================================================== */
+   SUPABASE DATABASE VERSION
+   ========================================================= */
 
 
-/* ================= SUPABASE ================= */
+/* =========================================================
+   SUPABASE
+   ========================================================= */
 
 const SUPABASE_URL =
   "https://ullqxaoctpedgtxlaesh.supabase.co";
@@ -1046,9 +1426,38 @@ const SUPABASE_KEY =
   "sb_publishable_NW1cUIuZ4pqFxJ_iuNBbcg_pS-PjUqr";
 
 
-/* ================= SAFE FETCH ================= */
+/* =========================================================
+   GLOBAL SETTINGS
+   ========================================================= */
 
-async function supabaseGet(table,params=""){
+const PAGE_SIZE = 30;
+
+let exams = [];
+
+let pyqOffset = 0;
+
+let pyqLoading = false;
+
+let pyqHasMore = true;
+
+let mockQuestions = [];
+
+let mockIndex = 0;
+
+let mockScore = 0;
+
+let mockAnswered = false;
+
+let dailyGKQuestions = [];
+
+let dailyGKIndex = 0;
+
+
+/* =========================================================
+   SAFE SUPABASE GET
+   ========================================================= */
+
+async function supabaseGet(table, params = "", options = {}){
 
   try{
 
@@ -1060,35 +1469,60 @@ async function supabaseGet(table,params=""){
       params,
       {
         method:"GET",
+
         headers:{
           "apikey":SUPABASE_KEY,
-          "Authorization":"Bearer "+SUPABASE_KEY,
-          "Content-Type":"application/json"
+          "Authorization":"Bearer " + SUPABASE_KEY,
+          "Content-Type":"application/json",
+          "Accept":"application/json"
         },
+
         cache:"no-store"
       }
     );
 
+
     if(!response.ok){
 
+      const text =
+        await response.text();
+
       console.warn(
-        "Supabase",
+        "Supabase error:",
         table,
-        response.status
+        response.status,
+        text
       );
+
+      if(options.showError !== false){
+
+        toast(
+          "Database loading problem. Please try again."
+        );
+
+      }
 
       return [];
 
     }
+
 
     return await response.json();
 
   }catch(error){
 
     console.warn(
-      "Supabase unavailable:",
+      "Supabase connection error:",
       error
     );
+
+    if(options.showError !== false){
+
+      toast(
+        "Internet / Supabase connection problem."
+      );
+
+    }
 
     return [];
 
@@ -1097,51 +1531,66 @@ async function supabaseGet(table,params=""){
 }
 
 
-/* ================= NAVIGATION ================= */
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 
 function go(id){
 
-  const el=document.getElementById(id);
+  const el =
+    document.getElementById(id);
 
   if(el){
+
     el.scrollIntoView({
       behavior:"smooth"
     });
+
   }
 
 }
 
 
-/* ================= TOAST ================= */
+/* =========================================================
+   TOAST
+   ========================================================= */
 
 let toastTimer;
 
 function toast(message){
 
-  const box=document.getElementById("toast");
+  const box =
+    document.getElementById("toast");
 
-  box.textContent=message;
+  box.textContent =
+    message;
 
   box.classList.add("show");
 
   clearTimeout(toastTimer);
 
-  toastTimer=setTimeout(()=>{
-    box.classList.remove("show");
-  },2500);
+  toastTimer =
+    setTimeout(
+      ()=>{
+        box.classList.remove("show");
+      },
+      2800
+    );
 
 }
 
 
-/* ================= MOTIVATION ================= */
+/* =========================================================
+   MOTIVATION
+   ========================================================= */
 
-const motivations=[
+const motivations = [
 
   "ଆଜି ପଢନ୍ତୁ, କାଲି ସଫଳତା ପାଆନ୍ତୁ। 💪",
 
   "Consistency is the key to success. 🔥",
 
-  "ପ୍ରତିଦିନ 1 Mock Test ତୁମ preparation କୁ strong କରିବ। 📝",
+  "ପ୍ରତିଦିନ practice ତୁମ preparation କୁ strong କରିବ। 📝",
 
   "PYQ practice କରନ୍ତୁ ଏବଂ exam pattern ବୁଝନ୍ତୁ। 📖",
 
@@ -1151,25 +1600,34 @@ const motivations=[
 
 ];
 
-document.getElementById("motivation").textContent =
-  motivations[
-    Math.floor(Date.now()/86400000)
-    % motivations.length
-  ];
+
+document.getElementById("motivation")
+  .textContent =
+    motivations[
+      Math.floor(
+        Date.now()/86400000
+      ) % motivations.length
+    ];
 
 
-/* ================= LANGUAGE ================= */
+/* =========================================================
+   LANGUAGE
+   ========================================================= */
 
-let english=false;
+let english = false;
 
 function toggleLanguage(){
 
-  english=!english;
+  english = !english;
 
-  document.getElementById("heroText").textContent =
-    english
-    ? "Prepare for Odisha Government Exams with PYQ, Mock Tests, Daily GK and Study Materials — all in one place."
-    : "Odisha Government Exams ପାଇଁ PYQ, Mock Tests, Daily GK ଏବଂ Study Materials — ସବୁ ଗୋଟିଏ ସ୍ଥାନରେ।";
+  document.getElementById("heroText")
+    .textContent =
+      english
+
+      ? "Prepare for Odisha Government Exams with PYQ, Mock Tests, Daily GK and Study Materials — all in one place."
+
+      : "Odisha Government Exams ପାଇଁ PYQ, Mock Tests, Daily GK ଏବଂ Study Materials — ସବୁ ଗୋଟିଏ ସ୍ଥାନରେ।";
+
 
   toast(
     english
@@ -1180,463 +1638,800 @@ function toggleLanguage(){
 }
 
 
-/* =====================================================
+/* =========================================================
    EXAMS
-   Supabase exams table
-   ===================================================== */
-
-const fallbackExams=[
-
- {
-  id:"opsc",
-  name:"OPSC",
-  category:"Government",
-  description:"Odisha Public Service Commission exam preparation."
- },
-
- {
-  id:"ossc",
-  name:"OSSC",
-  category:"Government",
-  description:"Odisha Staff Selection Commission preparation."
- },
-
- {
-  id:"osssc",
-  name:"OSSSC",
-  category:"Government",
-  description:"OSSSC examination preparation."
- },
-
- {
-  id:"police",
-  name:"Odisha Police",
-  category:"Police",
-  description:"Odisha Police examination practice."
- },
-
- {
-  id:"health",
-  name:"Health Department",
-  category:"Health",
-  description:"Health department competitive exam preparation."
- },
-
- {
-  id:"forest",
-  name:"Forest",
-  category:"Forest",
-  description:"Forest related government exam preparation."
- },
-
- {
-  id:"ct",
-  name:"CT Entrance",
-  category:"Entrance",
-  description:"CT Entrance preparation."
- },
-
- {
-  id:"bed",
-  name:"B.Ed Entrance",
-  category:"Entrance",
-  description:"B.Ed entrance preparation."
- },
-
- {
-  id:"otet",
-  name:"OTET",
-  category:"Teacher",
-  description:"Odisha Teacher Eligibility Test preparation."
- },
-
- {
-  id:"osstet",
-  name:"OSSTET",
-  category:"Teacher",
-  description:"OSSTET preparation."
- },
-
- {
-  id:"competitive",
-  name:"Competitive Exams",
-  category:"Competitive",
-  description:"General competitive exam preparation."
- }
-
-];
-
-
-let exams=[];
+   ========================================================= */
 
 async function loadExams(){
 
-  const status=document.getElementById("examStatus");
+  const status =
+    document.getElementById("examStatus");
 
-  status.textContent="🔄 Loading study sections...";
+  status.textContent =
+    "🔄 Loading exams from database...";
 
-  const data=await supabaseGet(
-    "exams",
-    "&is_active=eq.true&order=created_at.desc"
-  );
 
-  exams=
-    Array.isArray(data) && data.length
+  const data =
+    await supabaseGet(
+      "exams",
+      "&is_active=eq.true&order=created_at.desc",
+      {
+        showError:false
+      }
+    );
+
+
+  exams =
+    Array.isArray(data)
     ? data
-    : fallbackExams;
+    : [];
+
+
+  if(!exams.length){
+
+    status.textContent =
+      "⚠️ No active exams found in database.";
+
+    document.getElementById("examGrid")
+      .innerHTML =
+
+      `<div class="empty">
+        No active exam found.
+        <br>
+        Supabase <b>exams</b> tableରେ exam add କରନ୍ତୁ।
+      </div>`;
+
+    populateExamSelects();
+
+    return;
+
+  }
+
+
+  status.textContent =
+    `🟢 ${exams.length} active exam sections loaded`;
+
 
   renderExams(exams);
 
-  status.textContent =
-    data.length
-    ? "🟢 Live study sections loaded"
-    : "📚 Offline study sections loaded";
+  populateExamSelects();
 
 }
 
 
 function renderExams(list){
 
-  const grid=document.getElementById("examGrid");
+  const grid =
+    document.getElementById("examGrid");
+
 
   if(!list.length){
 
-    grid.innerHTML=
-      `<div class="empty">No exam section found.</div>`;
+    grid.innerHTML =
+      `<div class="empty">
+        No exam section found.
+      </div>`;
 
     return;
 
   }
 
-  grid.innerHTML=list.map(exam=>`
 
-    <div class="card">
+  grid.innerHTML =
+    list.map(
+      exam => `
 
-      <div class="icon">🎯</div>
+      <div class="card">
 
-      <span class="studyTag">
-        ${safe(exam.category || "Exam")}
-      </span>
+        <div class="icon">
+          🎯
+        </div>
 
-      <h3>
-        ${safe(exam.name || "Exam")}
-      </h3>
+        <span class="studyTag">
+          ${safe(exam.category || "Exam")}
+        </span>
 
-      <p>
-        ${safe(
-          exam.description ||
-          "Question, PYQ, Mock Test ଏବଂ Study Practice."
-        )}
-      </p>
+        <h3>
+          ${safe(exam.name || "Exam")}
+        </h3>
 
-      <button
-        class="btn gold"
-        onclick="startExamMock('${safeAttr(exam.name || "Exam")}')">
+        <p>
+          ${safe(
+            exam.description ||
+            "Question, PYQ, Mock Test ଏବଂ Study Practice."
+          )}
+        </p>
 
-        📝 Practice Now
-
-      </button>
-
-      ${
-        exam.syllabus_url
-        ? `
         <button
-          class="btn"
-          style="background:#eef4ff"
-          onclick="openLink('${safeAttr(exam.syllabus_url)}')">
-          📘 Syllabus
+          class="btn gold"
+          onclick="startExamPractice('${safeAttr(exam.id)}')">
+
+          📝 Practice Now
+
         </button>
-        `
-        :""
-      }
 
-    </div>
 
-  `).join("");
+        ${
+          exam.syllabus_url
+          ?
+
+          `<button
+            class="btn light"
+            onclick="openLink('${safeAttr(exam.syllabus_url)}')">
+
+            📘 Syllabus
+
+          </button>`
+
+          : ""
+        }
+
+
+        ${
+          exam.official_url
+          ?
+
+          `<button
+            class="btn dark"
+            onclick="openLink('${safeAttr(exam.official_url)}')">
+
+            🌐 Official
+
+          </button>`
+
+          : ""
+        }
+
+      </div>
+
+    `
+    ).join("");
 
 }
 
 
-/* =====================================================
+/* =========================================================
+   POPULATE EXAM SELECTS
+   ========================================================= */
+
+function populateExamSelects(){
+
+  const selects = [
+
+    document.getElementById("pyqExam"),
+
+    document.getElementById("mockExam")
+
+  ];
+
+
+  selects.forEach(select => {
+
+    if(!select)return;
+
+    const first =
+      select.options[0];
+
+    select.innerHTML = "";
+
+    select.appendChild(first);
+
+
+    exams.forEach(exam => {
+
+      const option =
+        document.createElement("option");
+
+      option.value =
+        exam.id;
+
+      option.textContent =
+        exam.name || exam.id;
+
+      select.appendChild(option);
+
+    });
+
+  });
+
+}
+
+
+/* =========================================================
    PYQ
-   ===================================================== */
+   ========================================================= */
 
-const pyqQuestions=[
+function resetPYQ(){
 
- {
-  year:2020,
-  exam:"Odisha GK",
-  q:"Odisha ra capital kana?",
-  odia:"ଓଡ଼ିଶାର ରାଜଧାନୀ କଣ?",
-  options:["Cuttack","Bhubaneswar","Puri","Sambalpur"],
-  answer:1,
-  explanation:"Bhubaneswar is the capital of Odisha."
- },
+  pyqOffset = 0;
 
- {
-  year:2021,
-  exam:"Odisha GK",
-  q:"Odisha Day keun date re palana kara jae?",
-  odia:"ଓଡ଼ିଶା ଦିବସ କେଉଁ ତାରିଖରେ ପାଳନ କରାଯାଏ?",
-  options:["1 April","15 August","26 January","2 October"],
-  answer:0,
-  explanation:"Odisha Day is observed on 1 April."
- },
+  pyqHasMore = true;
 
- {
-  year:2022,
-  exam:"Indian Polity",
-  q:"Indian Constitution adopted heithila keun date re?",
-  odia:"ଭାରତୀୟ ସମ୍ବିଧାନ କେଉଁ ତାରିଖରେ ଗ୍ରହଣ କରାଯାଇଥିଲା?",
-  options:[
-    "15 August 1947",
-    "26 November 1949",
-    "26 January 1950",
-    "2 October 1950"
-  ],
-  answer:1,
-  explanation:"The Constitution was adopted on 26 November 1949."
- },
+  document.getElementById("pyqGrid")
+    .innerHTML = "";
 
- {
-  year:2023,
-  exam:"Odisha GK",
-  q:"Konark Sun Temple Odisha ra keun district re?",
-  odia:"କୋଣାର୍କ ସୂର୍ଯ୍ୟ ମନ୍ଦିର ଓଡ଼ିଶାର କେଉଁ ଜିଲ୍ଲାରେ?",
-  options:["Puri","Khordha","Cuttack","Ganjam"],
-  answer:0,
-  explanation:"Konark is located in Puri district."
- },
-
- {
-  year:2024,
-  exam:"Odisha GK",
-  q:"Odisha ra official language kana?",
-  odia:"ଓଡ଼ିଶାର ସରକାରୀ ଭାଷା କଣ?",
-  options:["Hindi","English","Odia","Bengali"],
-  answer:2,
-  explanation:"Odia is the official language of Odisha."
- },
-
- {
-  year:2025,
-  exam:"General Knowledge",
-  q:"India ra Republic Day keun date re palana kara jae?",
-  odia:"ଭାରତର ଗଣତନ୍ତ୍ର ଦିବସ କେବେ ପାଳନ କରାଯାଏ?",
-  options:["15 August","26 January","2 October","1 April"],
-  answer:1,
-  explanation:"Republic Day is observed on 26 January."
- },
-
- {
-  year:2026,
-  exam:"General Knowledge",
-  q:"Indian Parliament ra dui house kana?",
-  odia:"ଭାରତୀୟ ସଂସଦର ଦୁଇଟି ସଦନ କଣ?",
-  options:[
-    "Lok Sabha and Rajya Sabha",
-    "Assembly and Council",
-    "Court and Sabha",
-    "Gram Sabha and Lok Sabha"
-  ],
-  answer:0,
-  explanation:"The Parliament consists of Lok Sabha and Rajya Sabha."
- }
-
-];
-
-
-let selectedYear="All";
-
-function setYear(year,button){
-
-  selectedYear=year;
-
-  document
-    .querySelectorAll("#yearFilters .filter")
-    .forEach(x=>x.classList.remove("active"));
-
-  button.classList.add("active");
-
-  renderPYQ();
+  loadPYQ(true);
 
 }
 
 
-function renderPYQ(){
+async function loadPYQ(reset = false){
 
-  const grid=document.getElementById("pyqGrid");
+  if(pyqLoading)return;
 
-  const list=
-    selectedYear==="All"
-    ? pyqQuestions
-    : pyqQuestions.filter(
-        x=>String(x.year)===selectedYear
-      );
+  if(!pyqHasMore)return;
 
-  grid.innerHTML=list.map((x,i)=>`
-
-    <div class="studyCard">
-
-      <span class="studyTag">
-        ${x.year} • ${safe(x.exam)}
-      </span>
-
-      <h3>${safe(x.q)}</h3>
-
-      <p style="margin-top:8px">
-        ${safe(x.odia)}
-      </p>
-
-      <button
-        class="btn gold"
-        onclick="showPYQ(${i},${list===pyqQuestions ? "true":"false"})">
-        Answer →
-      </button>
-
-    </div>
-
-  `).join("");
-
-}
+  pyqLoading = true;
 
 
-function showPYQ(index){
+  const grid =
+    document.getElementById("pyqGrid");
 
-  const list=
-    selectedYear==="All"
-    ? pyqQuestions
-    : pyqQuestions.filter(
-        x=>String(x.year)===selectedYear
-      );
-
-  const item=list[index];
-
-  if(!item)return;
-
-  const answer=
-    String.fromCharCode(65+item.answer)+
-    ". "+
-    item.options[item.answer];
-
-  toast(
-    "Correct Answer: "+answer+
-    " | "+item.explanation
-  );
-
-}
+  const status =
+    document.getElementById("pyqStatus");
 
 
-/* =====================================================
-   MOCK TEST
-   ===================================================== */
+  if(reset){
 
-const mockQuestions=[
+    grid.innerHTML =
+      `<div class="loading">
+        🔄 Loading PYQ...
+      </div>`;
 
- {
-  exam:"General",
-  q:"Odisha ra capital kana?",
-  options:["Puri","Bhubaneswar","Cuttack","Ganjam"],
-  answer:1
- },
-
- {
-  exam:"General",
-  q:"Odisha Day keun date?",
-  options:["1 April","15 August","26 January","2 October"],
-  answer:0
- },
-
- {
-  exam:"Odisha GK",
-  q:"Konark Sun Temple keun district re?",
-  options:["Puri","Cuttack","Ganjam","Balasore"],
-  answer:0
- },
-
- {
-  exam:"Competitive",
-  q:"Indian Constitution adopted heithila?",
-  options:[
-    "1947",
-    "1948",
-    "1949",
-    "1950"
-  ],
-  answer:2
- },
-
- {
-  exam:"Teacher",
-  q:"OTET ra full form kana?",
-  options:[
-    "Odisha Teacher Eligibility Test",
-    "Odisha Training Education Test",
-    "Odisha Teaching Entrance Test",
-    "Odisha Teacher Education Trial"
-  ],
-  answer:0
- },
-
- {
-  exam:"CT",
-  q:"CT Entrance mainly keun field saha related?",
-  options:[
-    "Teacher Education",
-    "Engineering",
-    "Medical",
-    "Agriculture"
-  ],
-  answer:0
- },
-
- {
-  exam:"B.Ed",
-  q:"B.Ed ra full form kana?",
-  options:[
-    "Bachelor of Education",
-    "Basic Education",
-    "Bachelor of Engineering",
-    "Board of Education"
-  ],
-  answer:0
- }
-
-];
-
-
-let activeMock=[];
-let mockIndex=0;
-let mockScore=0;
-let mockAnswered=false;
-
-function startMock(type="General"){
-
-  let list=
-    mockQuestions.filter(
-      x=>x.exam===type
-    );
-
-  if(!list.length){
-    list=mockQuestions;
   }
 
-  activeMock=
-    [...list].sort(
-      ()=>Math.random()-.5
+
+  status.textContent =
+    "🔄 Loading questions...";
+
+
+  let params =
+    `&order=created_at.desc&limit=${PAGE_SIZE}&offset=${pyqOffset}`;
+
+
+  const exam =
+    document.getElementById("pyqExam")
+      .value;
+
+  const subject =
+    document.getElementById("pyqSubject")
+      .value;
+
+  const year =
+    document.getElementById("pyqYear")
+      .value;
+
+  const difficulty =
+    document.getElementById("pyqDifficulty")
+      .value;
+
+
+  /*
+    PYQ questions:
+    question_type = pyq
+    OR pyq_year is not null
+
+    To keep compatibility with different
+    question_type values, we primarily use
+    pyq_year when available.
+  */
+
+
+  if(exam){
+
+    params +=
+      "&exam_id=eq." +
+      encodeURIComponent(exam);
+
+  }
+
+
+  if(subject){
+
+    params +=
+      "&subject=eq." +
+      encodeURIComponent(subject);
+
+  }
+
+
+  if(year){
+
+    params +=
+      "&pyq_year=eq." +
+      encodeURIComponent(year);
+
+  }else{
+
+    params +=
+      "&pyq_year=not.is.null";
+
+  }
+
+
+  if(difficulty){
+
+    params +=
+      "&difficulty=eq." +
+      encodeURIComponent(difficulty);
+
+  }
+
+
+  const data =
+    await supabaseGet(
+      "questions",
+      params,
+      {
+        showError:false
+      }
     );
 
-  mockIndex=0;
-  mockScore=0;
 
-  document.getElementById("mockTitle")
-    .textContent=type+" Mock Test";
+  if(reset){
+
+    grid.innerHTML = "";
+
+  }
+
+
+  if(!data.length){
+
+    pyqHasMore = false;
+
+    if(pyqOffset === 0){
+
+      grid.innerHTML =
+        `<div class="empty">
+          📖 No PYQ found for this filter.
+        </div>`;
+
+    }
+
+    status.textContent =
+      "No more PYQ questions.";
+
+    document.getElementById("pyqMoreBtn")
+      .style.display = "none";
+
+    pyqLoading = false;
+
+    return;
+
+  }
+
+
+  renderPYQCards(data);
+
+
+  pyqOffset += data.length;
+
+
+  if(data.length < PAGE_SIZE){
+
+    pyqHasMore = false;
+
+    document.getElementById("pyqMoreBtn")
+      .style.display = "none";
+
+  }else{
+
+    document.getElementById("pyqMoreBtn")
+      .style.display = "inline-block";
+
+  }
+
+
+  status.textContent =
+    `📚 ${pyqOffset} PYQ loaded — More available from database`;
+
+
+  pyqLoading = false;
+
+}
+
+
+function loadMorePYQ(){
+
+  loadPYQ(false);
+
+}
+
+
+function renderPYQCards(data){
+
+  const grid =
+    document.getElementById("pyqGrid");
+
+
+  data.forEach(item => {
+
+    const card =
+      document.createElement("div");
+
+    card.className =
+      "studyCard";
+
+
+    const options =
+      getOptions(item);
+
+
+    card.innerHTML = `
+
+      <span class="studyTag">
+        ${safe(
+          item.pyq_year ||
+          "PYQ"
+        )}
+        •
+        ${safe(
+          getExamName(item.exam_id)
+        )}
+      </span>
+
+
+      <h3>
+        ${safe(item.question || "")}
+      </h3>
+
+
+      <div class="questionMeta">
+
+        ${
+          item.subject
+          ?
+          `<span class="meta">
+            📚 ${safe(item.subject)}
+          </span>`
+          :
+          ""
+        }
+
+        ${
+          item.topic
+          ?
+          `<span class="meta">
+            🎯 ${safe(item.topic)}
+          </span>`
+          :
+          ""
+        }
+
+        ${
+          item.difficulty
+          ?
+          `<span class="meta goldMeta">
+            ${safe(item.difficulty)}
+          </span>`
+          :
+          ""
+        }
+
+        ${
+          item.is_verified
+          ?
+          `<span class="meta greenMeta">
+            ✅ Verified
+          </span>`
+          :
+          ""
+        }
+
+      </div>
+
+
+      <div
+        id="pyqAnswer-${safeAttr(item.id)}"
+        style="display:none">
+
+        ${
+          options.map(
+            (x,i)=>
+            `<div class="option"
+              style="cursor:default">
+
+              <b>
+                ${String.fromCharCode(65+i)}.
+              </b>
+              ${safe(x)}
+
+            </div>`
+          ).join("")
+        }
+
+
+        <div class="resultBox">
+
+          <b>
+            ✅ Correct Answer:
+          </b>
+
+          <div style="margin-top:5px">
+            ${safe(
+              correctAnswerText(item)
+            )}
+          </div>
+
+
+          ${
+            item.explanation
+            ?
+            `<p style="margin-top:10px">
+              📖 <b>Explanation:</b>
+              ${safe(item.explanation)}
+            </p>`
+            :
+            ""
+          }
+
+        </div>
+
+      </div>
+
+
+      <button
+        class="btn gold"
+        onclick="togglePYQAnswer('${safeAttr(item.id)}')">
+
+        👁️ Show Answer
+
+      </button>
+
+    `;
+
+
+    grid.appendChild(card);
+
+  });
+
+}
+
+
+/* =========================================================
+   PYQ ANSWER
+   ========================================================= */
+
+function togglePYQAnswer(id){
+
+  const box =
+    document.getElementById(
+      "pyqAnswer-" + id
+    );
+
+  if(!box)return;
+
+
+  const visible =
+    box.style.display === "block";
+
+
+  box.style.display =
+    visible
+    ? "none"
+    : "block";
+
+}
+
+
+/* =========================================================
+   SUBJECT LOADING
+   ========================================================= */
+
+async function loadSubjects(){
+
+  const data =
+    await supabaseGet(
+      "questions",
+      "&select=subject&subject=not.is.null&limit=1000",
+      {
+        showError:false
+      }
+    );
+
+
+  const subjects =
+    [
+      ...new Set(
+        data
+          .map(x => x.subject)
+          .filter(Boolean)
+      )
+    ]
+    .sort();
+
+
+  const select =
+    document.getElementById("pyqSubject");
+
+  const mockSelect =
+    document.getElementById("mockSubject");
+
+
+  subjects.forEach(subject => {
+
+    const a =
+      document.createElement("option");
+
+    a.value = subject;
+
+    a.textContent = subject;
+
+    select.appendChild(a);
+
+
+    const b =
+      document.createElement("option");
+
+    b.value = subject;
+
+    b.textContent = subject;
+
+    mockSelect.appendChild(b);
+
+  });
+
+}
+
+
+/* =========================================================
+   MOCK TEST
+   ========================================================= */
+
+async function startDatabaseMock(){
+
+  const exam =
+    document.getElementById("mockExam")
+      .value;
+
+  const subject =
+    document.getElementById("mockSubject")
+      .value;
+
+  const difficulty =
+    document.getElementById("mockDifficulty")
+      .value;
+
+  const count =
+    Number(
+      document.getElementById("mockCountSelect")
+        .value
+    ) || 20;
+
+
+  const title =
+    document.getElementById("mockTitle");
+
+
+  title.textContent =
+    "🔄 Loading Mock Test...";
+
+
+  document.getElementById("mockQuestion")
+    .textContent =
+      "Please wait...";
+
+
+  document.getElementById("mockOptions")
+    .innerHTML = "";
+
 
   document.getElementById("mockResult")
-    .style.display="none";
+    .style.display = "none";
+
 
   document.getElementById("nextBtn")
-    .style.display="inline-block";
+    .style.display = "none";
+
+
+  let params =
+    "&order=created_at.desc" +
+    "&limit=" +
+    Math.min(count * 3, 1000);
+
+
+  if(exam){
+
+    params +=
+      "&exam_id=eq." +
+      encodeURIComponent(exam);
+
+  }
+
+
+  if(subject){
+
+    params +=
+      "&subject=eq." +
+      encodeURIComponent(subject);
+
+  }
+
+
+  if(difficulty){
+
+    params +=
+      "&difficulty=eq." +
+      encodeURIComponent(difficulty);
+
+  }
+
+
+  /*
+    Prefer verified questions.
+    But do not force verification because
+    otherwise new unverified questions
+    would never appear.
+  */
+
+  let data =
+    await supabaseGet(
+      "questions",
+      params,
+      {
+        showError:true
+      }
+    );
+
+
+  if(!data.length){
+
+    title.textContent =
+      "Database Mock Test";
+
+    document.getElementById("mockQuestion")
+      .textContent =
+      "❌ No questions found.";
+
+    toast(
+      "No questions found for selected filters."
+    );
+
+    return;
+
+  }
+
+
+  /*
+    Randomize questions locally.
+    This avoids downloading the entire
+    database.
+  */
+
+  data =
+    shuffle(data);
+
+
+  mockQuestions =
+    data.slice(
+      0,
+      Math.min(count,data.length)
+    );
+
+
+  mockIndex = 0;
+
+  mockScore = 0;
+
+  mockAnswered = false;
+
+
+  title.textContent =
+    (
+      exam
+      ? getExamName(exam)
+      : "General"
+    ) +
+    " Mock Test";
+
+
+  document.getElementById("mockResult")
+    .style.display = "none";
+
+
+  document.getElementById("nextBtn")
+    .style.display = "inline-block";
+
 
   go("mock");
 
@@ -1645,85 +2440,159 @@ function startMock(type="General"){
 }
 
 
-function startExamMock(name){
+/* =========================================================
+   EXAM PRACTICE
+   ========================================================= */
 
-  startMock(
-    name.includes("CT")
-    ? "CT"
-    : name.includes("B.Ed")
-    ? "B.Ed"
-    : name.includes("Teacher")
-    ? "Teacher"
-    : "General"
-  );
+function startExamPractice(examId){
+
+  const select =
+    document.getElementById("mockExam");
+
+  select.value =
+    examId || "";
+
+
+  go("mock");
+
+  startDatabaseMock();
 
 }
 
+
+/* =========================================================
+   MOCK QUESTION
+   ========================================================= */
 
 function loadMockQuestion(){
 
-  const item=activeMock[mockIndex];
+  const item =
+    mockQuestions[mockIndex];
 
-  if(!item)return;
 
-  mockAnswered=false;
+  if(!item){
+
+    finishMock();
+
+    return;
+
+  }
+
+
+  mockAnswered = false;
+
 
   document.getElementById("mockCount")
-    .textContent=
-      `Question ${mockIndex+1} / ${activeMock.length}`;
+    .textContent =
+      `Question ${mockIndex + 1} / ${mockQuestions.length}`;
+
 
   document.getElementById("progressBar")
-    .style.width=
-      (mockIndex/activeMock.length*100)+"%";
+    .style.width =
+      (
+        mockIndex /
+        mockQuestions.length *
+        100
+      ) + "%";
+
 
   document.getElementById("mockQuestion")
-    .textContent=item.q;
+    .textContent =
+      item.question || "Question";
+
 
   document.getElementById("mockQuestionSub")
-    .textContent=
-      "Odia + English Practice";
+    .textContent =
+      [
+        item.subject,
+        item.topic,
+        item.difficulty
+      ]
+      .filter(Boolean)
+      .join(" • ");
 
-  const box=
+
+  const box =
     document.getElementById("mockOptions");
 
-  box.innerHTML="";
 
-  item.options.forEach((option,index)=>{
+  box.innerHTML = "";
 
-    const btn=document.createElement("button");
 
-    btn.className="option";
+  const options =
+    getOptions(item);
 
-    btn.textContent=
-      String.fromCharCode(65+index)+
-      ". "+
-      option;
 
-    btn.onclick=
-      ()=>answerMock(index,btn);
+  options.forEach(
+    (option,index)=>{
 
-    box.appendChild(btn);
+      const btn =
+        document.createElement("button");
 
-  });
+
+      btn.className =
+        "option";
+
+
+      btn.textContent =
+        String.fromCharCode(65+index) +
+        ". " +
+        option;
+
+
+      btn.onclick =
+        ()=>{
+          answerMock(
+            index,
+            btn
+          );
+        };
+
+
+      box.appendChild(btn);
+
+    }
+  );
+
+
+  document.getElementById("nextBtn")
+    .textContent =
+      mockIndex === mockQuestions.length-1
+      ? "Finish →"
+      : "Next →";
 
 }
 
+
+/* =========================================================
+   MOCK ANSWER
+   ========================================================= */
 
 function answerMock(index,button){
 
   if(mockAnswered)return;
 
-  mockAnswered=true;
 
-  const correct=
-    activeMock[mockIndex].answer;
+  mockAnswered = true;
 
-  const all=
+
+  const item =
+    mockQuestions[mockIndex];
+
+
+  const correct =
+    normalizeCorrectAnswer(
+      item.correct_ans
+    );
+
+
+  const all =
     document.querySelectorAll(
       "#mockOptions .option"
     );
 
-  if(index===correct){
+
+  if(index === correct){
 
     button.classList.add("correct");
 
@@ -1735,9 +2604,15 @@ function answerMock(index,button){
 
     button.classList.add("wrong");
 
+
     if(all[correct]){
-      all[correct].classList.add("correct");
+
+      all[correct]
+        .classList
+        .add("correct");
+
     }
+
 
     toast("Wrong Answer ❌");
 
@@ -1746,19 +2621,30 @@ function answerMock(index,button){
 }
 
 
+/* =========================================================
+   NEXT QUESTION
+   ========================================================= */
+
 function nextQuestion(){
 
   if(!mockAnswered){
 
-    toast("First answer the question.");
+    toast(
+      "First answer the question."
+    );
 
     return;
 
   }
 
+
   mockIndex++;
 
-  if(mockIndex>=activeMock.length){
+
+  if(
+    mockIndex >=
+    mockQuestions.length
+  ){
 
     finishMock();
 
@@ -1766,443 +2652,1259 @@ function nextQuestion(){
 
   }
 
+
   loadMockQuestion();
 
 }
 
 
+/* =========================================================
+   FINISH MOCK
+   ========================================================= */
+
 function finishMock(){
 
   document.getElementById("progressBar")
-    .style.width="100%";
+    .style.width = "100%";
+
 
   document.getElementById("mockQuestion")
-    .textContent="🎉 Mock Test Completed!";
+    .textContent =
+      "🎉 Mock Test Completed!";
+
 
   document.getElementById("mockQuestionSub")
-    .textContent="";
+    .textContent = "";
+
 
   document.getElementById("mockOptions")
-    .innerHTML="";
+    .innerHTML = "";
+
 
   document.getElementById("nextBtn")
-    .style.display="none";
+    .style.display = "none";
 
-  const percent=
-    Math.round(
-      mockScore/activeMock.length*100
-    );
+
+  const total =
+    mockQuestions.length;
+
+
+  const percent =
+    total
+    ? Math.round(
+        mockScore / total * 100
+      )
+    : 0;
+
 
   document.getElementById("mockResult")
-    .style.display="block";
+    .style.display = "block";
+
 
   document.getElementById("mockResult")
-    .innerHTML=`
+    .innerHTML = `
 
       <div class="resultBox">
 
-        <h2>🏆 Your Result</h2>
+        <h2>
+          🏆 Your Result
+        </h2>
 
         <p style="margin-top:8px">
+
           Score:
-          <b>${mockScore}/${activeMock.length}</b>
+
+          <b>
+            ${mockScore}/${total}
+          </b>
+
         </p>
 
         <p>
+
           Percentage:
-          <b>${percent}%</b>
+
+          <b>
+            ${percent}%
+          </b>
+
         </p>
 
         <button
           class="btn gold"
           style="margin-top:12px"
-          onclick="startMock('General')">
+          onclick="startDatabaseMock()">
+
           🔄 Try Again
+
         </button>
 
       </div>
+
     `;
+
 
   localStorage.setItem(
     "examSathiLastResult",
+
     JSON.stringify({
+
       score:mockScore,
-      total:activeMock.length,
-      percent,
+
+      total:total,
+
+      percent:percent,
+
       date:new Date().toISOString()
+
     })
   );
 
-  const tests=
+
+  const tests =
     Number(
       localStorage.getItem(
         "examSathiTests"
-      )||0
-    )+1;
+      ) || 0
+    ) + 1;
+
 
   localStorage.setItem(
     "examSathiTests",
     tests
   );
 
+
+  updateStudyDays();
+
   updateResult();
 
 }
 
 
+/* =========================================================
+   RESULT
+   ========================================================= */
+
 function updateResult(){
 
-  const saved=
+  const saved =
     JSON.parse(
       localStorage.getItem(
         "examSathiLastResult"
-      )||"null"
+      ) || "null"
     );
 
-  const tests=
+
+  const tests =
     Number(
       localStorage.getItem(
         "examSathiTests"
-      )||0
+      ) || 0
     );
+
 
   if(saved){
 
     document.getElementById("totalScore")
-      .textContent=
-        saved.score+"/"+saved.total;
+      .textContent =
+        saved.score +
+        "/" +
+        saved.total;
+
 
     document.getElementById("totalPercent")
-      .textContent=
-        saved.percent+"%";
+      .textContent =
+        saved.percent +
+        "%";
 
   }
 
+
   document.getElementById("testsTaken")
-    .textContent=tests;
+    .textContent =
+      tests;
 
 }
 
 
-/* =====================================================
+/* =========================================================
+   STUDY DAYS
+   ========================================================= */
+
+function updateStudyDays(){
+
+  const today =
+    new Date()
+      .toISOString()
+      .slice(0,10);
+
+
+  let days =
+    JSON.parse(
+      localStorage.getItem(
+        "examSathiStudyDates"
+      ) || "[]"
+    );
+
+
+  if(!days.includes(today)){
+
+    days.push(today);
+
+  }
+
+
+  /*
+    Keep only recent dates.
+  */
+
+  days =
+    days.slice(-365);
+
+
+  localStorage.setItem(
+    "examSathiStudyDates",
+    JSON.stringify(days)
+  );
+
+
+  document.getElementById("studyDays")
+    .textContent =
+      days.length;
+
+}
+
+
+/* =========================================================
    DAILY GK
-   ===================================================== */
+   ========================================================= */
 
-const dailyGK=[
+async function loadDailyGK(){
 
- {
-  q:"Odisha ra capital kana?",
-  options:["Cuttack","Bhubaneswar","Puri","Sambalpur"],
-  answer:1
- },
+  const q =
+    await supabaseGet(
+      "questions",
+      "&order=created_at.desc&limit=100",
+      {
+        showError:false
+      }
+    );
 
- {
-  q:"Odisha Day keun date re?",
-  options:["1 April","15 August","26 January","2 October"],
-  answer:0
- },
 
- {
-  q:"Odisha ra official language kana?",
-  options:["Hindi","English","Odia","Bengali"],
-  answer:2
- },
+  dailyGKQuestions =
+    q.filter(
+      item =>
+        isGKQuestion(item)
+    );
 
- {
-  q:"Konark Sun Temple keun district re?",
-  options:["Puri","Khordha","Ganjam","Cuttack"],
-  answer:0
- }
 
-];
+  /*
+    If no explicit GK question_type exists,
+    subject/topic matching is used.
+  */
 
-let todayGK=
-  dailyGK[
-    Math.floor(Date.now()/86400000)
-    %dailyGK.length
-  ];
 
-function loadDailyGK(){
+  if(!dailyGKQuestions.length){
+
+    dailyGKQuestions =
+      q;
+
+  }
+
+
+  if(!dailyGKQuestions.length){
+
+    document.getElementById("gkQuestion")
+      .textContent =
+        "No Daily GK question available.";
+
+    return;
+
+  }
+
+
+  dailyGKIndex =
+    Math.floor(
+      Date.now()/86400000
+    ) %
+    dailyGKQuestions.length;
+
+
+  renderDailyGK();
+
+}
+
+
+function renderDailyGK(){
+
+  const item =
+    dailyGKQuestions[dailyGKIndex];
+
+
+  if(!item)return;
+
 
   document.getElementById("gkQuestion")
-    .textContent=
-      todayGK.q;
+    .textContent =
+      item.question || "Daily GK";
 
-  const box=
-    document.getElementById("gkOptions");
 
-  box.innerHTML="";
+  document.getElementById("gkMeta")
+    .innerHTML = `
 
-  todayGK.options.forEach((x,i)=>{
-
-    const btn=document.createElement("button");
-
-    btn.className="option";
-
-    btn.textContent=
-      String.fromCharCode(65+i)+
-      ". "+
-      x;
-
-    btn.onclick=()=>{
-
-      if(i===todayGK.answer){
-
-        btn.classList.add("correct");
-
-        document.getElementById("gkAnswer")
-          .style.display="block";
-
-        document.getElementById("gkAnswer")
-          .innerHTML=
-            "✅ Correct Answer: "+
-            todayGK.options[todayGK.answer];
-
-      }else{
-
-        btn.classList.add("wrong");
-
-        toast("Wrong ❌ Try again.");
-
+      ${
+        item.subject
+        ?
+        `<span class="meta">
+          📚 ${safe(item.subject)}
+        </span>`
+        :
+        ""
       }
 
-    };
+      ${
+        item.topic
+        ?
+        `<span class="meta">
+          🎯 ${safe(item.topic)}
+        </span>`
+        :
+        ""
+      }
 
-    box.appendChild(btn);
+    `;
 
-  });
+
+  document.getElementById("gkAnswer")
+    .style.display = "none";
+
+
+  document.getElementById("nextGKBtn")
+    .style.display = "none";
+
+
+  const box =
+    document.getElementById("gkOptions");
+
+
+  box.innerHTML = "";
+
+
+  getOptions(item)
+    .forEach(
+      (option,index)=>{
+
+        const btn =
+          document.createElement("button");
+
+
+        btn.className =
+          "option";
+
+
+        btn.textContent =
+          String.fromCharCode(65+index) +
+          ". " +
+          option;
+
+
+        btn.onclick =
+          ()=>{
+            answerDailyGK(
+              index,
+              btn
+            );
+          };
+
+
+        box.appendChild(btn);
+
+      }
+    );
 
 }
 
 
-/* =====================================================
+function answerDailyGK(index,button){
+
+  const item =
+    dailyGKQuestions[dailyGKIndex];
+
+
+  const correct =
+    normalizeCorrectAnswer(
+      item.correct_ans
+    );
+
+
+  const all =
+    document.querySelectorAll(
+      "#gkOptions .option"
+    );
+
+
+  if(index === correct){
+
+    button.classList.add("correct");
+
+
+    document.getElementById("gkAnswer")
+      .style.display = "block";
+
+
+    document.getElementById("gkAnswer")
+      .innerHTML = `
+
+        <b>
+          ✅ Correct Answer:
+        </b>
+
+        <div style="margin-top:5px">
+
+          ${safe(
+            correctAnswerText(item)
+          )}
+
+        </div>
+
+        ${
+          item.explanation
+          ?
+          `<p style="margin-top:10px">
+            📖 ${safe(item.explanation)}
+          </p>`
+          :
+          ""
+        }
+
+      `;
+
+
+    document.getElementById("nextGKBtn")
+      .style.display = "inline-block";
+
+
+  }else{
+
+    button.classList.add("wrong");
+
+    toast(
+      "Wrong ❌ Try again."
+    );
+
+  }
+
+}
+
+
+function loadNextGK(){
+
+  dailyGKIndex++;
+
+  if(
+    dailyGKIndex >=
+    dailyGKQuestions.length
+  ){
+
+    dailyGKIndex = 0;
+
+  }
+
+
+  renderDailyGK();
+
+}
+
+
+/* =========================================================
    SEARCH
-   ===================================================== */
+   ========================================================= */
 
-function searchAll(){
+let searchTimer;
 
-  const q=
+function debouncedSearch(){
+
+  clearTimeout(searchTimer);
+
+
+  searchTimer =
+    setTimeout(
+      searchAll,
+      450
+    );
+
+}
+
+
+async function searchAll(){
+
+  const q =
     document.getElementById("searchInput")
       .value
-      .toLowerCase()
       .trim();
 
-  const box=
+
+  const box =
     document.getElementById("searchResults");
+
+
+  const status =
+    document.getElementById("searchStatus");
+
 
   if(!q){
 
-    box.innerHTML="";
+    box.innerHTML = "";
+
+    status.textContent = "";
 
     return;
 
   }
 
-  const found=
-    exams.filter(x=>
-      (
-        (x.name||"")+
-        " "+
-        (x.category||"")+
-        " "+
-        (x.description||"")
-      )
-      .toLowerCase()
-      .includes(q)
+
+  status.textContent =
+    "🔎 Searching database...";
+
+
+  /*
+    Search question + subject + topic.
+  */
+
+  const encoded =
+    encodeURIComponent(
+      "*" + q + "*"
     );
 
-  if(!found.length){
 
-    box.innerHTML=
+  const params =
+    `&or=(` +
+      `question.ilike.${encoded},` +
+      `subject.ilike.${encoded},` +
+      `topic.ilike.${encoded}` +
+    `)` +
+    `&limit=50`;
+
+
+  const data =
+    await supabaseGet(
+      "questions",
+      params,
+      {
+        showError:false
+      }
+    );
+
+
+  if(!data.length){
+
+    box.innerHTML =
       `<div class="empty">
-        ❌ No study section found.
+        ❌ No question found for
+        <b>${safe(q)}</b>.
       </div>`;
+
+    status.textContent =
+      "No result.";
 
     return;
 
   }
 
-  box.innerHTML=
-    found.map(x=>`
+
+  status.textContent =
+    `${data.length} result(s) found`;
+
+
+  box.innerHTML =
+    data.map(
+      item => `
 
       <div class="card">
 
-        <div class="icon">📚</div>
+        <span class="studyTag">
+          ${safe(
+            item.subject ||
+            "Question"
+          )}
+        </span>
 
-        <h3>${safe(x.name)}</h3>
 
-        <p>
-          ${safe(x.description||"Exam preparation")}
-        </p>
+        <h3>
+          ${safe(item.question)}
+        </h3>
+
+
+        <div class="questionMeta">
+
+          ${
+            item.topic
+            ?
+            `<span class="meta">
+              🎯 ${safe(item.topic)}
+            </span>`
+            :
+            ""
+          }
+
+          ${
+            item.pyq_year
+            ?
+            `<span class="meta">
+              📅 ${safe(item.pyq_year)}
+            </span>`
+            :
+            ""
+          }
+
+          ${
+            item.difficulty
+            ?
+            `<span class="meta goldMeta">
+              ${safe(item.difficulty)}
+            </span>`
+            :
+            ""
+          }
+
+        </div>
+
 
         <button
           class="btn gold"
-          onclick="startExamMock('${safeAttr(x.name)}')">
-          📝 Practice
+          onclick="showSearchAnswer('${safeAttr(item.id)}')">
+
+          👁️ Answer
+
         </button>
+
+
+        <div
+          id="searchAnswer-${safeAttr(item.id)}"
+          style="display:none;margin-top:12px">
+
+          <div class="resultBox">
+
+            <b>
+              ✅ ${safe(correctAnswerText(item))}
+            </b>
+
+            ${
+              item.explanation
+              ?
+              `<p style="margin-top:8px">
+                📖 ${safe(item.explanation)}
+              </p>`
+              :
+              ""
+            }
+
+          </div>
+
+        </div>
 
       </div>
 
-    `).join("");
+    `
+    ).join("");
 
 }
 
 
-/* =====================================================
+function showSearchAnswer(id){
+
+  const box =
+    document.getElementById(
+      "searchAnswer-" + id
+    );
+
+
+  if(!box)return;
+
+
+  box.style.display =
+    box.style.display === "block"
+    ? "none"
+    : "block";
+
+}
+
+
+/* =========================================================
+   STUDY MATERIAL LINKS
+   ========================================================= */
+
+function getSelectedExam(){
+
+  const id =
+    document.getElementById("mockExam")
+      .value;
+
+
+  if(!id){
+
+    toast(
+      "First select an exam from Mock Test section."
+    );
+
+    return null;
+
+  }
+
+
+  return exams.find(
+    x => String(x.id) === String(id)
+  ) || null;
+
+}
+
+
+function openSelectedSyllabus(){
+
+  const exam =
+    getSelectedExam();
+
+
+  if(
+    exam &&
+    exam.syllabus_url
+  ){
+
+    openLink(
+      exam.syllabus_url
+    );
+
+  }else{
+
+    toast(
+      "Syllabus URL not available for selected exam."
+    );
+
+  }
+
+}
+
+
+function openSelectedOfficial(){
+
+  const exam =
+    getSelectedExam();
+
+
+  if(
+    exam &&
+    exam.official_url
+  ){
+
+    openLink(
+      exam.official_url
+    );
+
+  }else{
+
+    toast(
+      "Official URL not available for selected exam."
+    );
+
+  }
+
+}
+
+
+/* =========================================================
    BOT
-   ===================================================== */
+   ========================================================= */
 
 function toggleBot(){
 
-  const box=
+  const box =
     document.getElementById("botBox");
 
-  box.style.display=
-    box.style.display==="block"
-    ?"none"
-    :"block";
+
+  box.style.display =
+    box.style.display === "block"
+    ? "none"
+    : "block";
 
 }
 
 
 function sendBot(){
 
-  const input=
+  const input =
     document.getElementById("botInput");
 
-  const text=input.value.trim();
+
+  const text =
+    input.value.trim();
+
 
   if(!text)return;
 
-  const messages=
-    document.getElementById("botMessages");
 
-  messages.innerHTML+=`
+  const messages =
+    document.getElementById(
+      "botMessages"
+    );
+
+
+  messages.innerHTML += `
+
     <div class="msg">
       👤 ${safe(text)}
     </div>
+
   `;
 
-  let answer=
+
+  const lower =
+    text.toLowerCase();
+
+
+  let answer =
     "PYQ, Mock Test, Daily GK ଏବଂ Study Materials section ବ୍ୟବହାର କରନ୍ତୁ। 📚";
 
-  const lower=text.toLowerCase();
 
-  if(lower.includes("ct")){
-    answer=
-      "CT Entrance ପାଇଁ CT Mock Test ଏବଂ PYQ practice କରନ୍ତୁ। 🎓";
-  }
+  if(
+    lower.includes("ct")
+  ){
 
-  else if(lower.includes("bed")){
-    answer=
-      "B.Ed preparation ପାଇଁ B.Ed Mock Test ଆରମ୍ଭ କରନ୍ତୁ। 📚";
+    answer =
+      "CT Entrance ପାଇଁ Exam select କରି Mock Test ଏବଂ PYQ practice କରନ୍ତୁ। 🎓";
+
   }
 
   else if(
-    lower.includes("otet")||
+    lower.includes("bed")
+  ){
+
+    answer =
+      "B.Ed preparation ପାଇଁ B.Ed exam select କରି Mock Test ଆରମ୍ଭ କରନ୍ତୁ। 📚";
+
+  }
+
+  else if(
+    lower.includes("otet") ||
     lower.includes("teacher")
   ){
-    answer=
-      "Teacher exam ପାଇଁ Teacher Mock Test ଏବଂ PYQ practice କରନ୍ତୁ। 👨‍🏫";
+
+    answer =
+      "Teacher exam ପାଇଁ Teacher/OTET questions practice କରନ୍ତୁ। 👨‍🏫";
+
   }
 
   else if(
-    lower.includes("opsc")||
-    lower.includes("ossc")||
+    lower.includes("opsc") ||
+    lower.includes("ossc") ||
     lower.includes("osssc")
   ){
-    answer=
-      "Exam section ରୁ ଆପଣଙ୍କ exam select କରି Practice Now କରନ୍ତୁ। 🎯";
+
+    answer =
+      "Exam sectionରୁ exam select କରି Practice Now କରନ୍ତୁ। 🎯";
+
   }
 
-  messages.innerHTML+=`
+  else if(
+    lower.includes("mock")
+  ){
+
+    answer =
+      "Mock Test sectionକୁ ଯାଇ Exam, Subject, Difficulty ଏବଂ 20/50/100 questions select କରନ୍ତୁ। 📝";
+
+  }
+
+  else if(
+    lower.includes("pyq")
+  ){
+
+    answer =
+      "PYQ sectionରେ Exam, Subject, Year ଏବଂ Difficulty filter ବ୍ୟବହାର କରନ୍ତୁ। 📖";
+
+  }
+
+
+  messages.innerHTML += `
+
     <div class="msg">
       🤖 ${answer}
     </div>
+
   `;
 
-  input.value="";
 
-  messages.scrollTop=
+  input.value = "";
+
+  messages.scrollTop =
     messages.scrollHeight;
 
 }
 
 
-/* =====================================================
+/* =========================================================
    WHATSAPP
-   ===================================================== */
+   ========================================================= */
 
 function openWhatsApp(){
 
   window.open(
     "https://wa.me/918249584734?text=Hello%20ExamSathi%20Odisha",
-    "_blank"
+    "_blank",
+    "noopener,noreferrer"
   );
 
 }
 
 
-/* =====================================================
-   LINK
-   ===================================================== */
+/* =========================================================
+   OPEN LINK
+   ========================================================= */
 
 function openLink(url){
 
   if(!url)return;
 
-  window.open(url,"_blank","noopener,noreferrer");
+
+  try{
+
+    const parsed =
+      new URL(url);
+
+
+    if(
+      parsed.protocol !== "http:" &&
+      parsed.protocol !== "https:"
+    ){
+
+      toast(
+        "Invalid website link."
+      );
+
+      return;
+
+    }
+
+
+    window.open(
+      parsed.href,
+      "_blank",
+      "noopener,noreferrer"
+    );
+
+  }catch(error){
+
+    toast(
+      "Invalid URL."
+    );
+
+  }
 
 }
 
 
-/* =====================================================
+/* =========================================================
+   QUESTION HELPERS
+   ========================================================= */
+
+function getOptions(item){
+
+  return [
+
+    item.option_a,
+
+    item.option_b,
+
+    item.option_c,
+
+    item.option_d
+
+  ].map(
+    x => String(x ?? "")
+  );
+
+}
+
+
+function normalizeCorrectAnswer(value){
+
+  if(value === null ||
+     value === undefined){
+
+    return -1;
+
+  }
+
+
+  const v =
+    String(value)
+      .trim()
+      .toUpperCase();
+
+
+  if(
+    v === "A" ||
+    v === "OPTION_A" ||
+    v === "1" ||
+    v === "0"
+  ){
+
+    return v === "0" ? 0 : 0;
+
+  }
+
+
+  if(
+    v === "B" ||
+    v === "OPTION_B" ||
+    v === "2"
+  ){
+
+    return 1;
+
+  }
+
+
+  if(
+    v === "C" ||
+    v === "OPTION_C" ||
+    v === "3"
+  ){
+
+    return 2;
+
+  }
+
+
+  if(
+    v === "D" ||
+    v === "OPTION_D" ||
+    v === "4"
+  ){
+
+    return 3;
+
+  }
+
+
+  /*
+    Some databases may store:
+    "option_a"
+    "option_b"
+    etc.
+  */
+
+
+  if(v.includes("A"))return 0;
+
+  if(v.includes("B"))return 1;
+
+  if(v.includes("C"))return 2;
+
+  if(v.includes("D"))return 3;
+
+
+  return -1;
+
+}
+
+
+function correctAnswerText(item){
+
+  const index =
+    normalizeCorrectAnswer(
+      item.correct_ans
+    );
+
+
+  const options =
+    getOptions(item);
+
+
+  if(
+    index < 0 ||
+    !options[index]
+  ){
+
+    return String(
+      item.correct_ans ?? ""
+    );
+
+  }
+
+
+  return (
+    String.fromCharCode(65+index) +
+    ". " +
+    options[index]
+  );
+
+}
+
+
+function getExamName(examId){
+
+  const exam =
+    exams.find(
+      x =>
+        String(x.id) ===
+        String(examId)
+    );
+
+
+  return exam
+    ? exam.name
+    : "Exam";
+
+}
+
+
+function isGKQuestion(item){
+
+  const type =
+    String(
+      item.question_type || ""
+    ).toLowerCase();
+
+
+  const subject =
+    String(
+      item.subject || ""
+    ).toLowerCase();
+
+
+  const topic =
+    String(
+      item.topic || ""
+    ).toLowerCase();
+
+
+  return (
+
+    type.includes("gk") ||
+
+    type.includes("general") ||
+
+    subject.includes("gk") ||
+
+    subject.includes("general knowledge") ||
+
+    topic.includes("current affairs")
+
+  );
+
+}
+
+
+/* =========================================================
+   SHUFFLE
+   ========================================================= */
+
+function shuffle(array){
+
+  const arr =
+    [...array];
+
+
+  for(
+    let i=arr.length-1;
+    i>0;
+    i--
+  ){
+
+    const j =
+      Math.floor(
+        Math.random() *
+        (i+1)
+      );
+
+
+    [
+      arr[i],
+      arr[j]
+    ] =
+    [
+      arr[j],
+      arr[i]
+    ];
+
+  }
+
+
+  return arr;
+
+}
+
+
+/* =========================================================
    SAFE HTML
-   ===================================================== */
+   ========================================================= */
 
 function safe(value){
 
-  return String(value??"")
-    .replace(/&/g,"&amp;")
-    .replace(/</g,"&lt;")
-    .replace(/>/g,"&gt;")
-    .replace(/"/g,"&quot;")
-    .replace(/'/g,"&#039;");
+  return String(
+    value ?? ""
+  )
+  .replace(/&/g,"&amp;")
+  .replace(/</g,"&lt;")
+  .replace(/>/g,"&gt;")
+  .replace(/"/g,"&quot;")
+  .replace(/'/g,"&#039;");
 
 }
 
 
 function safeAttr(value){
 
-  return String(value??"")
-    .replace(/\\/g,"\\\\")
-    .replace(/'/g,"\\'")
-    .replace(/\n/g," ");
+  return String(
+    value ?? ""
+  )
+  .replace(/\\/g,"\\\\")
+  .replace(/'/g,"\\'")
+  .replace(/\n/g," ")
+  .replace(/\r/g," ");
 
 }
 
 
-/* =====================================================
+/* =========================================================
+   INITIALIZE
+   ========================================================= */
+
+async function initialize(){
+
+  updateResult();
+
+  updateStudyDays();
+
+
+  await loadExams();
+
+
+  await loadSubjects();
+
+
+  await loadPYQ(true);
+
+
+  await loadDailyGK();
+
+
+  console.log(
+    "🇮🇳 ExamSathi Odisha loaded."
+  );
+
+  console.log(
+    "📚 Unlimited database question bank enabled."
+  );
+
+}
+
+
+/* =========================================================
    START
-   ===================================================== */
+   ========================================================= */
 
-renderPYQ();
-
-loadDailyGK();
-
-loadExams();
-
-updateResult();
-
-startMock("General");
-
-console.log(
-  "🇮🇳 ExamSathi Odisha Study Platform loaded."
-);
-
-console.log(
-  "📚 Study • PYQ • Mock • Daily GK"
-);
+initialize();
 
 </script>
 
