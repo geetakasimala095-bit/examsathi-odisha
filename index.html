@@ -1,197 +1,925 @@
-📚
-ExamSathi Odisha
-🏠 Home
-🎯 Exams
-📖 PYQ
-📝 Mock
-🧠 Daily GK
-📄 Study
-ଓଡ଼ିଆ / EN
-🇮🇳 Odisha Competitive Exam Study Platform
-Prepare Smart.
-Crack Your Exam.
-Odisha Government Exams ପାଇଁ PYQ, Mock Tests, Daily GK ଏବଂ Study Materials — ସବୁ ଗୋଟିଏ ସ୍ଥାନରେ।
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-📝 Start Mock Test
-📖 Practice PYQ
-🔥 Today's Study
-PYQ practice କରନ୍ତୁ ଏବଂ exam pattern ବୁଝନ୍ତୁ। 📖
+<title>ExamSathi Odisha | AI Mock Test</title>
 
-📖 PYQ
-Unlimited
-📝 Mock
-Unlimited
-🧠 GK
-Daily
-💰 Access
-FREE
-🔎 Search Study Content
-Exam, subject, topic, PYQ କିମ୍ବା question search କରନ୍ତୁ
+<meta name="description"
+content="ExamSathi Odisha - Government Exam Preparation with Gemini AI Mock Tests">
 
-OPSC, OSSC, CT, B.Ed, OTET, GK...
-🎯 Odisha Govt Exam Preparation
-ଯେଉଁ exam ପାଇଁ ପଢିବାକୁ ଚାହୁଁଛନ୍ତି select କରନ୍ତୁ
+<style>
+*{
+  box-sizing:border-box;
+}
 
-🟢 9 active exam sections loaded
-🎯
-Government Jobs
-OPSC
-Odisha Public Service Commission examinations
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f4f7fb;
+  color:#172033;
+}
 
-📝 Practice Now
-🎯
-Government Jobs
-OSSC
-Odisha Staff Selection Commission examinations
+header{
+  background:linear-gradient(135deg,#ff9933,#ffffff,#138808);
+  padding:25px 15px;
+  text-align:center;
+  border-bottom:1px solid #ddd;
+}
 
-📝 Practice Now
-🎯
-Government Jobs
-OSSSC
-Odisha Sub-Ordinate Staff Selection Commission examinations
+header h1{
+  margin:0;
+  font-size:30px;
+}
 
-📝 Practice Now
-🎯
-Government Jobs
-Odisha Police
-Odisha Police recruitment examinations
+header p{
+  margin:8px 0 0;
+  font-weight:bold;
+}
 
-📝 Practice Now
-🎯
-Entrance Exams
-CT Entrance
-CT Entrance preparation
+.container{
+  width:min(1000px,94%);
+  margin:25px auto;
+}
 
-📝 Practice Now
-🎯
-Entrance Exams
-B.Ed Entrance
-B.Ed Entrance preparation
+.card{
+  background:white;
+  padding:22px;
+  border-radius:16px;
+  margin-bottom:20px;
+  box-shadow:0 4px 18px rgba(0,0,0,.08);
+}
 
-📝 Practice Now
-🎯
-Teacher Exams
-OTET
-Odisha Teacher Eligibility Test
+h2{
+  margin-top:0;
+}
 
-📝 Practice Now
-🎯
-Teacher Exams
-OSSTET
-Odisha Secondary School Teacher Eligibility Test
+label{
+  display:block;
+  font-weight:bold;
+  margin:14px 0 6px;
+}
 
-📝 Practice Now
-🎯
-Competitive Exams
-General Competitive
-Odisha state and department competitive examinations
+select,
+input{
+  width:100%;
+  padding:13px;
+  border:1px solid #ccd3df;
+  border-radius:10px;
+  font-size:16px;
+}
 
-📝 Practice Now
-📖 Previous Year Question Practice
-Database PYQ • Question + Answer + Explanation
+button{
+  border:0;
+  border-radius:10px;
+  padding:13px 18px;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
 
-📚 ପ୍ରଥମେ question solve କରନ୍ତୁ, ପରେ answer ଏବଂ explanation ଦେଖନ୍ତୁ।
+.generate{
+  background:#6f42c1;
+  color:white;
+  width:100%;
+  margin-top:20px;
+}
 
-All Exams
+.generate:hover{
+  opacity:.9;
+}
 
-All Subjects
+.option{
+  display:block;
+  width:100%;
+  text-align:left;
+  background:#f5f7fa;
+  margin:10px 0;
+  border:1px solid #d8dee8;
+}
 
-All Years
+.option:hover{
+  background:#e9eef7;
+}
 
-All Difficulty
-📚 1 PYQ loaded — More available from database
-2026 • OPSC
-ଓଡ଼ିଶାର ରାଜଧାନୀ କଣ?
-📚 Odisha GK
-🎯 Odisha Geography
-easy
-✅ Verified
-👁️ Show Answer
-🧠 Daily GK & Current Affairs
-ପ୍ରତିଦିନ databaseରୁ GK practice କରନ୍ତୁ
+.option.correct{
+  background:#d9f7df;
+  border-color:#198754;
+}
 
-ଓଡ଼ିଶାର ରାଜଧାନୀ କଣ?
-📚 Odisha GK
-🎯 Odisha Geography
-A. ପୁରୀ
-B. ଭୁବନେଶ୍ୱର
-C. କଟକ
-D. ସମ୍ବଲପୁର
-📝 Mock Test Center
-Unlimited database questions • Random Practice
+.option.wrong{
+  background:#ffdede;
+  border-color:#dc3545;
+}
+
+.next{
+  background:#198754;
+  color:white;
+  width:100%;
+  margin-top:15px;
+}
+
+.hidden{
+  display:none;
+}
+
+.status{
+  padding:14px;
+  border-radius:10px;
+  background:#eef3ff;
+  margin-top:15px;
+}
+
+.error{
+  background:#ffe4e4;
+  color:#a40000;
+}
+
+.success{
+  background:#ddf8e5;
+  color:#08752b;
+}
+
+.small{
+  color:#687386;
+  font-size:14px;
+}
+
+.score{
+  text-align:center;
+  font-size:24px;
+  font-weight:bold;
+}
+
+footer{
+  text-align:center;
+  padding:30px;
+  color:#687386;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🇮🇳 ExamSathi Odisha</h1>
+  <p>Government Exam Preparation • AI Mock Test</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+
+    <h2>🤖 Gemini AI Mock Test</h2>
+
+    <p class="small">
+      Generate practice questions using Gemini AI.
+    </p>
+
+    <label for="exam">
+      Exam
+    </label>
+
+    <select id="exam">
+      <option value="OSSC">OSSC</option>
+      <option value="OSSSC">OSSSC</option>
+      <option value="OPSC">OPSC</option>
+      <option value="Odisha Police">Odisha Police</option>
+      <option value="CT Entrance">CT Entrance</option>
+      <option value="Other Odisha Government Exam">
+        Other Odisha Government Exam
+      </option>
+    </select>
+
+    <label for="subject">
+      Subject
+    </label>
+
+    <select id="subject">
+      <option value="General Knowledge">
+        General Knowledge
+      </option>
+
+      <option value="Odisha General Knowledge">
+        Odisha General Knowledge
+      </option>
+
+      <option value="Current Affairs">
+        Current Affairs
+      </option>
+
+      <option value="English">
+        English
+      </option>
+
+      <option value="Mathematics">
+        Mathematics
+      </option>
+
+      <option value="Reasoning">
+        Reasoning
+      </option>
+
+      <option value="Science">
+        Science
+      </option>
+    </select>
+
+    <label for="topic">
+      Topic
+    </label>
+
+    <input
+      id="topic"
+      value="Odisha"
+      placeholder="Example: Odisha History"
+    >
+
+    <label for="difficulty">
+      Difficulty
+    </label>
+
+    <select id="difficulty">
+
+      <option value="easy">
+        Easy
+      </option>
+
+      <option value="medium" selected>
+        Medium
+      </option>
+
+      <option value="hard">
+        Hard
+      </option>
+
+    </select>
+
+    <label for="count">
+      Number of Questions
+    </label>
+
+    <select id="count">
+
+      <option value="5">
+        5 Questions
+      </option>
+
+      <option value="10" selected>
+        10 Questions
+      </option>
+
+      <option value="20">
+        20 Questions
+      </option>
+
+    </select>
+
+    <button
+      class="generate"
+      onclick="generateQuestions()">
+
+      🤖 Generate AI Mock Test
+
+    </button>
+
+    <div
+      id="status"
+      class="status hidden">
+    </div>
+
+  </div>
 
 
-All Exams
+  <div
+    id="testCard"
+    class="card hidden">
 
-All Subjects
+    <div id="progress"
+         class="small">
+    </div>
 
-All Difficulty
+    <h2 id="question">
+      Question
+    </h2>
 
-10 Questions
-🚀 Start Database Mock Test 🤖 Generate AI Mock
-Gemini AI • Free tier • Maximum 20 AI questions per request
-Database Mock Test
-Ready
-Select exam and start Mock Test.
-📄 Study Materials
-Exam-wise study resources
+    <div id="options">
+    </div>
 
-📘
-Syllabus
-Exam-wise syllabus open କରନ୍ତୁ।
+    <div
+      id="explanation"
+      class="status hidden">
+    </div>
 
-📘 Open Syllabus
-🌐
-Official Website
-Examର official website visit କରନ୍ତୁ।
+    <button
+      id="next"
+      class="next hidden"
+      onclick="nextQuestion()">
 
-🌐 Open Official Site
-📖
-PYQ Practice
-Previous Year Questions databaseରୁ practice କରନ୍ତୁ।
+      Next Question →
 
-📖 Practice PYQ
-📝
-Mock Test
-Unlimited question bankରୁ random mock test।
+    </button>
 
-📝 Start Mock
-📊 My Practice Result
-ଏହି deviceରେ ତୁମ practice progress
+  </div>
 
-🎯
-0
-Latest Score
 
-📈
-0%
-Percentage
+  <div
+    id="resultCard"
+    class="card hidden">
 
-📝
-0
-Tests Completed
+    <div class="score"
+         id="score">
+    </div>
 
-🔥
-1
-Study Day
+    <button
+      class="generate"
+      onclick="resetTest()">
 
-📲 ExamSathi Support
-Study related help ପାଇଁ WhatsApp କରନ୍ତୁ
+      🔄 Start New Test
 
-💬 WhatsApp Support
-🇮🇳 ExamSathi Odisha
-Prepare Smart. Crack Your Exam.
+    </button>
 
-Odisha Government Exam Preparation Platform.
+  </div>
 
-Study
-Exams
-PYQ
-Mock Tests
-Daily GK
-Materials
-Study Materials
-Practice
-Home
-© 2026 ExamSathi Odisha • Study Free
-🤖
+</div>
+
+
+<footer>
+  © 2026 ExamSathi Odisha
+</footer>
+
+
+<script>
+
+/* =====================================================
+   SUPABASE CONFIG
+   ===================================================== */
+
+const SUPABASE_URL =
+  "https://ullqxaoctpedgtxlaesh.supabase.co";
+
+const SUPABASE_KEY =
+  "sb_publishable_NW1cUIuZ4pqFxJ_iuNBbcg_pS-PjUqr";
+
+
+/* =====================================================
+   EDGE FUNCTION
+   ===================================================== */
+
+const SMART_ENDPOINT =
+  SUPABASE_URL +
+  "/functions/v1/smart-endpoint";
+
+
+/* =====================================================
+   TEST VARIABLES
+   ===================================================== */
+
+let questions = [];
+
+let currentIndex = 0;
+
+let score = 0;
+
+let answered = false;
+
+
+/* =====================================================
+   GENERATE QUESTIONS
+   ===================================================== */
+
+async function generateQuestions(){
+
+  const exam =
+    document.getElementById("exam").value;
+
+  const subject =
+    document.getElementById("subject").value;
+
+  const topic =
+    document.getElementById("topic").value.trim()
+    || "General";
+
+  const difficulty =
+    document.getElementById("difficulty").value;
+
+  const count =
+    Number(
+      document.getElementById("count").value
+    );
+
+
+  const status =
+    document.getElementById("status");
+
+  status.className =
+    "status";
+
+  status.textContent =
+    "🤖 Gemini is generating questions... Please wait.";
+
+  status.classList.remove("hidden");
+
+
+  try{
+
+    const response =
+      await fetch(
+        SMART_ENDPOINT,
+        {
+          method:"POST",
+
+          headers:{
+            "apikey":SUPABASE_KEY,
+
+            "Content-Type":
+              "application/json",
+
+            "Accept":
+              "application/json"
+          },
+
+          body:JSON.stringify({
+
+            exam_id:
+              exam,
+
+            exam_name:
+              exam,
+
+            category:
+              "Odisha Government Exams",
+
+            subject:
+              subject,
+
+            topic:
+              topic,
+
+            difficulty:
+              difficulty,
+
+            question_type:
+              "practice",
+
+            pyq_year:
+              null,
+
+            count:
+              count,
+
+            language:
+              "Odia + English"
+
+          })
+        }
+      );
+
+
+    const data =
+      await response.json();
+
+
+    console.log(
+      "AI Response:",
+      data
+    );
+
+
+    if(!response.ok){
+
+      throw new Error(
+        data?.details ||
+        data?.error ||
+        "AI service error"
+      );
+
+    }
+
+
+    if(
+      data.success !== true ||
+      !Array.isArray(data.questions) ||
+      data.questions.length === 0
+    ){
+
+      throw new Error(
+        "No questions received from AI."
+      );
+
+    }
+
+
+    questions =
+      data.questions;
+
+
+    currentIndex =
+      0;
+
+    score =
+      0;
+
+    answered =
+      false;
+
+
+    status.className =
+      "status success";
+
+    status.textContent =
+      "✅ " +
+      questions.length +
+      " questions generated successfully!";
+
+
+    document
+      .getElementById("testCard")
+      .classList.remove("hidden");
+
+
+    document
+      .getElementById("resultCard")
+      .classList.add("hidden");
+
+
+    setTimeout(
+      function(){
+
+        showQuestion();
+
+      },
+      700
+    );
+
+
+  }catch(error){
+
+    console.error(
+      "AI ERROR:",
+      error
+    );
+
+
+    status.className =
+      "status error";
+
+    status.textContent =
+      "❌ " +
+      (
+        error.message ||
+        "AI service error"
+      );
+
+  }
+
+}
+
+
+/* =====================================================
+   SHOW QUESTION
+   ===================================================== */
+
+function showQuestion(){
+
+  if(
+    currentIndex >=
+    questions.length
+  ){
+
+    showResult();
+
+    return;
+
+  }
+
+
+  answered =
+    false;
+
+
+  const q =
+    questions[currentIndex];
+
+
+  document.getElementById(
+    "progress"
+  ).textContent =
+    "Question " +
+    (currentIndex + 1) +
+    " of " +
+    questions.length;
+
+
+  document.getElementById(
+    "question"
+  ).textContent =
+    q.question;
+
+
+  const options =
+    document.getElementById(
+      "options"
+    );
+
+
+  options.innerHTML =
+    "";
+
+
+  const optionData = [
+
+    ["A",q.option_a],
+
+    ["B",q.option_b],
+
+    ["C",q.option_c],
+
+    ["D",q.option_d]
+
+  ];
+
+
+  optionData.forEach(
+    function(item){
+
+      const button =
+        document.createElement(
+          "button"
+        );
+
+
+      button.className =
+        "option";
+
+
+      button.textContent =
+        item[0] +
+        ". " +
+        item[1];
+
+
+      button.onclick =
+        function(){
+
+          selectAnswer(
+            item[0],
+            button
+          );
+
+        };
+
+
+      options.appendChild(
+        button
+      );
+
+    }
+  );
+
+
+  document.getElementById(
+    "explanation"
+  ).classList.add(
+    "hidden"
+  );
+
+
+  document.getElementById(
+    "explanation"
+  ).textContent =
+    "";
+
+
+  document.getElementById(
+    "next"
+  ).classList.add(
+    "hidden"
+  );
+
+}
+
+
+/* =====================================================
+   SELECT ANSWER
+   ===================================================== */
+
+function selectAnswer(
+  selected,
+  clickedButton
+){
+
+  if(answered)
+    return;
+
+
+  answered =
+    true;
+
+
+  const q =
+    questions[currentIndex];
+
+
+  const correct =
+    String(
+      q.correct_ans
+    )
+    .trim()
+    .toUpperCase();
+
+
+  const allButtons =
+    document.querySelectorAll(
+      "#options .option"
+    );
+
+
+  allButtons.forEach(
+    function(button){
+
+      const letter =
+        button.textContent
+          .trim()
+          .charAt(0)
+          .toUpperCase();
+
+
+      if(letter === correct){
+
+        button.classList.add(
+          "correct"
+        );
+
+      }
+
+    }
+  );
+
+
+  if(
+    selected === correct
+  ){
+
+    score++;
+
+    clickedButton.classList.add(
+      "correct"
+    );
+
+  }else{
+
+    clickedButton.classList.add(
+      "wrong"
+    );
+
+  }
+
+
+  const explanation =
+    document.getElementById(
+      "explanation"
+    );
+
+
+  explanation.textContent =
+    "💡 Explanation: " +
+    (
+      q.explanation ||
+      "Explanation not available."
+    );
+
+
+  explanation.classList.remove(
+    "hidden"
+  );
+
+
+  document.getElementById(
+    "next"
+  ).classList.remove(
+    "hidden"
+  );
+
+}
+
+
+/* =====================================================
+   NEXT QUESTION
+   ===================================================== */
+
+function nextQuestion(){
+
+  currentIndex++;
+
+  showQuestion();
+
+}
+
+
+/* =====================================================
+   RESULT
+   ===================================================== */
+
+function showResult(){
+
+  document.getElementById(
+    "testCard"
+  ).classList.add(
+    "hidden"
+  );
+
+
+  document.getElementById(
+    "resultCard"
+  ).classList.remove(
+    "hidden"
+  );
+
+
+  const percentage =
+    Math.round(
+      (
+        score /
+        questions.length
+      ) * 100
+    );
+
+
+  document.getElementById(
+    "score"
+  ).innerHTML =
+    `
+      🎉 Test Completed!<br><br>
+
+      Score:
+      ${score}
+      /
+      ${questions.length}
+
+      <br><br>
+
+      ${percentage}%
+
+      <br><br>
+
+      ${
+        percentage >= 80
+          ? "Excellent! 🌟"
+          : percentage >= 50
+          ? "Good Job! 👍"
+          : "Keep Practicing! 💪"
+      }
+    `;
+
+}
+
+
+/* =====================================================
+   RESET
+   ===================================================== */
+
+function resetTest(){
+
+  questions = [];
+
+  currentIndex = 0;
+
+  score = 0;
+
+  answered = false;
+
+
+  document.getElementById(
+    "resultCard"
+  ).classList.add(
+    "hidden"
+  );
+
+
+  document.getElementById(
+    "testCard"
+  ).classList.add(
+    "hidden"
+  );
+
+
+  document.getElementById(
+    "status"
+  ).classList.add(
+    "hidden"
+  );
+
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+}
+
+</script>
+
+</body>
+</html>
