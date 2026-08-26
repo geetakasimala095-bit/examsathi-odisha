@@ -4,58 +4,71 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<title>ExamSathi Odisha | AI Study & Government Jobs</title>
+<title>ExamSathi Odisha | Smart Study & Exam Preparation</title>
 
 <meta name="description"
-content="ExamSathi Odisha - Odisha Government Jobs, +2 +3 AI Study, AI Mock Tests and Daily Live Mock Tests.">
+content="ExamSathi Odisha - Odisha Government Exam Preparation and +2 +3 Study Platform">
 
 <style>
-*{
-  box-sizing:border-box;
+:root{
+  --blue:#123b78;
+  --blue2:#2563eb;
+  --gold:#f59e0b;
+  --orange:#f97316;
+  --green:#16a34a;
+  --purple:#7c3aed;
+  --red:#dc2626;
+  --bg:#f4f7fb;
+  --card:#ffffff;
+  --text:#172033;
+  --muted:#667085;
+  --border:#e4e7ec;
+  --shadow:0 8px 30px rgba(15,23,42,.08);
 }
 
-:root{
-  --primary:#102a56;
-  --primary2:#174a8b;
-  --gold:#f5b700;
-  --green:#159447;
-  --red:#dc3545;
-  --bg:#f3f6fb;
-  --text:#172033;
-  --muted:#6c7688;
-  --white:#fff;
-  --border:#dce3ee;
-  --shadow:0 8px 28px rgba(16,42,86,.10);
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-  margin:0;
   font-family:Arial,"Noto Sans Oriya",sans-serif;
   background:var(--bg);
   color:var(--text);
+  line-height:1.6;
 }
 
 button,
-input,
 select,
+input,
 textarea{
-  font-family:inherit;
+  font:inherit;
 }
 
 button{
   cursor:pointer;
 }
 
+.hidden{
+  display:none!important;
+}
+
 /* HEADER */
 
 header{
-  background:linear-gradient(135deg,#102a56,#174a8b);
+  background:
+    linear-gradient(135deg,#123b78,#2563eb,#7c3aed);
   color:white;
   padding:18px 5%;
   position:sticky;
   top:0;
   z-index:1000;
-  box-shadow:0 3px 18px rgba(0,0,0,.15);
+  box-shadow:0 4px 20px rgba(0,0,0,.15);
 }
 
 .header-inner{
@@ -64,261 +77,196 @@ header{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:15px;
+  gap:20px;
 }
 
-.brand{
+.logo{
   display:flex;
   align-items:center;
   gap:12px;
 }
 
-.logo{
+.logo-icon{
   width:48px;
   height:48px;
+  background:white;
+  color:var(--blue);
   border-radius:14px;
-  background:linear-gradient(135deg,#f5b700,#fff);
-  color:#102a56;
   display:flex;
   align-items:center;
   justify-content:center;
-  font-size:24px;
+  font-size:26px;
   font-weight:bold;
 }
 
-.brand h1{
-  margin:0;
-  font-size:23px;
+.logo h1{
+  font-size:22px;
 }
 
-.brand p{
-  margin:3px 0 0;
+.logo p{
   font-size:12px;
-  opacity:.85;
+  opacity:.9;
 }
 
-nav{
+.menu{
   display:flex;
   gap:8px;
   flex-wrap:wrap;
+  justify-content:flex-end;
 }
 
-.nav-btn{
-  border:1px solid rgba(255,255,255,.25);
-  background:rgba(255,255,255,.10);
+.menu button{
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.2);
   color:white;
-  padding:10px 14px;
+  padding:9px 13px;
   border-radius:10px;
   font-weight:bold;
 }
 
-.nav-btn:hover{
+.menu button:hover{
   background:white;
-  color:var(--primary);
+  color:var(--blue);
+}
+
+/* MAIN */
+
+main{
+  max-width:1200px;
+  margin:auto;
+  padding:25px 4%;
+}
+
+.page{
+  display:none;
+}
+
+.page.active{
+  display:block;
 }
 
 /* HERO */
 
 .hero{
   background:
-    radial-gradient(circle at top right,rgba(245,183,0,.28),transparent 35%),
-    linear-gradient(135deg,#102a56,#1c5b9f);
-  color:white;
-  padding:55px 5%;
-}
-
-.hero-inner{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:1.3fr .7fr;
-  gap:35px;
-  align-items:center;
+    linear-gradient(135deg,#ffffff,#eef4ff);
+  border-radius:24px;
+  padding:35px;
+  box-shadow:var(--shadow);
+  margin-bottom:22px;
+  border:1px solid var(--border);
 }
 
 .hero h2{
-  font-size:42px;
-  margin:0 0 15px;
-}
-
-.hero h2 span{
-  color:#ffd34e;
+  font-size:34px;
+  color:var(--blue);
+  margin-bottom:10px;
 }
 
 .hero p{
-  font-size:18px;
-  line-height:1.7;
-  opacity:.92;
+  color:var(--muted);
+  max-width:750px;
 }
 
 .hero-actions{
   display:flex;
   gap:12px;
   flex-wrap:wrap;
-  margin-top:25px;
+  margin-top:22px;
 }
 
-.primary-btn,
-.gold-btn,
-.green-btn,
-.dark-btn{
+/* BUTTONS */
+
+.btn{
   border:0;
-  padding:14px 20px;
   border-radius:12px;
-  font-size:16px;
+  padding:12px 18px;
   font-weight:bold;
+  transition:.2s;
 }
 
-.primary-btn{
-  background:white;
-  color:var(--primary);
+.btn:hover{
+  transform:translateY(-2px);
 }
 
-.gold-btn{
+.btn-blue{
+  background:var(--blue);
+  color:white;
+}
+
+.btn-gold{
   background:var(--gold);
-  color:#172033;
+  color:#111827;
 }
 
-.green-btn{
+.btn-green{
   background:var(--green);
   color:white;
 }
 
-.dark-btn{
-  background:var(--primary);
+.btn-purple{
+  background:var(--purple);
   color:white;
 }
 
-.hero-card{
-  background:rgba(255,255,255,.12);
-  border:1px solid rgba(255,255,255,.2);
-  border-radius:22px;
-  padding:25px;
-  backdrop-filter:blur(10px);
+.btn-orange{
+  background:var(--orange);
+  color:white;
 }
 
-.hero-card h3{
-  margin-top:0;
+.btn-light{
+  background:#eef2ff;
+  color:var(--blue);
 }
 
-.hero-stat{
-  display:flex;
-  justify-content:space-between;
-  padding:12px 0;
-  border-bottom:1px solid rgba(255,255,255,.15);
-}
+/* NOTIFICATION */
 
-/* MAIN */
-
-.container{
-  width:min(1200px,94%);
-  margin:30px auto;
-}
-
-.section{
-  margin-bottom:35px;
-}
-
-.section-title{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
-  margin-bottom:18px;
-}
-
-.section-title h2{
-  margin:0;
-  font-size:27px;
-}
-
-.section-title p{
-  color:var(--muted);
-  margin:5px 0 0;
-}
-
-/* CARDS */
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px;
-}
-
-.card{
-  background:white;
-  border:1px solid var(--border);
+.notification{
+  background:linear-gradient(135deg,#fff7ed,#ffedd5);
+  border:1px solid #fed7aa;
   border-radius:18px;
   padding:20px;
-  box-shadow:var(--shadow);
+  margin-bottom:24px;
 }
 
-.category-card{
-  min-height:145px;
-  transition:.2s;
-  cursor:pointer;
-}
-
-.category-card:hover{
-  transform:translateY(-4px);
-  border-color:#8aa9d3;
-}
-
-.category-icon{
-  font-size:34px;
-  margin-bottom:12px;
-}
-
-.category-card h3{
-  margin:0 0 7px;
-}
-
-.category-card p{
-  margin:0;
-  color:var(--muted);
-  font-size:14px;
-  line-height:1.5;
-}
-
-/* SEARCH */
-
-.search-box{
+.notification-title{
   display:flex;
-  gap:10px;
-  margin-bottom:20px;
-}
-
-.search-box input{
-  flex:1;
-  padding:15px;
-  border:1px solid var(--border);
-  border-radius:12px;
-  font-size:16px;
-}
-
-/* JOBS */
-
-.jobs-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:15px;
-}
-
-.job-card{
-  background:white;
-  border:1px solid var(--border);
-  padding:18px;
-  border-radius:15px;
-}
-
-.job-top{
-  display:flex;
+  align-items:center;
   justify-content:space-between;
+  gap:10px;
+  margin-bottom:14px;
+}
+
+.notification h3{
+  color:#c2410c;
+}
+
+.badge{
+  display:inline-block;
+  padding:5px 10px;
+  border-radius:20px;
+  background:#fee2e2;
+  color:#b91c1c;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.job-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:12px;
 }
 
-.job-card h3{
-  margin:0 0 7px;
+.job-item{
+  background:white;
+  border-radius:13px;
+  padding:14px;
+  border:1px solid #fed7aa;
+}
+
+.job-item strong{
+  display:block;
+  margin-bottom:5px;
 }
 
 .job-meta{
@@ -326,399 +274,337 @@ nav{
   font-size:13px;
 }
 
-.job-badge{
-  background:#e8f5ec;
-  color:#08752b;
-  padding:6px 9px;
-  border-radius:20px;
-  font-size:12px;
-  font-weight:bold;
-  height:max-content;
+/* SECTION */
+
+.section-title{
+  margin:30px 0 15px;
 }
 
-.job-btn{
-  margin-top:15px;
-  border:0;
-  background:var(--primary);
+.section-title h2{
+  font-size:25px;
+}
+
+.section-title p{
+  color:var(--muted);
+}
+
+/* CARDS */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:20px;
+  box-shadow:var(--shadow);
+}
+
+.card:hover{
+  transform:translateY(-3px);
+  transition:.2s;
+}
+
+.icon{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.card h3{
+  margin-bottom:7px;
+}
+
+.card p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.card .btn{
+  margin-top:14px;
+}
+
+/* COLOUR CARDS */
+
+.blue-card{
+  border-top:5px solid var(--blue2);
+}
+
+.orange-card{
+  border-top:5px solid var(--orange);
+}
+
+.green-card{
+  border-top:5px solid var(--green);
+}
+
+.purple-card{
+  border-top:5px solid var(--purple);
+}
+
+.gold-card{
+  border-top:5px solid var(--gold);
+}
+
+/* EXAM DASHBOARD */
+
+.exam-header{
+  background:linear-gradient(135deg,#123b78,#2563eb);
   color:white;
-  padding:9px 14px;
+  border-radius:22px;
+  padding:28px;
+  margin-bottom:20px;
+}
+
+.exam-header h2{
+  font-size:29px;
+}
+
+.exam-header p{
+  opacity:.9;
+}
+
+.back{
+  background:rgba(255,255,255,.15);
+  color:white;
+  border:1px solid rgba(255,255,255,.3);
+  padding:8px 12px;
   border-radius:9px;
+  margin-bottom:15px;
 }
 
 /* STUDY */
 
-.study-card{
-  position:relative;
-  overflow:hidden;
-}
-
-.study-card .badge{
-  position:absolute;
-  top:15px;
-  right:15px;
-  background:#fff1c2;
-  color:#765800;
-  padding:5px 8px;
-  border-radius:20px;
-  font-size:12px;
-  font-weight:bold;
-}
-
-.study-card h3{
-  font-size:23px;
-  margin-top:5px;
-}
-
-.study-list{
-  padding-left:20px;
-  color:#536075;
-  line-height:1.9;
-}
-
-/* AI */
-
-.ai-box{
-  background:linear-gradient(135deg,#fff,#eef5ff);
-  border:2px solid #cddcf4;
-}
-
-.ai-header{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-
-.ai-icon{
-  width:48px;
-  height:48px;
-  border-radius:14px;
-  background:#6f42c1;
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:25px;
-}
-
-.ai-controls{
+.study-select{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
-  margin-top:20px;
-}
-
-label{
-  display:block;
-  font-weight:bold;
-  margin-bottom:7px;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:14px;
+  margin-bottom:20px;
 }
 
 select,
 input,
 textarea{
   width:100%;
-  padding:13px;
-  border:1px solid #ccd5e3;
-  border-radius:10px;
-  background:white;
-  font-size:15px;
-}
-
-textarea{
-  min-height:130px;
-  resize:vertical;
-}
-
-/* STATUS */
-
-.status{
-  padding:14px;
+  padding:12px;
+  border:1px solid #cfd5df;
   border-radius:11px;
-  margin-top:15px;
-  background:#eef3ff;
-}
-
-.success{
-  background:#ddf8e5;
-  color:#08752b;
-}
-
-.error{
-  background:#ffe4e4;
-  color:#a40000;
-}
-
-.hidden{
-  display:none!important;
-}
-
-/* ANSWER */
-
-.answer-area{
-  margin-top:20px;
-}
-
-.answer-buttons{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-top:12px;
-}
-
-.answer-result{
-  margin-top:15px;
-  padding:18px;
-  border-radius:14px;
-  background:#f6f8fc;
-  border:1px solid var(--border);
-  line-height:1.7;
-}
-
-/* DIAGRAM */
-
-.diagram-box{
-  margin-top:20px;
-  border:1px dashed #9bb1cf;
-  border-radius:15px;
-  min-height:180px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background:#fafcff;
-  padding:20px;
-}
-
-.diagram-flow{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:8px;
-}
-
-.diagram-node{
-  padding:13px 18px;
-  border-radius:12px;
-  background:#e9f1ff;
-  border:1px solid #b7cae7;
-  font-weight:bold;
-}
-
-.arrow{
-  font-size:24px;
-}
-
-/* MOCK */
-
-.mock-layout{
-  display:grid;
-  grid-template-columns:2fr 1fr;
-  gap:20px;
-}
-
-.mock-card{
   background:white;
-  border:1px solid var(--border);
-  border-radius:18px;
-  padding:22px;
+  color:var(--text);
+  outline:none;
 }
 
-.option{
-  display:block;
-  width:100%;
-  text-align:left;
-  background:#f5f7fa;
-  margin:10px 0;
-  border:1px solid #d8dee8;
-  border-radius:10px;
-  padding:13px;
-  font-size:16px;
-}
-
-.option:hover{
-  background:#e9eef7;
-}
-
-.option.correct{
-  background:#d9f7df;
-  border-color:#198754;
-}
-
-.option.wrong{
-  background:#ffdede;
-  border-color:#dc3545;
-}
-
-.progress-bar{
-  height:9px;
-  background:#e9edf4;
-  border-radius:20px;
-  overflow:hidden;
-  margin:12px 0 20px;
-}
-
-.progress-fill{
-  height:100%;
-  width:0;
-  background:#6f42c1;
-  transition:.3s;
-}
-
-.timer{
-  font-size:25px;
-  font-weight:bold;
-  color:#dc3545;
-}
-
-.score{
-  text-align:center;
-  font-size:27px;
-  font-weight:bold;
-}
-
-/* LIVE */
-
-.live-card{
-  background:linear-gradient(135deg,#3b0d0d,#8c1d1d);
-  color:white;
-  border-radius:20px;
-  padding:28px;
-}
-
-.live-flex{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  align-items:center;
-}
-
-.live-badge{
-  display:inline-block;
-  background:#ff3b30;
-  padding:6px 12px;
-  border-radius:20px;
-  font-weight:bold;
+select:focus,
+input:focus,
+textarea:focus{
+  border-color:var(--blue2);
+  box-shadow:0 0 0 3px rgba(37,99,235,.1);
 }
 
 /* PREMIUM */
 
+.premium-wrap{
+  background:linear-gradient(135deg,#fffaf0,#fff7ed);
+  border:1px solid #fed7aa;
+  border-radius:24px;
+  padding:25px;
+}
+
+.premium-head{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.premium-head h2{
+  color:#92400e;
+  font-size:30px;
+}
+
+.premium-head p{
+  color:var(--muted);
+}
+
 .premium-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:18px;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:20px;
 }
 
-.price-card{
+.premium-card{
   background:white;
-  border:2px solid var(--border);
-  border-radius:18px;
+  border-radius:22px;
   padding:25px;
-  position:relative;
+  border:2px solid #fbbf24;
+  box-shadow:0 10px 35px rgba(245,158,11,.15);
 }
 
-.price-card.best{
-  border-color:var(--gold);
-  transform:translateY(-5px);
+.premium-card.study{
+  border-color:#a78bfa;
 }
 
-.best-badge{
-  position:absolute;
-  top:-13px;
-  right:18px;
-  background:var(--gold);
-  padding:6px 11px;
-  border-radius:20px;
-  font-size:12px;
-  font-weight:bold;
+.premium-card h3{
+  font-size:23px;
 }
 
 .price{
-  font-size:36px;
+  font-size:28px;
   font-weight:bold;
-  color:var(--primary);
+  margin:15px 0;
+}
+
+.price small{
+  font-size:13px;
+  color:var(--muted);
 }
 
 .features{
-  padding-left:20px;
-  line-height:2;
-  color:#536075;
+  list-style:none;
+  margin:15px 0;
 }
 
-/* FEATURES */
-
-.feature-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
+.features li{
+  padding:7px 0;
+  border-bottom:1px solid #f1f5f9;
 }
 
-.feature{
+.plan-box{
+  background:#f8fafc;
+  padding:12px;
+  border-radius:12px;
+  margin:12px 0;
+}
+
+.plan{
+  display:flex;
+  justify-content:space-between;
+  padding:8px 0;
+}
+
+.whatsapp{
+  background:#16a34a;
+  color:white;
+  width:100%;
+}
+
+/* AI / STUDY BOX */
+
+.learning-box{
   background:white;
-  padding:18px;
-  border-radius:15px;
+  border-radius:20px;
+  padding:22px;
+  box-shadow:var(--shadow);
   border:1px solid var(--border);
+  margin-bottom:20px;
+}
+
+.learning-box h3{
+  color:var(--blue);
+  margin-bottom:12px;
+}
+
+.learning-output{
+  background:#f8fafc;
+  border-radius:14px;
+  padding:18px;
+  min-height:100px;
+  white-space:pre-wrap;
+  margin-top:15px;
+}
+
+/* MOCK */
+
+.mock-box{
+  background:white;
+  border-radius:20px;
+  padding:22px;
+  box-shadow:var(--shadow);
+}
+
+.option{
+  width:100%;
+  text-align:left;
+  padding:14px;
+  margin:8px 0;
+  border-radius:11px;
+  border:1px solid #dbe1ea;
+  background:#f8fafc;
+}
+
+.option:hover{
+  background:#eef2ff;
+}
+
+.option.correct{
+  background:#dcfce7;
+  border-color:#16a34a;
+}
+
+.option.wrong{
+  background:#fee2e2;
+  border-color:#dc2626;
+}
+
+.explanation{
+  background:#eff6ff;
+  border-left:5px solid var(--blue2);
+  padding:15px;
+  border-radius:10px;
+  margin-top:15px;
+}
+
+/* RESULT */
+
+.result{
+  text-align:center;
+  padding:30px;
+}
+
+.score{
+  font-size:42px;
+  font-weight:bold;
+  color:var(--blue);
+}
+
+/* PROMOTION */
+
+.promo{
+  background:linear-gradient(135deg,#ede9fe,#dbeafe);
+  border:1px solid #c4b5fd;
+  border-radius:22px;
+  padding:25px;
+  margin:25px 0;
+}
+
+.promo h2{
+  color:#4c1d95;
 }
 
 /* FOOTER */
 
 footer{
-  margin-top:50px;
-  background:#0d1d36;
-  color:#dce5f5;
-  padding:35px 5%;
-}
-
-.footer-inner{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr;
-  gap:30px;
-}
-
-footer h3{
+  background:#101828;
   color:white;
+  text-align:center;
+  padding:35px 20px;
+  margin-top:40px;
 }
 
 footer p{
-  color:#aebbd0;
-  line-height:1.7;
+  margin:5px;
+  opacity:.85;
 }
 
-.small{
-  color:var(--muted);
-  font-size:13px;
+.creator{
+  font-weight:bold;
+  color:#fbbf24;
 }
 
 /* MOBILE */
 
-@media(max-width:900px){
-
-  .hero-inner,
-  .mock-layout{
-    grid-template-columns:1fr;
-  }
-
-  .grid,
-  .feature-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .ai-controls{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .premium-grid{
-    grid-template-columns:1fr;
-  }
-
-  .footer-inner{
-    grid-template-columns:1fr;
-  }
-}
-
-@media(max-width:600px){
+@media(max-width:750px){
 
   header{
     position:relative;
@@ -729,32 +615,33 @@ footer p{
     align-items:stretch;
   }
 
-  nav{
+  .menu{
     justify-content:center;
   }
 
+  .menu button{
+    flex:1;
+    min-width:100px;
+  }
+
   .hero{
-    padding:35px 5%;
+    padding:25px 18px;
   }
 
   .hero h2{
-    font-size:30px;
+    font-size:27px;
   }
 
-  .grid,
-  .feature-grid,
-  .jobs-grid,
-  .ai-controls{
+  main{
+    padding:18px 4%;
+  }
+
+  .premium-grid{
     grid-template-columns:1fr;
   }
 
-  .live-flex{
-    flex-direction:column;
-    align-items:flex-start;
-  }
-
-  .search-box{
-    flex-direction:column;
+  .job-list{
+    grid-template-columns:1fr;
   }
 }
 </style>
@@ -762,1197 +649,1069 @@ footer p{
 
 <body>
 
-<!-- =====================================================
-HEADER
-===================================================== -->
-
 <header>
+  <div class="header-inner">
 
-<div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">📚</div>
+      <div>
+        <h1>ExamSathi Odisha</h1>
+        <p>ପଢ଼ନ୍ତୁ • Practice କରନ୍ତୁ • Test ଦିଅନ୍ତୁ</p>
+      </div>
+    </div>
 
-<div class="brand">
+    <nav class="menu">
+      <button onclick="showPage('home')">🏠 Home</button>
+      <button onclick="showPage('notifications')">🔔 Jobs</button>
+      <button onclick="showPage('jobSection')">💼 Exam</button>
+      <button onclick="showPage('studySection')">🎓 Study</button>
+      <button onclick="showPage('premium')">👑 Premium</button>
+    </nav>
 
-<div class="logo">📚</div>
-
-<div>
-<h1>ExamSathi Odisha</h1>
-<p>AI Study • Odisha Government Jobs</p>
-</div>
-
-</div>
-
-<nav>
-
-<button class="nav-btn"
-onclick="scrollToSection('jobs')">
-🏛️ Jobs
-</button>
-
-<button class="nav-btn"
-onclick="scrollToSection('study')">
-📚 Study
-</button>
-
-<button class="nav-btn"
-onclick="scrollToSection('ai')">
-🤖 AI Teacher
-</button>
-
-<button class="nav-btn"
-onclick="scrollToSection('premium')">
-💎 Premium
-</button>
-
-</nav>
-
-</div>
-
+  </div>
 </header>
 
 
-<!-- =====================================================
-HERO
-===================================================== -->
+<main>
 
-<section class="hero">
+<!-- ================================================= -->
+<!-- HOME -->
+<!-- ================================================= -->
 
-<div class="hero-inner">
+<section id="home" class="page active">
 
-<div>
+  <div class="hero">
 
-<h2>
-<strong>ପଢ଼ନ୍ତୁ Smart.</strong>
-<br>
-<span>AI ସହିତ ଶିଖନ୍ତୁ.</span>
-</h2>
+    <h2>📚 ExamSathi Odisha</h2>
 
-<p>
-ExamSathi Odisha ରେ Odisha Government Jobs ସହିତ
-+2 ଏବଂ +3 ପାଇଁ AI-based ପଢ଼ା, Question Answer,
-Mock Test ଏବଂ Daily Live Mock Test।
-</p>
+    <p>
+      Odisha Government Exam ଓ +2 / +3 College Study ପାଇଁ
+      ସରଳ ଏବଂ smart learning platform।
+      ଯେଉଁ section ବାଛିବେ, ସେହି section ଭିତରେ ହିଁ
+      ପଢ଼ିପାରିବେ, practice କରିପାରିବେ ଏବଂ test ଦେଇପାରିବେ।
+    </p>
 
-<div class="hero-actions">
+    <div class="hero-actions">
 
-<button class="gold-btn"
-onclick="scrollToSection('study')">
-📚 Study Start କରନ୍ତୁ
-</button>
+      <button class="btn btn-blue"
+              onclick="showPage('jobSection')">
+        💼 Jobs
+      </button>
 
-<button class="primary-btn"
-onclick="scrollToSection('jobs')">
-🏛️ Latest Jobs
-</button>
+      <button class="btn btn-green"
+              onclick="showPage('studySection')">
+        🎓 Study
+      </button>
 
-<button class="green-btn"
-onclick="scrollToSection('ai')">
-🤖 AI Teacher
-</button>
+      <button class="btn btn-gold"
+              onclick="showPage('premium')">
+        👑 Premium
+      </button>
 
-</div>
+    </div>
 
-</div>
+  </div>
 
 
-<div class="hero-card">
+  <!-- JOB NOTIFICATION TOP -->
 
-<h3>🚀 ExamSathi AI</h3>
+  <div class="notification">
 
-<div class="hero-stat">
-<span>🏛️ Government Jobs</span>
-<strong>Auto</strong>
-</div>
+    <div class="notification-title">
 
-<div class="hero-stat">
-<span>📚 +2 / +3 Study</span>
-<strong>AI</strong>
-</div>
+      <h3>🔔 Latest Job Notifications</h3>
 
-<div class="hero-stat">
-<span>🧪 Mock Tests</span>
-<strong>Unlimited*</strong>
-</div>
+      <button class="btn btn-orange"
+              onclick="showPage('notifications')">
+        View All
+      </button>
 
-<div class="hero-stat">
-<span>🔴 Daily Live Mock</span>
-<strong>1 Hour</strong>
-</div>
+    </div>
 
-<p class="small" style="color:white;margin-bottom:0">
-*Premium plan ଅନୁସାରେ।
-</p>
+    <div id="homeJobs"
+         class="job-list">
 
-</div>
+      <div class="job-item">
+        <strong>📢 Latest Government Job</strong>
+        <span class="job-meta">
+          New notifications will appear here.
+        </span>
+      </div>
 
-</div>
+      <div class="job-item">
+        <strong>🏛️ Odisha Exams</strong>
+        <span class="job-meta">
+          OPSC • OSSC • OSSSC • Police etc.
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- MAIN SECTIONS -->
+
+  <div class="section-title">
+    <h2>💼 Government Exam Preparation</h2>
+    <p>ଯେଉଁ exam ବାଛିବେ, ତାହାର separate section ଖୋଲିବ।</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card blue-card">
+      <div class="icon">👮</div>
+      <h3>Odisha Police</h3>
+      <p>Police exam preparation ଓ practice.</p>
+      <button class="btn btn-blue"
+              onclick="openExam('Odisha Police')">
+        Open Police
+      </button>
+    </div>
+
+    <div class="card orange-card">
+      <div class="icon">📋</div>
+      <h3>OSSC</h3>
+      <p>OSSC related exam preparation.</p>
+      <button class="btn btn-orange"
+              onclick="openExam('OSSC')">
+        Open OSSC
+      </button>
+    </div>
+
+    <div class="card green-card">
+      <div class="icon">🏛️</div>
+      <h3>OSSSC</h3>
+      <p>OSSSC exam-wise preparation.</p>
+      <button class="btn btn-green"
+              onclick="openExam('OSSSC')">
+        Open OSSSC
+      </button>
+    </div>
+
+    <div class="card purple-card">
+      <div class="icon">🏛️</div>
+      <h3>OPSC</h3>
+      <p>OPSC exam preparation.</p>
+      <button class="btn btn-purple"
+              onclick="openExam('OPSC')">
+        Open OPSC
+      </button>
+    </div>
+
+    <div class="card blue-card">
+      <div class="icon">🌳</div>
+      <h3>Forest</h3>
+      <p>Forest related competitive exams.</p>
+      <button class="btn btn-blue"
+              onclick="openExam('Odisha Forest')">
+        Open Forest
+      </button>
+    </div>
+
+    <div class="card green-card">
+      <div class="icon">🏥</div>
+      <h3>Health</h3>
+      <p>Health department exam preparation.</p>
+      <button class="btn btn-green"
+              onclick="openExam('Odisha Health')">
+        Open Health
+      </button>
+    </div>
+
+    <div class="card orange-card">
+      <div class="icon">🔥</div>
+      <h3>Fire Services</h3>
+      <p>Fire service exam preparation.</p>
+      <button class="btn btn-orange"
+              onclick="openExam('Odisha Fire Services')">
+        Open Fire
+      </button>
+    </div>
+
+    <div class="card purple-card">
+      <div class="icon">🏢</div>
+      <h3>Revenue</h3>
+      <p>Revenue department exams.</p>
+      <button class="btn btn-purple"
+              onclick="openExam('Odisha Revenue')">
+        Open Revenue
+      </button>
+    </div>
+
+  </div>
+
+
+  <!-- STUDY -->
+
+  <div class="section-title">
+    <h2>🎓 College Study</h2>
+    <p>କେବଳ +2 ଓ +3 ପାଇଁ separate study system.</p>
+  </div>
+
+  <div class="grid">
+
+    <div class="card green-card">
+
+      <div class="icon">📘</div>
+
+      <h3>+2 Study</h3>
+
+      <p>
+        Science, Arts, Commerce ଓ subject-wise study.
+      </p>
+
+      <button class="btn btn-green"
+              onclick="openStudy('plus2')">
+        Open +2
+      </button>
+
+    </div>
+
+    <div class="card purple-card">
+
+      <div class="icon">🎓</div>
+
+      <h3>+3 Study</h3>
+
+      <p>
+        Degree level subject ଓ chapter-wise study.
+      </p>
+
+      <button class="btn btn-purple"
+              onclick="openStudy('plus3')">
+        Open +3
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- JOBMITRA -->
+
+  <div class="promo">
+
+    <h2>🤖 JobMitra AI</h2>
+
+    <p>
+      Job Apply, Scholarship ଓ Student Services ପାଇଁ
+      ଆମର ଅନ୍ୟ platform।
+    </p>
+
+    <button class="btn btn-purple"
+            onclick="openJobMitra()">
+      🚀 Visit JobMitra AI
+    </button>
+
+  </div>
 
 </section>
 
 
-<div class="container">
+<!-- ================================================= -->
+<!-- JOB NOTIFICATION -->
+<!-- ================================================= -->
 
+<section id="notifications" class="page">
 
-<!-- =====================================================
-JOBS
-===================================================== -->
+  <div class="hero">
 
-<section id="jobs" class="section">
+    <h2>🔔 Job Notifications</h2>
 
-<div class="section-title">
+    <p>
+      Odisha Government Job ର latest information।
+      ଏଠାରେ Job Apply ନୁହେଁ—କେବଳ notification ଓ exam information।
+    </p>
 
-<div>
-<h2>🏛️ Odisha Government Jobs</h2>
-<p>ସମସ୍ତ Jobs category-wise ଅଲଗା ଭାବରେ</p>
-</div>
+  </div>
 
-<button class="dark-btn"
-onclick="loadJobs()">
-🔄 Refresh Jobs
-</button>
+  <div id="allJobs"
+       class="job-list">
 
-</div>
+    <div class="job-item">
+      <strong>📢 Latest Job Notification</strong>
+      <div class="job-meta">
+        Job notification database ରୁ automatic update ହେବ।
+      </div>
+    </div>
 
-
-<div class="grid">
-
-<div class="category-card card"
-onclick="filterJobs('OPSC')">
-<div class="category-icon">🏛️</div>
-<h3>OPSC</h3>
-<p>Odisha Public Service Commission</p>
-</div>
-
-<div class="category-card card"
-onclick="filterJobs('OSSC')">
-<div class="category-icon">📋</div>
-<h3>OSSC</h3>
-<p>Odisha Staff Selection Commission</p>
-</div>
-
-<div class="category-card card"
-onclick="filterJobs('OSSSC')">
-<div class="category-icon">📝</div>
-<h3>OSSSC</h3>
-<p>Odisha Sub-ordinate Staff Selection</p>
-</div>
-
-<div class="category-card card"
-onclick="filterJobs('Police')">
-<div class="category-icon">👮</div>
-<h3>Odisha Police</h3>
-<p>Police recruitment opportunities</p>
-</div>
-
-<div class="category-card card"
-onclick="filterJobs('Health')">
-<div class="category-icon">🏥</div>
-<h3>Health</h3>
-<p>Health department jobs</p>
-</div>
-
-<div class="category-card card"
-onclick="filterJobs('Forest')">
-<div class="category-icon">🌳</div>
-<h3>Forest</h3>
-<p>Forest department jobs</p>
-</div>
-
-<div class="category-card card"
-onclick="filterJobs('Revenue')">
-<div class="category-icon">🏢</div>
-<h3>Revenue</h3>
-<p>Revenue department jobs</p>
-</div>
-
-<div class="category-card card"
-onclick="filterJobs('Technical')">
-<div class="category-icon">⚙️</div>
-<h3>Engineering / Technical</h3>
-<p>Technical opportunities</p>
-</div>
-
-<div class="category-card card"
-onclick="filterJobs('ITI')">
-<div class="category-icon">🔧</div>
-<h3>ITI / Diploma</h3>
-<p>ITI and diploma level jobs</p>
-</div>
-
-<div class="category-card card"
-onclick="filterJobs('+2')">
-<div class="category-icon">🎓</div>
-<h3>+2 Level Jobs</h3>
-<p>Higher secondary level</p>
-</div>
-
-<div class="category-card card"
-onclick="filterJobs('Graduate')">
-<div class="category-icon">🎓</div>
-<h3>Graduate Jobs</h3>
-<p>Graduate level opportunities</p>
-</div>
-
-<div class="category-card card"
-onclick="filterJobs('Other')">
-<div class="category-icon">📢</div>
-<h3>Other Govt Jobs</h3>
-<p>Other Odisha opportunities</p>
-</div>
-
-</div>
-
-
-<div class="card" style="margin-top:20px">
-
-<div class="search-box">
-
-<input
-id="jobSearch"
-placeholder="🔎 Job title / organization search କରନ୍ତୁ..."
-oninput="searchJobs()">
-
-<button class="dark-btn"
-onclick="showAllJobs()">
-All Jobs
-</button>
-
-</div>
-
-<div id="jobsStatus"
-class="status">
-⏳ Jobs loading...
-</div>
-
-<div id="jobsList"
-class="jobs-grid"
-style="margin-top:15px">
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- =====================================================
-STUDY
-===================================================== -->
+<!-- ================================================= -->
+<!-- JOB SECTION -->
+<!-- ================================================= -->
 
-<section id="study" class="section">
+<section id="jobSection" class="page">
 
-<div class="section-title">
+  <div class="hero">
 
-<div>
-<h2>📚 AI Study</h2>
-<p>କେବଳ +2 ଏବଂ +3 — manually note/PDF post ନୁହେଁ</p>
-</div>
+    <h2>💼 Government Exam Preparation</h2>
 
-</div>
+    <p>
+      ଗୋଟିଏ exam select କରନ୍ତୁ।
+      ତାପରେ ସେହି examର separate preparation section ଖୋଲିବ।
+    </p>
 
+  </div>
 
-<div class="grid">
+  <div class="grid">
 
-<div class="study-card card"
-onclick="openStudy('plus2','Arts')">
+    <div class="card blue-card">
+      <div class="icon">👮</div>
+      <h3>Odisha Police</h3>
+      <p>Police preparation.</p>
+      <button class="btn btn-blue"
+              onclick="openExam('Odisha Police')">
+        Enter
+      </button>
+    </div>
 
-<span class="badge">AI BASED</span>
+    <div class="card orange-card">
+      <div class="icon">📋</div>
+      <h3>OSSC</h3>
+      <p>OSSC preparation.</p>
+      <button class="btn btn-orange"
+              onclick="openExam('OSSC')">
+        Enter
+      </button>
+    </div>
 
-<div class="category-icon">🎓</div>
+    <div class="card green-card">
+      <div class="icon">🏛️</div>
+      <h3>OSSSC</h3>
+      <p>OSSSC preparation.</p>
+      <button class="btn btn-green"
+              onclick="openExam('OSSSC')">
+        Enter
+      </button>
+    </div>
 
-<h3>+2 Arts</h3>
+    <div class="card purple-card">
+      <div class="icon">🏛️</div>
+      <h3>OPSC</h3>
+      <p>OPSC preparation.</p>
+      <button class="btn btn-purple"
+              onclick="openExam('OPSC')">
+        Enter
+      </button>
+    </div>
 
-<p class="small">
-ବହି ଓ syllabus ଅନୁସାରେ AI ଦ୍ୱାରା ପଢ଼ା।
-</p>
+    <div class="card orange-card">
+      <div class="icon">⛑️</div>
+      <h3>Jail</h3>
+      <p>Odisha Jail related exams.</p>
+      <button class="btn btn-orange"
+              onclick="openExam('Odisha Jail')">
+        Enter
+      </button>
+    </div>
 
-<ul class="study-list">
-<li>Chapter-wise AI Teaching</li>
-<li>Short + Long Answer</li>
-<li>Question & Answer</li>
-<li>AI Practice</li>
-</ul>
+    <div class="card green-card">
+      <div class="icon">🌾</div>
+      <h3>Agriculture</h3>
+      <p>Agriculture related exams.</p>
+      <button class="btn btn-green"
+              onclick="openExam('Odisha Agriculture')">
+        Enter
+      </button>
+    </div>
 
-<button class="dark-btn">
-Start +2 Arts →
-</button>
+    <div class="card blue-card">
+      <div class="icon">⚙️</div>
+      <h3>Engineering / Technical</h3>
+      <p>Technical level exams.</p>
+      <button class="btn btn-blue"
+              onclick="openExam('Engineering Technical')">
+        Enter
+      </button>
+    </div>
 
-</div>
+    <div class="card purple-card">
+      <div class="icon">🔧</div>
+      <h3>ITI / Diploma</h3>
+      <p>ITI and Diploma exams.</p>
+      <button class="btn btn-purple"
+              onclick="openExam('ITI Diploma')">
+        Enter
+      </button>
+    </div>
 
+    <div class="card gold-card">
+      <div class="icon">📚</div>
+      <h3>+2 Level Jobs</h3>
+      <p>+2 qualification based exams.</p>
+      <button class="btn btn-gold"
+              onclick="openExam('+2 Level')">
+        Enter
+      </button>
+    </div>
 
-<div class="study-card card"
-onclick="openStudy('plus2','Science')">
+    <div class="card green-card">
+      <div class="icon">🎓</div>
+      <h3>Graduate Level</h3>
+      <p>Graduate qualification based exams.</p>
+      <button class="btn btn-green"
+              onclick="openExam('Graduate Level')">
+        Enter
+      </button>
+    </div>
 
-<span class="badge">AI BASED</span>
-
-<div class="category-icon">🔬</div>
-
-<h3>+2 Science</h3>
-
-<p class="small">
-Science subjects AI ଦ୍ୱାରା ସହଜ ଭାବରେ।
-</p>
-
-<ul class="study-list">
-<li>Topic Explanation</li>
-<li>Diagram</li>
-<li>Question Answer</li>
-<li>Mock Test</li>
-</ul>
-
-<button class="dark-btn">
-Start +2 Science →
-</button>
-
-</div>
-
-
-<div class="study-card card"
-onclick="openStudy('plus2','Commerce')">
-
-<span class="badge">AI BASED</span>
-
-<div class="category-icon">💼</div>
-
-<h3>+2 Commerce</h3>
-
-<p class="small">
-Commerce subjects AI ସହିତ ଶିଖନ୍ତୁ।
-</p>
-
-<ul class="study-list">
-<li>Chapter Learning</li>
-<li>Examples</li>
-<li>Question Answer</li>
-<li>Practice</li>
-</ul>
-
-<button class="dark-btn">
-Start +2 Commerce →
-</button>
-
-</div>
-
-
-<div class="study-card card"
-onclick="openStudy('plus3','BA')">
-
-<span class="badge">AI BASED</span>
-
-<div class="category-icon">🎓</div>
-
-<h3>+3 BA</h3>
-
-<p class="small">
-BA students ପାଇଁ AI-based study system।
-</p>
-
-<ul class="study-list">
-<li>Subject-wise AI Teaching</li>
-<li>Short + Long Answer</li>
-<li>Important Questions</li>
-<li>Mock Test</li>
-</ul>
-
-<button class="dark-btn">
-Start +3 BA →
-</button>
-
-</div>
-
-
-<div class="study-card card"
-onclick="openStudy('plus3','B.Sc')">
-
-<span class="badge">AI BASED</span>
-
-<div class="category-icon">🧪</div>
-
-<h3>+3 B.Sc</h3>
-
-<p class="small">
-Science degree study AI ସହିତ।
-</p>
-
-<ul class="study-list">
-<li>Unit-wise Learning</li>
-<li>Diagram</li>
-<li>Question Answer</li>
-<li>AI Practice</li>
-</ul>
-
-<button class="dark-btn">
-Start +3 B.Sc →
-</button>
-
-</div>
-
-
-<div class="study-card card"
-onclick="openStudy('plus3','B.Com')">
-
-<span class="badge">AI BASED</span>
-
-<div class="category-icon">📊</div>
-
-<h3>+3 B.Com</h3>
-
-<p class="small">
-Commerce degree study AI ସହିତ।
-</p>
-
-<ul class="study-list">
-<li>Unit-wise Study</li>
-<li>Examples</li>
-<li>Question Answer</li>
-<li>Mock Test</li>
-</ul>
-
-<button class="dark-btn">
-Start +3 B.Com →
-</button>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- =====================================================
-AI TEACHER
-===================================================== -->
+<!-- ================================================= -->
+<!-- SEPARATE EXAM DASHBOARD -->
+<!-- ================================================= -->
+
+<section id="examDashboard" class="page">
+
+  <div class="exam-header">
+
+    <button class="back"
+            onclick="showPage('jobSection')">
+      ← Back
+    </button>
+
+    <h2 id="examTitle">Exam</h2>
+
+    <p id="examDescription">
+      Separate exam preparation dashboard.
+    </p>
+
+  </div>
+
+
+  <div class="grid">
+
+    <div class="card blue-card">
+      <div class="icon">📚</div>
+      <h3>ପଢ଼ା</h3>
+      <p>Exam syllabus ଅନୁସାରେ topic-wise learning.</p>
+      <button class="btn btn-blue"
+              onclick="examStudy()">
+        ପଢ଼ିବା
+      </button>
+    </div>
+
+    <div class="card green-card">
+      <div class="icon">📖</div>
+      <h3>ସିଲାବସ୍</h3>
+      <p>Exam syllabus ଦେଖନ୍ତୁ।</p>
+      <button class="btn btn-green"
+              onclick="showSyllabus()">
+        Syllabus
+      </button>
+    </div>
+
+    <div class="card orange-card">
+      <div class="icon">📕</div>
+      <h3>ପୁରୁଣା ପ୍ରଶ୍ନ</h3>
+      <p>Previous question practice.</p>
+      <button class="btn btn-orange"
+              onclick="startMock('PYQ')">
+        PYQ Practice
+      </button>
+    </div>
+
+    <div class="card purple-card">
+      <div class="icon">🧪</div>
+      <h3>Mock Test</h3>
+      <p>Exam-specific mock test.</p>
+      <button class="btn btn-purple"
+              onclick="startMock('Practice')">
+        Start Mock
+      </button>
+    </div>
+
+    <div class="card gold-card">
+      <div class="icon">⏱️</div>
+      <h3>1 Hour Live Test</h3>
+      <p>Daily one-hour test system.</p>
+      <button class="btn btn-gold"
+              onclick="startLiveTest()">
+        Start Test
+      </button>
+    </div>
+
+    <div class="card blue-card">
+      <div class="icon">❓</div>
+      <h3>Doubt</h3>
+      <p>ଯାହା ବୁଝିହେଉନାହିଁ ପଚାରନ୍ତୁ।</p>
+      <button class="btn btn-blue"
+              onclick="openDoubt()">
+        Ask Doubt
+      </button>
+    </div>
+
+    <div class="card green-card">
+      <div class="icon">📊</div>
+      <h3>Result</h3>
+      <p>ନିଜ performance ଦେଖନ୍ତୁ।</p>
+      <button class="btn btn-green"
+              onclick="showResultPage()">
+        My Result
+      </button>
+    </div>
+
+  </div>
+
+
+  <div id="examStudyBox"
+       class="learning-box hidden">
+
+    <h3>📚 <span id="studyExamName"></span> Study</h3>
 
-<section id="ai" class="section">
+    <div class="study-select">
 
-<div class="card ai-box">
+      <div>
+        <label>Subject</label>
 
-<div class="ai-header">
+        <select id="examSubject">
+          <option>General Knowledge</option>
+          <option>Odisha GK</option>
+          <option>Current Affairs</option>
+          <option>Mathematics</option>
+          <option>Reasoning</option>
+          <option>English</option>
+          <option>Odia</option>
+          <option>General Science</option>
+          <option>Computer Knowledge</option>
+        </select>
+      </div>
 
-<div class="ai-icon">🤖</div>
+      <div>
+        <label>Topic</label>
 
-<div>
-<h2 style="margin:0">
-AI Teacher
-</h2>
+        <input id="examTopic"
+               placeholder="ଉଦାହରଣ: Odisha History">
+      </div>
 
-<p class="small">
-ସରଳ ଓଡ଼ିଆରେ ପଢ଼ନ୍ତୁ, ବୁଝନ୍ତୁ ଏବଂ Practice କରନ୍ତୁ।
-</p>
-</div>
+    </div>
 
-</div>
+    <button class="btn btn-blue"
+            onclick="generateStudy()">
+      📚 ପଢ଼ା ଆରମ୍ଭ କରନ୍ତୁ
+    </button>
 
+    <div id="studyOutput"
+         class="learning-output">
+      Subject ଓ topic select କରି ପଢ଼ା ଆରମ୍ଭ କରନ୍ତୁ।
+    </div>
 
-<div class="ai-controls">
+  </div>
 
-<div>
 
-<label>Class</label>
+  <div id="syllabusBox"
+       class="learning-box hidden">
 
-<select id="studyClass">
+    <h3>📖 <span id="syllabusName"></span> Syllabus</h3>
 
-<option value="+2">+2</option>
-<option value="+3">+3</option>
+    <div class="learning-output">
+      Exam syllabus AI/database ରୁ section-wise ଦେଖାଯିବ।
+      Official syllabus ଥିଲେ ସେହି sourceକୁ priority ଦିଆଯିବ।
+    </div>
 
-</select>
-
-</div>
-
-
-<div>
-
-<label>Stream / Course</label>
-
-<select id="studyStream">
-
-<option>Arts</option>
-<option>Science</option>
-<option>Commerce</option>
-
-</select>
-
-</div>
-
-
-<div>
-
-<label>Subject</label>
-
-<input
-id="studySubject"
-placeholder="ଯେପରି History">
-
-</div>
-
-</div>
-
-
-<div style="margin-top:15px">
-
-<label>📖 Topic / Chapter</label>
-
-<input
-id="studyTopic"
-placeholder="ଯେପରି ଭାରତୀୟ ସମ୍ବିଧାନ">
-
-</div>
-
-
-<div class="answer-buttons">
-
-<button class="gold-btn"
-onclick="startAIStudy()">
-🤖 AI ଦ୍ୱାରା ପଢ଼ନ୍ତୁ
-</button>
-
-<button class="dark-btn"
-onclick="generateStudyQuestions()">
-📝 Question Generate
-</button>
-
-</div>
-
-
-<div id="aiStatus"
-class="status hidden">
-</div>
-
-
-<div id="aiLesson"
-class="hidden">
-
-<div class="card" style="margin-top:20px">
-
-<h2>📖 AI Lesson</h2>
-
-<div id="lessonContent"
-style="line-height:1.9">
-</div>
-
-</div>
-
-
-<div class="diagram-box">
-
-<div>
-
-<h3>🖼️ Diagram / Visual Explanation</h3>
-
-<div id="diagramContent"
-class="diagram-flow">
-
-<div class="diagram-node">
-Topic
-</div>
-
-<div class="arrow">→</div>
-
-<div class="diagram-node">
-AI Explanation
-</div>
-
-<div class="arrow">→</div>
-
-<div class="diagram-node">
-Revision
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-
-<div class="answer-area">
-
-<h3>✍️ ନିଜ ଭାଷାରେ ଉତ୍ତର ଲେଖନ୍ତୁ</h3>
-
-<textarea
-id="studentAnswer"
-placeholder="ଏଠାରେ ନିଜର ଉତ୍ତର ଲେଖନ୍ତୁ..."></textarea>
-
-<div class="answer-buttons">
-
-<button class="green-btn"
-onclick="checkWrittenAnswer()">
-🤖 AI ଦ୍ୱାରା Answer Check
-</button>
-
-<button class="dark-btn"
-onclick="showModelAnswer()">
-📖 Model Answer
-</button>
-
-</div>
-
-<div id="answerResult"
-class="answer-result hidden">
-</div>
-
-</div>
-
-</div>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- =====================================================
-DAILY LIVE MOCK
-===================================================== -->
+<!-- ================================================= -->
+<!-- STUDY SECTION -->
+<!-- ================================================= -->
 
-<section class="section">
+<section id="studySection" class="page">
 
-<div class="live-card">
+  <div class="hero">
 
-<div class="live-flex">
+    <h2>🎓 College Study</h2>
 
-<div>
+    <p>
+      କେବଳ +2 ଓ +3 students ପାଇଁ।
+      Student ନିଜ stream, subject, chapter ଓ topic select କରି
+      ସେହିଠାରେ ପଢ଼ିପାରିବ।
+    </p>
 
-<span class="live-badge">🔴 LIVE</span>
-
-<h2>
-Daily 1-Hour Live Mock Test
-</h2>
-
-<p>
-+2, +3 ଏବଂ Premium learners ପାଇଁ
-daily automatic mock environment।
-</p>
-
-</div>
+  </div>
 
 
-<div style="text-align:center">
+  <div class="grid">
 
-<div class="timer">
-60:00
-</div>
+    <div class="card green-card">
 
-<p style="margin-bottom:0">
-Daily Live Session
-</p>
+      <div class="icon">📘</div>
 
-</div>
+      <h3>+2</h3>
 
-</div>
+      <p>
+        Science • Arts • Commerce
+      </p>
 
-<div class="answer-buttons">
+      <button class="btn btn-green"
+              onclick="openStudy('plus2')">
+        +2 ଭିତରକୁ ଯାଆନ୍ତୁ
+      </button>
 
-<button class="gold-btn"
-onclick="startLiveMock()">
-🔴 Start Live Mock
-</button>
+    </div>
 
-<button class="primary-btn"
-onclick="scrollToSection('premium')">
-💎 Premium ଦେଖନ୍ତୁ
-</button>
 
-</div>
+    <div class="card purple-card">
 
-</div>
+      <div class="icon">🎓</div>
+
+      <h3>+3</h3>
+
+      <p>
+        Degree / Stream / Subject
+      </p>
+
+      <button class="btn btn-purple"
+              onclick="openStudy('plus3')">
+        +3 ଭିତରକୁ ଯାଆନ୍ତୁ
+      </button>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- =====================================================
-MOCK TEST
-===================================================== -->
+<!-- ================================================= -->
+<!-- STUDY DASHBOARD -->
+<!-- ================================================= -->
 
-<section id="mock" class="section">
+<section id="studyDashboard" class="page">
 
-<div class="section-title">
+  <div class="exam-header">
 
-<div>
+    <button class="back"
+            onclick="showPage('studySection')">
+      ← Back
+    </button>
 
-<h2>🧪 AI Mock Test</h2>
+    <h2 id="collegeTitle">College Study</h2>
 
-<p>
-AI ଦ୍ୱାରା automatic questions generate କରନ୍ତୁ।
-</p>
+    <p>
+      Subject → Chapter → Topic ଅନୁସାରେ ପଢ଼ନ୍ତୁ।
+    </p>
 
-</div>
+  </div>
 
-</div>
 
+  <div class="learning-box">
 
-<div class="card">
+    <h3>📚 ନିଜ Subject ବାଛନ୍ତୁ</h3>
 
-<div class="ai-controls">
+    <div class="study-select">
 
-<div>
+      <div>
 
-<label>Exam / Study</label>
+        <label>Stream</label>
 
-<select id="exam">
+        <select id="stream">
 
-<option value="OSSC">OSSC</option>
-<option value="OSSSC">OSSSC</option>
-<option value="OPSC">OPSC</option>
-<option value="Odisha Police">Odisha Police</option>
-<option value="+2 Arts">+2 Arts</option>
-<option value="+2 Science">+2 Science</option>
-<option value="+2 Commerce">+2 Commerce</option>
-<option value="+3 BA">+3 BA</option>
-<option value="+3 B.Sc">+3 B.Sc</option>
-<option value="+3 B.Com">+3 B.Com</option>
+          <option value="Science">
+            Science
+          </option>
 
-</select>
+          <option value="Arts">
+            Arts
+          </option>
 
-</div>
+          <option value="Commerce">
+            Commerce
+          </option>
 
+        </select>
 
-<div>
+      </div>
 
-<label>Subject</label>
 
-<select id="subject">
+      <div>
 
-<option>General Knowledge</option>
-<option>Odisha General Knowledge</option>
-<option>Current Affairs</option>
-<option>English</option>
-<option>Odia</option>
-<option>Mathematics</option>
-<option>Reasoning</option>
-<option>Science</option>
-<option>History</option>
-<option>Political Science</option>
-<option>Commerce</option>
+        <label>Subject</label>
 
-</select>
+        <select id="collegeSubject">
 
-</div>
+          <option>Physics</option>
+          <option>Chemistry</option>
+          <option>Mathematics</option>
+          <option>Biology</option>
+          <option>English</option>
+          <option>Odia</option>
+          <option>History</option>
+          <option>Political Science</option>
+          <option>Economics</option>
+          <option>Commerce</option>
+          <option>Computer Science</option>
 
+        </select>
 
-<div>
+      </div>
 
-<label>Difficulty</label>
 
-<select id="difficulty">
+      <div>
 
-<option value="easy">Easy</option>
-<option value="medium" selected>Medium</option>
-<option value="hard">Hard</option>
+        <label>Chapter / Topic</label>
 
-</select>
+        <input id="collegeTopic"
+               placeholder="ଉଦାହରଣ: Motion">
 
-</div>
+      </div>
 
-</div>
+    </div>
 
 
-<div style="margin-top:15px">
+    <button class="btn btn-green"
+            onclick="generateCollegeStudy()">
+      📚 ପଢ଼ା ଆରମ୍ଭ କରନ୍ତୁ
+    </button>
 
-<label>Topic</label>
 
-<input
-id="topic"
-value="Odisha"
-placeholder="Topic">
+    <div id="collegeOutput"
+         class="learning-output">
 
-</div>
+      Subject ଓ topic select କରନ୍ତୁ।
+    </div>
 
+  </div>
 
-<div style="margin-top:15px">
 
-<label>Number of Questions</label>
+  <div class="grid">
 
-<select id="count">
+    <div class="card blue-card">
 
-<option value="5">5 Questions</option>
-<option value="10" selected>10 Questions</option>
-<option value="20">20 Questions</option>
+      <div class="icon">📝</div>
 
-</select>
+      <h3>Short Question</h3>
 
-</div>
+      <p>
+        Short answer practice.
+      </p>
 
+      <button class="btn btn-blue"
+              onclick="collegePractice('short')">
+        Practice
+      </button>
 
-<button
-class="generate gold-btn"
-style="width:100%;margin-top:18px"
-onclick="generateQuestions()">
+    </div>
 
-🤖 Generate AI Mock Test
 
-</button>
+    <div class="card purple-card">
 
+      <div class="icon">📖</div>
 
-<div
-id="status"
-class="status hidden">
-</div>
+      <h3>Long Question</h3>
 
-</div>
+      <p>
+        Long answer ସହ example।
+      </p>
 
+      <button class="btn btn-purple"
+              onclick="collegePractice('long')">
+        Practice
+      </button>
 
-<div
-id="testCard"
-class="mock-layout hidden">
+    </div>
 
-<div class="mock-card">
 
-<div id="progress" class="small"></div>
+    <div class="card green-card">
 
-<div class="progress-bar">
-<div id="progressFill" class="progress-fill"></div>
-</div>
+      <div class="icon">🖼️</div>
 
-<h2 id="question">
-Question
-</h2>
+      <h3>Diagram / Chart</h3>
 
-<div id="options"></div>
+      <p>
+        ଦରକାର ଥିଲେ diagram/chart ସହ explanation।
+      </p>
 
-<div
-id="explanation"
-class="status hidden">
-</div>
+    </div>
 
-<button
-id="next"
-class="green-btn"
-style="width:100%;margin-top:15px"
-onclick="nextQuestion()">
 
-Next Question →
+    <div class="card orange-card">
 
-</button>
+      <div class="icon">🧪</div>
 
-</div>
+      <h3>Subject Mock</h3>
 
+      <p>
+        Subject-wise mock test।
+      </p>
 
-<div class="mock-card">
+      <button class="btn btn-orange"
+              onclick="startCollegeMock()">
+        Start Mock
+      </button>
 
-<h3>📊 Test Status</h3>
+    </div>
 
-<p>Answered</p>
 
-<h2 id="answeredCount">0</h2>
+    <div class="card blue-card">
 
-<p>Score</p>
+      <div class="icon">❓</div>
 
-<h2 id="liveScore">0</h2>
+      <h3>Doubt</h3>
 
-<hr>
+      <p>
+        କଠିନ topicକୁ ସରଳ ଭାବରେ ପଚାରନ୍ତୁ।
+      </p>
 
-<p class="small">
-ପ୍ରତ୍ୟେକ ପ୍ରଶ୍ନର answer select କଲେ
-ସଠିକ୍ answer ଓ explanation automatically ଦେଖାଯିବ।
-</p>
+      <button class="btn btn-blue"
+              onclick="openCollegeDoubt()">
+        Ask Doubt
+      </button>
 
-</div>
+    </div>
 
-</div>
-
-
-<div
-id="resultCard"
-class="card hidden"
-style="margin-top:20px">
-
-<div class="score" id="score"></div>
-
-<div id="resultAnalysis"
-style="text-align:center;line-height:1.8;margin-top:15px">
-</div>
-
-<button
-class="gold-btn"
-style="width:100%;margin-top:20px"
-onclick="resetTest()">
-
-🔄 Start New Test
-
-</button>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- =====================================================
-PREMIUM
-===================================================== -->
+<!-- ================================================= -->
+<!-- PREMIUM -->
+<!-- ================================================= -->
 
-<section id="premium" class="section">
+<section id="premium" class="page">
 
-<div class="section-title">
+  <div class="premium-wrap">
 
-<div>
+    <div class="premium-head">
 
-<h2>💎 ExamSathi Premium</h2>
+      <h2>👑 Premium Learning</h2>
 
-<p>
-Low price • AI Study • Unlimited Practice
-</p>
+      <p>
+        ପ୍ରଥମେ Freeରେ try କରନ୍ତୁ।
+        ଅଧିକ practice ଦରକାର ହେଲେ Premium ନିଅନ୍ତୁ।
+      </p>
 
-</div>
-
-</div>
-
-
-<div class="premium-grid">
+    </div>
 
 
-<div class="price-card">
-
-<h3>🟢 3 Months</h3>
-
-<div class="price">
-₹99
-</div>
-
-<p class="small">
-3 Months Access
-</p>
-
-<ul class="features">
-
-<li>♾️ Unlimited Questions</li>
-<li>♾️ Unlimited Mock Tests</li>
-<li>🤖 AI Teacher</li>
-<li>🧠 AI Doubt Solver</li>
-<li>📊 AI Analysis</li>
-<li>🔴 Daily Live Mock</li>
-
-</ul>
-
-<button
-class="green-btn"
-style="width:100%"
-onclick="choosePremium('3 Months',99)">
-
-Choose ₹99
-
-</button>
-
-</div>
+    <div class="premium-grid">
 
 
-<div class="price-card">
+      <!-- JOB PREMIUM -->
 
-<h3>🔵 6 Months</h3>
+      <div class="premium-card">
 
-<div class="price">
-₹149
-</div>
+        <h3>💼 Job Premium</h3>
 
-<p class="small">
-6 Months Access
-</p>
-
-<ul class="features">
-
-<li>♾️ Unlimited Questions</li>
-<li>♾️ Unlimited Mock Tests</li>
-<li>🤖 AI Teacher</li>
-<li>🧠 AI Doubt Solver</li>
-<li>📊 AI Analysis</li>
-<li>🔴 Daily Live Mock</li>
-
-</ul>
-
-<button
-class="dark-btn"
-style="width:100%"
-onclick="choosePremium('6 Months',149)">
-
-Choose ₹149
-
-</button>
-
-</div>
+        <p>
+          Government Job / Competitive Exam preparation ପାଇଁ।
+        </p>
 
 
-<div class="price-card best">
+        <div class="plan-box">
 
-<span class="best-badge">
-⭐ BEST VALUE
-</span>
+          <div class="plan">
+            <span>3 Months</span>
+            <strong>₹99</strong>
+          </div>
 
-<h3>🟣 12 Months</h3>
+          <div class="plan">
+            <span>6 Months</span>
+            <strong>₹149</strong>
+          </div>
 
-<div class="price">
-₹249
-</div>
+          <div class="plan">
+            <span>12 Months</span>
+            <strong>₹249</strong>
+          </div>
 
-<p class="small">
-Full Year Access
-</p>
-
-<ul class="features">
-
-<li>♾️ Unlimited Questions</li>
-<li>♾️ Unlimited Mock Tests</li>
-<li>🤖 AI Teacher</li>
-<li>🧠 AI Doubt Solver</li>
-<li>📊 AI Analysis</li>
-<li>🔴 Daily Live Mock</li>
-
-</ul>
-
-<button
-class="gold-btn"
-style="width:100%"
-onclick="choosePremium('12 Months',249)">
-
-Choose ₹249
-
-</button>
-
-</div>
-
-</div>
+        </div>
 
 
-<div
-id="premiumMessage"
-class="status hidden"
-style="margin-top:20px">
-</div>
+        <ul class="features">
+
+          <li>♾️ Unlimited Questions</li>
+          <li>♾️ Unlimited Mock Tests</li>
+          <li>⏱️ 1 Hour Live Test</li>
+          <li>📕 PYQ Practice</li>
+          <li>❓ Unlimited Doubt</li>
+          <li>📚 Complete Preparation</li>
+          <li>📊 Result & Progress</li>
+
+        </ul>
+
+
+        <button class="btn whatsapp"
+                onclick="premiumWhatsApp('Job Premium')">
+
+          📲 Get Job Premium
+
+        </button>
+
+      </div>
+
+
+      <!-- STUDY PREMIUM -->
+
+      <div class="premium-card study">
+
+        <h3>🎓 Study Premium</h3>
+
+        <p>
+          +2 / +3 College Study ପାଇଁ।
+        </p>
+
+
+        <div class="plan-box">
+
+          <div class="plan">
+            <span>3 Months</span>
+            <strong>₹49</strong>
+          </div>
+
+          <div class="plan">
+            <span>6 Months</span>
+            <strong>₹79</strong>
+          </div>
+
+          <div class="plan">
+            <span>12 Months</span>
+            <strong>₹129</strong>
+          </div>
+
+        </div>
+
+
+        <ul class="features">
+
+          <li>♾️ Unlimited Questions</li>
+          <li>📚 Subject & Chapter Study</li>
+          <li>📝 Short + Long Questions</li>
+          <li>💡 Simple Explanation + Example</li>
+          <li>🖼️ Diagram / Chart</li>
+          <li>❓ Unlimited Doubt</li>
+          <li>🧪 Mock Test</li>
+          <li>⏱️ 1 Hour Live Test</li>
+          <li>📊 Result & Progress</li>
+
+        </ul>
+
+
+        <button class="btn whatsapp"
+                onclick="premiumWhatsApp('Study Premium')">
+
+          📲 Get Study Premium
+
+        </button>
+
+      </div>
+
+    </div>
+
+
+    <div style="text-align:center;margin-top:25px">
+
+      <strong>📲 Premium Support</strong>
+
+      <p>
+        WhatsApp: <b>8249584734</b>
+      </p>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- =====================================================
-FEATURES
-===================================================== -->
+<!-- ================================================= -->
+<!-- MOCK TEST -->
+<!-- ================================================= -->
 
-<section class="section">
+<section id="mockPage" class="page">
 
-<div class="section-title">
+  <div class="mock-box">
 
-<div>
+    <button class="btn btn-light"
+            onclick="goBackFromMock()">
+      ← Back
+    </button>
 
-<h2>🚀 ExamSathi Features</h2>
+    <br><br>
 
-<p>
-Automatic AI-based learning system
-</p>
+    <div id="mockProgress"
+         style="color:#667085;margin-bottom:10px">
+    </div>
 
-</div>
+    <h2 id="mockQuestion">
+      Question
+    </h2>
 
-</div>
+    <div id="mockOptions"></div>
 
+    <div id="mockExplanation"
+         class="explanation hidden">
+    </div>
 
-<div class="feature-grid">
+    <button id="mockNext"
+            class="btn btn-green hidden"
+            onclick="nextMockQuestion()"
+            style="width:100%;margin-top:15px">
+      Next Question →
+    </button>
 
-<div class="feature">
-<h3>🤖 AI Teacher</h3>
-<p class="small">
-ସରଳ ଓଡ଼ିଆରେ topic explanation।
-</p>
-</div>
-
-<div class="feature">
-<h3>📝 Q&A</h3>
-<p class="small">
-Question ପରେ automatic answer।
-</p>
-</div>
-
-<div class="feature">
-<h3>🖼️ Diagram</h3>
-<p class="small">
-Visual/diagram based learning support।
-</p>
-</div>
-
-<div class="feature">
-<h3>♾️ Practice</h3>
-<p class="small">
-Premium learners ପାଇଁ unlimited practice।
-</p>
-</div>
-
-<div class="feature">
-<h3>🔴 Live Mock</h3>
-<p class="small">
-Daily 1-hour live exam experience।
-</p>
-</div>
-
-<div class="feature">
-<h3>📊 Result</h3>
-<p class="small">
-Automatic score and performance।
-</p>
-</div>
-
-<div class="feature">
-<h3>🎯 Weak Topic</h3>
-<p class="small">
-AI ଦ୍ୱାରା weak topic identify।
-</p>
-</div>
-
-<div class="feature">
-<h3>🏆 Progress</h3>
-<p class="small">
-Study progress track କରିବା।
-</p>
-</div>
-
-</div>
+  </div>
 
 </section>
 
-</div>
 
+<!-- ================================================= -->
+<!-- RESULT -->
+<!-- ================================================= -->
 
-<!-- =====================================================
-FOOTER
-===================================================== -->
+<section id="resultPage" class="page">
+
+  <div class="card result">
+
+    <h2>🎉 Test Completed</h2>
+
+    <br>
+
+    <div id="finalScore"
+         class="score">
+      0%
+    </div>
+
+    <br>
+
+    <p id="resultMessage"></p>
+
+    <br>
+
+    <button class="btn btn-blue"
+            onclick="goBackFromResult()">
+      ← Back
+    </button>
+
+  </div>
+
+</section>
+
+</main>
+
 
 <footer>
 
-<div class="footer-inner">
+  <p>© 2026 ExamSathi Odisha</p>
 
-<div>
+  <p class="creator">
+    Created by Babulu Naik
+  </p>
 
-<h3>📚 ExamSathi Odisha</h3>
-
-<p>
-Odisha Government Jobs ଏବଂ +2/+3
-AI-based learning platform।
-</p>
-
-<p>
-<strong>Created by Babulu Naik</strong>
-</p>
-
-</div>
-
-
-<div>
-
-<h3>Quick Links</h3>
-
-<p>🏛️ Government Jobs</p>
-<p>📚 +2 / +3 Study</p>
-<p>🤖 AI Teacher</p>
-<p>💎 Premium</p>
-
-</div>
-
-
-<div>
-
-<h3>AI Learning</h3>
-
-<p>Short Answer</p>
-<p>Long Answer</p>
-<p>Diagram</p>
-<p>Mock Test</p>
-<p>Daily Live Mock</p>
-
-</div>
-
-</div>
+  <p>
+    Study Smart • Practice More • Prepare Better
+  </p>
 
 </footer>
 
@@ -1960,1464 +1719,57 @@ AI-based learning platform।
 <script>
 
 /* =====================================================
-SUPABASE CONFIG
+   SUPABASE
 ===================================================== */
 
 const SUPABASE_URL =
-"https://ullqxaoctpedgtxlaesh.supabase.co";
+  "https://ullqxaoctpedgtxlaesh.supabase.co";
 
 const SUPABASE_KEY =
-"sb_publishable_NW1cUIuZ4pqFxJ_iuNBbcg_pS-PjUqr";
+  "sb_publishable_NW1cUIuZ4pqFxJ_iuNBbcg_pS-PjUqr";
 
 const SMART_ENDPOINT =
-SUPABASE_URL +
-"/functions/v1/smart-endpoint";
+  SUPABASE_URL +
+  "/functions/v1/smart-endpoint";
 
 
 /* =====================================================
-GLOBAL VARIABLES
+   GLOBAL STATE
 ===================================================== */
+
+let selectedExam = "";
+
+let selectedCollege = "";
 
 let questions = [];
 
-let currentIndex = 0;
+let currentQuestion = 0;
 
 let score = 0;
 
 let answered = false;
 
-let allJobs = [];
-
-let selectedJobCategory = "ALL";
+let previousPage = "home";
 
 
 /* =====================================================
-NAVIGATION
+   PAGE SYSTEM
 ===================================================== */
 
-function scrollToSection(id){
+function showPage(id){
 
-  const element =
-  document.getElementById(id);
-
-  if(element){
-
-    element.scrollIntoView({
-      behavior:"smooth"
+  document
+    .querySelectorAll(".page")
+    .forEach(page=>{
+      page.classList.remove("active");
     });
 
+  const page =
+    document.getElementById(id);
+
+  if(page){
+    page.classList.add("active");
   }
-
-}
-
-
-/* =====================================================
-JOBS
-===================================================== */
-
-async function loadJobs(){
-
-  const status =
-  document.getElementById("jobsStatus");
-
-  const list =
-  document.getElementById("jobsList");
-
-  status.className =
-  "status";
-
-  status.textContent =
-  "⏳ Jobs loading...";
-
-  list.innerHTML = "";
-
-  try{
-
-    const response =
-    await fetch(
-      SUPABASE_URL +
-      "/rest/v1/jobs?select=*&order=created_at.desc",
-      {
-        headers:{
-          "apikey":SUPABASE_KEY,
-          "Authorization":
-          "Bearer " + SUPABASE_KEY
-        }
-      }
-    );
-
-    if(!response.ok){
-
-      throw new Error(
-        "Jobs could not be loaded."
-      );
-
-    }
-
-    const data =
-    await response.json();
-
-    allJobs =
-    Array.isArray(data)
-    ? data.filter(job => {
-
-        const text =
-        JSON.stringify(job)
-        .toLowerCase();
-
-        return !text.includes(
-          "national career service"
-        )
-        &&
-        !text.includes(
-          "ncs.gov.in"
-        );
-
-      })
-    : [];
-
-    selectedJobCategory =
-    "ALL";
-
-    renderJobs(allJobs);
-
-    status.className =
-    "status success";
-
-    status.textContent =
-    "✅ " +
-    allJobs.length +
-    " genuine job records loaded.";
-
-  }catch(error){
-
-    console.error(error);
-
-    status.className =
-    "status error";
-
-    status.textContent =
-    "❌ Jobs load failed. Supabase table/config check କରନ୍ତୁ.";
-
-  }
-
-}
-
-
-function renderJobs(jobs){
-
-  const list =
-  document.getElementById("jobsList");
-
-  list.innerHTML = "";
-
-  if(!jobs.length){
-
-    list.innerHTML =
-    `
-    <div class="status">
-      📭 ଏହି category ରେ job ମିଳିଲା ନାହିଁ।
-    </div>
-    `;
-
-    return;
-
-  }
-
-
-  jobs.slice(0,30).forEach(
-    function(job){
-
-      const title =
-      job.title ||
-      job.name ||
-      "Government Job";
-
-      const organization =
-      job.organization ||
-      job.department ||
-      "Odisha Government";
-
-      const category =
-      job.category ||
-      "Government Job";
-
-      const pdf =
-      job.pdf_url ||
-      job.notification_url ||
-      job.url ||
-      job.office_url ||
-      "";
-
-
-      const card =
-      document.createElement("div");
-
-      card.className =
-      "job-card";
-
-
-      card.innerHTML =
-      `
-      <div class="job-top">
-
-        <div>
-
-          <h3>
-            ${escapeHTML(title)}
-          </h3>
-
-          <div class="job-meta">
-            🏢 ${escapeHTML(organization)}
-          </div>
-
-          <div class="job-meta">
-            📂 ${escapeHTML(category)}
-          </div>
-
-        </div>
-
-        <span class="job-badge">
-          NEW
-        </span>
-
-      </div>
-
-      ${
-        pdf
-        ?
-        `
-        <button
-          class="job-btn"
-          onclick="openJob('${escapeAttribute(pdf)}')">
-          📄 View / Apply
-        </button>
-        `
-        :
-        `
-        <button
-          class="job-btn"
-          onclick="showJobMessage()">
-          📢 View Details
-        </button>
-        `
-      }
-
-      `;
-
-      list.appendChild(card);
-
-    }
-  );
-
-}
-
-
-function filterJobs(category){
-
-  selectedJobCategory =
-  category;
-
-  const lower =
-  category.toLowerCase();
-
-  const filtered =
-  allJobs.filter(
-    function(job){
-
-      const text =
-      (
-        (job.category || "") +
-        " " +
-        (job.organization || "") +
-        " " +
-        (job.title || "")
-      ).toLowerCase();
-
-      return text.includes(lower);
-
-    }
-  );
-
-  renderJobs(filtered);
-
-  scrollToSection("jobs");
-
-}
-
-
-function showAllJobs(){
-
-  selectedJobCategory =
-  "ALL";
-
-  renderJobs(allJobs);
-
-}
-
-
-function searchJobs(){
-
-  const search =
-  document
-  .getElementById("jobSearch")
-  .value
-  .trim()
-  .toLowerCase();
-
-
-  const filtered =
-  allJobs.filter(
-    function(job){
-
-      const text =
-      JSON.stringify(job)
-      .toLowerCase();
-
-      return text.includes(search);
-
-    }
-  );
-
-
-  renderJobs(filtered);
-
-}
-
-
-function openJob(url){
-
-  if(!url)
-    return;
-
-  try{
-
-    window.open(
-      url,
-      "_blank",
-      "noopener,noreferrer"
-    );
-
-  }catch(e){}
-
-}
-
-
-function showJobMessage(){
-
-  alert(
-    "Job details ଏହି record ରେ available ନାହିଁ।"
-  );
-
-}
-
-
-/* =====================================================
-STUDY
-===================================================== */
-
-function openStudy(level,stream){
-
-  document.getElementById(
-    "studyClass"
-  ).value =
-  level === "plus2"
-  ? "+2"
-  : "+3";
-
-
-  const streamSelect =
-  document.getElementById(
-    "studyStream"
-  );
-
-
-  let found = false;
-
-  for(
-    const option
-    of streamSelect.options
-  ){
-
-    if(
-      option.value === stream ||
-      option.text === stream
-    ){
-
-      streamSelect.value =
-      option.value;
-
-      found = true;
-
-      break;
-
-    }
-
-  }
-
-
-  if(!found){
-
-    streamSelect.value =
-    streamSelect.options[0].value;
-
-  }
-
-
-  scrollToSection("ai");
-
-}
-
-
-function startAIStudy(){
-
-  const level =
-  document.getElementById(
-    "studyClass"
-  ).value;
-
-  const stream =
-  document.getElementById(
-    "studyStream"
-  ).value;
-
-  const subject =
-  document.getElementById(
-    "studySubject"
-  ).value.trim()
-  ||
-  "ସାଧାରଣ ବିଷୟ";
-
-  const topic =
-  document.getElementById(
-    "studyTopic"
-  ).value.trim()
-  ||
-  "ମୁଖ୍ୟ ଧାରଣା";
-
-
-  const status =
-  document.getElementById(
-    "aiStatus"
-  );
-
-
-  status.className =
-  "status";
-
-  status.textContent =
-  "🤖 AI ପାଠ ପ୍ରସ୍ତୁତ କରୁଛି...";
-
-  status.classList.remove("hidden");
-
-
-  /*
-    Frontend fallback lesson.
-
-    Actual AI lesson can be connected to
-    smart-endpoint when the Edge Function
-    is extended for study generation.
-  */
-
-
-  setTimeout(
-    function(){
-
-      const lesson =
-      `
-      <h3>📖 ${escapeHTML(topic)}</h3>
-
-      <p>
-      ଏହି topic କୁ ${escapeHTML(level)}
-      ${escapeHTML(stream)} ଛାତ୍ରଙ୍କ ପାଇଁ
-      ସହଜ ଓଡ଼ିଆ ଭାଷାରେ ପଢ଼ାଯିବ।
-      </p>
-
-      <h3>1️⃣ ମୁଖ୍ୟ ଧାରଣା</h3>
-
-      <p>
-      ପ୍ରଥମେ topic ର ମୂଳ ଧାରଣାକୁ
-      ସହଜ ଭାଷାରେ ବୁଝନ୍ତୁ।
-      କଠିନ ଶବ୍ଦ ଥିଲେ AI ତାହାର
-      ଅର୍ଥ ମଧ୍ୟ ବୁଝାଇବ।
-      </p>
-
-      <h3>2️⃣ ସହଜ ଉଦାହରଣ</h3>
-
-      <p>
-      ଦୈନନ୍ଦିନ ଜୀବନର ଉଦାହରଣ ସହିତ
-      topic କୁ ବୁଝାଯିବ।
-      </p>
-
-      <h3>3️⃣ ପରୀକ୍ଷା ପାଇଁ</h3>
-
-      <p>
-      ଏହି topic ରୁ ଆସିପାରୁଥିବା
-      ଛୋଟ ଏବଂ ବଡ଼ ପ୍ରଶ୍ନ ଉପରେ
-      practice କରାଯିବ।
-      </p>
-
-      <h3>🧠 ମନେ ରଖିବା Tip</h3>
-
-      <p>
-      ପ୍ରଥମେ concept ବୁଝନ୍ତୁ,
-      ତାପରେ example ମନେ ରଖନ୍ତୁ,
-      ଶେଷରେ question practice କରନ୍ତୁ।
-      </p>
-      `;
-
-
-      document.getElementById(
-        "lessonContent"
-      ).innerHTML =
-      lesson;
-
-
-      document.getElementById(
-        "diagramContent"
-      ).innerHTML =
-      `
-      <div class="diagram-node">
-        📖 ${escapeHTML(subject)}
-      </div>
-
-      <div class="arrow">→</div>
-
-      <div class="diagram-node">
-        🧠 ${escapeHTML(topic)}
-      </div>
-
-      <div class="arrow">→</div>
-
-      <div class="diagram-node">
-        💡 Explanation
-      </div>
-
-      <div class="arrow">→</div>
-
-      <div class="diagram-node">
-        📝 Practice
-      </div>
-      `;
-
-
-      document.getElementById(
-        "aiLesson"
-      ).classList.remove("hidden");
-
-
-      status.className =
-      "status success";
-
-      status.textContent =
-      "✅ AI lesson ready.";
-
-    },
-    700
-  );
-
-}
-
-
-/* =====================================================
-AI STUDY QUESTIONS
-===================================================== */
-
-async function generateStudyQuestions(){
-
-  const subject =
-  document.getElementById(
-    "studySubject"
-  ).value.trim()
-  ||
-  "General";
-
-  const topic =
-  document.getElementById(
-    "studyTopic"
-  ).value.trim()
-  ||
-  "General";
-
-
-  const status =
-  document.getElementById(
-    "aiStatus"
-  );
-
-
-  status.className =
-  "status";
-
-  status.textContent =
-  "🤖 AI questions generate କରୁଛି...";
-
-  status.classList.remove("hidden");
-
-
-  try{
-
-    const response =
-    await fetch(
-      SMART_ENDPOINT,
-      {
-        method:"POST",
-
-        headers:{
-          "apikey":
-          SUPABASE_KEY,
-
-          "Content-Type":
-          "application/json",
-
-          "Accept":
-          "application/json"
-        },
-
-        body:JSON.stringify({
-
-          exam_id:
-          document.getElementById(
-            "studyClass"
-          ).value,
-
-          exam_name:
-          document.getElementById(
-            "studyStream"
-          ).value,
-
-          category:
-          "Plus 2 Plus 3 Study",
-
-          subject:
-          subject,
-
-          topic:
-          topic,
-
-          difficulty:
-          "medium",
-
-          question_type:
-          "practice",
-
-          pyq_year:
-          null,
-
-          count:
-          10,
-
-          language:
-          "Odia"
-
-        })
-
-      }
-    );
-
-
-    const data =
-    await response.json();
-
-
-    if(!response.ok){
-
-      throw new Error(
-        data?.details ||
-        data?.error ||
-        "AI service error"
-      );
-
-    }
-
-
-    if(
-      !data.success ||
-      !Array.isArray(data.questions)
-    ){
-
-      throw new Error(
-        "No questions received."
-      );
-
-    }
-
-
-    questions =
-    data.questions;
-
-    currentIndex = 0;
-    score = 0;
-    answered = false;
-
-
-    document.getElementById(
-      "testCard"
-    ).classList.remove("hidden");
-
-
-    document.getElementById(
-      "resultCard"
-    ).classList.add("hidden");
-
-
-    status.className =
-    "status success";
-
-    status.textContent =
-    "✅ AI questions ready.";
-
-    scrollToSection("mock");
-
-    showQuestion();
-
-
-  }catch(error){
-
-    console.error(error);
-
-    status.className =
-    "status error";
-
-    status.textContent =
-    "❌ " +
-    error.message;
-
-  }
-
-}
-
-
-/* =====================================================
-WRITTEN ANSWER CHECK
-===================================================== */
-
-async function checkWrittenAnswer(){
-
-  const answer =
-  document.getElementById(
-    "studentAnswer"
-  ).value.trim();
-
-  const topic =
-  document.getElementById(
-    "studyTopic"
-  ).value.trim()
-  ||
-  "ଏହି topic";
-
-
-  const result =
-  document.getElementById(
-    "answerResult"
-  );
-
-
-  if(!answer){
-
-    result.className =
-    "answer-result";
-
-    result.innerHTML =
-    "✍️ ପ୍ରଥମେ ନିଜର ଉତ୍ତର ଲେଖନ୍ତୁ।";
-
-    result.classList.remove(
-      "hidden"
-    );
-
-    return;
-
-  }
-
-
-  result.className =
-  "answer-result";
-
-  result.innerHTML =
-  `
-  🤖 <strong>AI Answer Analysis</strong>
-
-  <p>
-  ତୁମର ଉତ୍ତରଟି <strong>${escapeHTML(topic)}</strong>
-  ବିଷୟ ସହିତ ସମ୍ପର୍କିତ।
-  </p>
-
-  <p>
-  ✅ ମୁଖ୍ୟ ଧାରଣା ଠିକ୍ ରଖନ୍ତୁ।
-  </p>
-
-  <p>
-  💡 ପରୀକ୍ଷାରେ ଉତ୍ତରକୁ
-  point-wise ଏବଂ ସ୍ପଷ୍ଟ ଭାବରେ ଲେଖିଲେ
-  ଭଲ ହେବ।
-  </p>
-
-  <p>
-  📝 ଆହୁରି ଭଲ କରିବା ପାଇଁ
-  definition + explanation + example
-  ଯୋଡ଼ନ୍ତୁ।
-  </p>
-  `;
-
-  result.classList.remove(
-    "hidden"
-  );
-
-}
-
-
-function showModelAnswer(){
-
-  const topic =
-  document.getElementById(
-    "studyTopic"
-  ).value.trim()
-  ||
-  "Topic";
-
-
-  const result =
-  document.getElementById(
-    "answerResult"
-  );
-
-
-  result.className =
-  "answer-result";
-
-  result.innerHTML =
-  `
-  <strong>📖 Model Answer — ${escapeHTML(topic)}</strong>
-
-  <p>
-  ଏହି ପ୍ରଶ୍ନର ଉତ୍ତର ଲେଖିବା ସମୟରେ
-  ପ୍ରଥମେ ପରିଭାଷା/ମୁଖ୍ୟ ଧାରଣା ଲେଖନ୍ତୁ।
-  ତାପରେ ମୁଖ୍ୟ ବିଷୟଗୁଡ଼ିକୁ
-  point-wise ବ୍ୟାଖ୍ୟା କରନ୍ତୁ।
-  ଆବଶ୍ୟକ ହେଲେ diagram ଏବଂ example
-  ଦିଅନ୍ତୁ।
-  </p>
-
-  <p>
-  🎯 <strong>Exam Tip:</strong>
-  ସହଜ ଭାଷା, ସଠିକ୍ ତଥ୍ୟ ଏବଂ
-  ସୁନ୍ଦର presentation ରଖନ୍ତୁ।
-  </p>
-  `;
-
-  result.classList.remove(
-    "hidden"
-  );
-
-}
-
-
-/* =====================================================
-AI MOCK
-===================================================== */
-
-async function generateQuestions(){
-
-  const exam =
-  document.getElementById(
-    "exam"
-  ).value;
-
-  const subject =
-  document.getElementById(
-    "subject"
-  ).value;
-
-  const topic =
-  document.getElementById(
-    "topic"
-  ).value.trim()
-  ||
-  "General";
-
-  const difficulty =
-  document.getElementById(
-    "difficulty"
-  ).value;
-
-  const count =
-  Number(
-    document.getElementById(
-      "count"
-    ).value
-  );
-
-
-  const status =
-  document.getElementById(
-    "status"
-  );
-
-
-  status.className =
-  "status";
-
-  status.textContent =
-  "🤖 AI questions generate କରୁଛି...";
-
-  status.classList.remove(
-    "hidden"
-  );
-
-
-  try{
-
-    const response =
-    await fetch(
-      SMART_ENDPOINT,
-      {
-        method:"POST",
-
-        headers:{
-          "apikey":
-          SUPABASE_KEY,
-
-          "Content-Type":
-          "application/json",
-
-          "Accept":
-          "application/json"
-        },
-
-        body:JSON.stringify({
-
-          exam_id:
-          exam,
-
-          exam_name:
-          exam,
-
-          category:
-          "Odisha Government Exams",
-
-          subject:
-          subject,
-
-          topic:
-          topic,
-
-          difficulty:
-          difficulty,
-
-          question_type:
-          "practice",
-
-          pyq_year:
-          null,
-
-          count:
-          count,
-
-          language:
-          "Odia"
-
-        })
-      }
-    );
-
-
-    const data =
-    await response.json();
-
-
-    console.log(
-      "AI Response:",
-      data
-    );
-
-
-    if(!response.ok){
-
-      throw new Error(
-        data?.details ||
-        data?.error ||
-        "AI service error"
-      );
-
-    }
-
-
-    if(
-      data.success !== true ||
-      !Array.isArray(
-        data.questions
-      ) ||
-      data.questions.length === 0
-    ){
-
-      throw new Error(
-        "No questions received from AI."
-      );
-
-    }
-
-
-    questions =
-    data.questions;
-
-    currentIndex =
-    0;
-
-    score =
-    0;
-
-    answered =
-    false;
-
-
-    status.className =
-    "status success";
-
-    status.textContent =
-    "✅ " +
-    questions.length +
-    " questions generated.";
-
-
-    document.getElementById(
-      "testCard"
-    ).classList.remove(
-      "hidden"
-    );
-
-
-    document.getElementById(
-      "resultCard"
-    ).classList.add(
-      "hidden"
-    );
-
-
-    showQuestion();
-
-    scrollToSection(
-      "mock"
-    );
-
-
-  }catch(error){
-
-    console.error(
-      "AI ERROR:",
-      error
-    );
-
-
-    status.className =
-    "status error";
-
-    status.textContent =
-    "❌ " +
-    (
-      error.message ||
-      "AI service error"
-    );
-
-  }
-
-}
-
-
-/* =====================================================
-SHOW QUESTION
-===================================================== */
-
-function showQuestion(){
-
-  if(
-    currentIndex >=
-    questions.length
-  ){
-
-    showResult();
-
-    return;
-
-  }
-
-
-  answered =
-  false;
-
-
-  const q =
-  questions[
-    currentIndex
-  ];
-
-
-  document.getElementById(
-    "progress"
-  ).textContent =
-  "Question " +
-  (currentIndex + 1) +
-  " of " +
-  questions.length;
-
-
-  document.getElementById(
-    "progressFill"
-  ).style.width =
-  (
-    (
-      currentIndex /
-      questions.length
-    ) * 100
-  ) + "%";
-
-
-  document.getElementById(
-    "question"
-  ).textContent =
-  q.question ||
-  "Question";
-
-
-  const options =
-  document.getElementById(
-    "options"
-  );
-
-
-  options.innerHTML =
-  "";
-
-
-  const optionData = [
-
-    ["A",q.option_a],
-
-    ["B",q.option_b],
-
-    ["C",q.option_c],
-
-    ["D",q.option_d]
-
-  ];
-
-
-  optionData.forEach(
-    function(item){
-
-      const button =
-      document.createElement(
-        "button"
-      );
-
-
-      button.className =
-      "option";
-
-
-      button.textContent =
-      item[0] +
-      ". " +
-      (
-        item[1] ||
-        ""
-      );
-
-
-      button.onclick =
-      function(){
-
-        selectAnswer(
-          item[0],
-          button
-        );
-
-      };
-
-
-      options.appendChild(
-        button
-      );
-
-    }
-  );
-
-
-  document.getElementById(
-    "explanation"
-  ).classList.add(
-    "hidden"
-  );
-
-
-  document.getElementById(
-    "explanation"
-  ).textContent =
-  "";
-
-
-  document.getElementById(
-    "next"
-  ).classList.remove(
-    "hidden"
-  );
-
-}
-
-
-/* =====================================================
-SELECT ANSWER
-===================================================== */
-
-function selectAnswer(
-  selected,
-  clickedButton
-){
-
-  if(answered)
-    return;
-
-
-  answered =
-  true;
-
-
-  const q =
-  questions[
-    currentIndex
-  ];
-
-
-  const correct =
-  String(
-    q.correct_ans ||
-    ""
-  )
-  .trim()
-  .toUpperCase();
-
-
-  const allButtons =
-  document.querySelectorAll(
-    "#options .option"
-  );
-
-
-  allButtons.forEach(
-    function(button){
-
-      const letter =
-      button.textContent
-      .trim()
-      .charAt(0)
-      .toUpperCase();
-
-
-      if(
-        letter === correct
-      ){
-
-        button.classList.add(
-          "correct"
-        );
-
-      }
-
-    }
-  );
-
-
-  if(
-    selected === correct
-  ){
-
-    score++;
-
-    clickedButton.classList.add(
-      "correct"
-    );
-
-  }else{
-
-    clickedButton.classList.add(
-      "wrong"
-    );
-
-  }
-
-
-  document.getElementById(
-    "answeredCount"
-  ).textContent =
-  currentIndex + 1;
-
-
-  document.getElementById(
-    "liveScore"
-  ).textContent =
-  score;
-
-
-  const explanation =
-  document.getElementById(
-    "explanation"
-  );
-
-
-  explanation.innerHTML =
-  `
-  <strong>💡 ବ୍ୟାଖ୍ୟା:</strong><br>
-  ${escapeHTML(
-    q.explanation ||
-    "ଏହି ପ୍ରଶ୍ନର ବ୍ୟାଖ୍ୟା AI ଦ୍ୱାରା ଦିଆଯାଇପାରିବ।"
-  )}
-  `;
-
-
-  explanation.classList.remove(
-    "hidden"
-  );
-
-}
-
-
-/* =====================================================
-NEXT
-===================================================== */
-
-function nextQuestion(){
-
-  currentIndex++;
-
-  showQuestion();
-
-}
-
-
-/* =====================================================
-RESULT
-===================================================== */
-
-function showResult(){
-
-  document.getElementById(
-    "testCard"
-  ).classList.add(
-    "hidden"
-  );
-
-
-  document.getElementById(
-    "resultCard"
-  ).classList.remove(
-    "hidden"
-  );
-
-
-  const percentage =
-  questions.length
-  ?
-  Math.round(
-    (
-      score /
-      questions.length
-    ) * 100
-  )
-  :
-  0;
-
-
-  document.getElementById(
-    "score"
-  ).innerHTML =
-  `
-  🎉 Test Completed!
-
-  <br><br>
-
-  Score:
-  ${score}
-  /
-  ${questions.length}
-
-  <br><br>
-
-  ${percentage}%
-
-  `;
-
-
-  let message =
-  "ଆହୁରି practice କରନ୍ତୁ। 💪";
-
-
-  if(
-    percentage >= 80
-  ){
-
-    message =
-    "Excellent! ଆପଣଙ୍କ preparation ବହୁତ ଭଲ। 🌟";
-
-  }else if(
-    percentage >= 50
-  ){
-
-    message =
-    "Good Job! ଆଉ କିଛି practice କରନ୍ତୁ। 👍";
-
-  }
-
-
-  document.getElementById(
-    "resultAnalysis"
-  ).innerHTML =
-  `
-  ${message}
-
-  <br>
-
-  🤖 AI Analysis:
-  ଯେଉଁ topic ରେ ଭୁଲ ହେଲା,
-  ସେହି topic ଉପରେ ପୁଣି practice କରନ୍ତୁ।
-  `;
-
-}
-
-
-/* =====================================================
-RESET
-===================================================== */
-
-function resetTest(){
-
-  questions = [];
-
-  currentIndex = 0;
-
-  score = 0;
-
-  answered = false;
-
-
-  document.getElementById(
-    "resultCard"
-  ).classList.add(
-    "hidden"
-  );
-
-
-  document.getElementById(
-    "testCard"
-  ).classList.add(
-    "hidden"
-  );
-
-
-  document.getElementById(
-    "status"
-  ).classList.add(
-    "hidden"
-  );
-
 
   window.scrollTo({
     top:0,
@@ -3428,59 +1780,627 @@ function resetTest(){
 
 
 /* =====================================================
-LIVE MOCK
+   EXAM OPEN
 ===================================================== */
 
-function startLiveMock(){
+function openExam(exam){
 
-  alert(
-    "🔴 Daily Live Mock Test\n\n" +
-    "ଏଠାରେ 1-hour live mock system ready ଅଛି।\n\n" +
-    "Actual scheduled daily test pain " +
-    "Supabase scheduler/Edge Function connect କରିବାକୁ ପଡ଼ିବ।"
-  );
+  selectedExam =
+    exam;
 
-  scrollToSection("mock");
+  document.getElementById(
+    "examTitle"
+  ).textContent =
+    exam;
+
+  document.getElementById(
+    "examDescription"
+  ).textContent =
+    exam +
+    " ପାଇଁ separate preparation dashboard।";
+
+  document.getElementById(
+    "studyExamName"
+  ).textContent =
+    exam;
+
+  document.getElementById(
+    "syllabusName"
+  ).textContent =
+    exam;
+
+  document.getElementById(
+    "examStudyBox"
+  ).classList.add("hidden");
+
+  document.getElementById(
+    "syllabusBox"
+  ).classList.add("hidden");
+
+  showPage("examDashboard");
 
 }
 
 
 /* =====================================================
-PREMIUM
+   EXAM STUDY
 ===================================================== */
 
-function choosePremium(
-  plan,
-  price
-){
+function examStudy(){
 
-  const message =
   document.getElementById(
-    "premiumMessage"
+    "examStudyBox"
+  ).classList.remove("hidden");
+
+  document.getElementById(
+    "syllabusBox"
+  ).classList.add("hidden");
+
+}
+
+
+/* =====================================================
+   SYLLABUS
+===================================================== */
+
+function showSyllabus(){
+
+  document.getElementById(
+    "syllabusBox"
+  ).classList.remove("hidden");
+
+  document.getElementById(
+    "examStudyBox"
+  ).classList.add("hidden");
+
+}
+
+
+/* =====================================================
+   STUDY OPEN
+===================================================== */
+
+function openStudy(type){
+
+  selectedCollege =
+    type;
+
+  document.getElementById(
+    "collegeTitle"
+  ).textContent =
+    type === "plus2"
+      ? "🎓 +2 Study"
+      : "🎓 +3 Study";
+
+  showPage("studyDashboard");
+
+}
+
+
+/* =====================================================
+   AI REQUEST
+===================================================== */
+
+async function callAI(payload){
+
+  const response =
+    await fetch(
+      SMART_ENDPOINT,
+      {
+        method:"POST",
+
+        headers:{
+          "apikey":
+            SUPABASE_KEY,
+
+          "Content-Type":
+            "application/json",
+
+          "Accept":
+            "application/json"
+        },
+
+        body:
+          JSON.stringify(payload)
+      }
+    );
+
+
+  const data =
+    await response.json();
+
+
+  if(!response.ok){
+
+    throw new Error(
+      data?.details ||
+      data?.error ||
+      "AI service error"
+    );
+
+  }
+
+
+  return data;
+
+}
+
+
+/* =====================================================
+   EXAM STUDY GENERATION
+===================================================== */
+
+async function generateStudy(){
+
+  const subject =
+    document.getElementById(
+      "examSubject"
+    ).value;
+
+  const topic =
+    document.getElementById(
+      "examTopic"
+    ).value.trim()
+    || "General";
+
+  const output =
+    document.getElementById(
+      "studyOutput"
+    );
+
+  output.textContent =
+    "📚 ପଢ଼ା ପ୍ରସ୍ତୁତ ହେଉଛି...";
+
+  try{
+
+    const data =
+      await callAI({
+
+        exam_id:
+          selectedExam,
+
+        exam_name:
+          selectedExam,
+
+        category:
+          "Government Exam",
+
+        subject:
+          subject,
+
+        topic:
+          topic,
+
+        difficulty:
+          "medium",
+
+        question_type:
+          "study",
+
+        pyq_year:
+          null,
+
+        count:
+          5,
+
+        language:
+          "Odia"
+
+      });
+
+
+    if(
+      Array.isArray(
+        data.questions
+      )
+      &&
+      data.questions.length
+    ){
+
+      output.textContent =
+        formatQuestions(
+          data.questions
+        );
+
+    }else{
+
+      output.textContent =
+        "📚 " +
+        subject +
+        " → " +
+        topic +
+        "\n\n" +
+        "ଏହି topicକୁ ସରଳ ଭାଷାରେ ପଢ଼ିବା ପାଇଁ AI response ମିଳିନାହିଁ।";
+
+    }
+
+  }catch(error){
+
+    output.textContent =
+      "❌ " +
+      error.message;
+
+  }
+
+}
+
+
+/* =====================================================
+   COLLEGE STUDY
+===================================================== */
+
+async function generateCollegeStudy(){
+
+  const stream =
+    document.getElementById(
+      "stream"
+    ).value;
+
+  const subject =
+    document.getElementById(
+      "collegeSubject"
+    ).value;
+
+  const topic =
+    document.getElementById(
+      "collegeTopic"
+    ).value.trim()
+    || "General";
+
+  const output =
+    document.getElementById(
+      "collegeOutput"
+    );
+
+  output.textContent =
+    "📚 ପଢ଼ା ପ୍ରସ୍ତୁତ ହେଉଛି...";
+
+  try{
+
+    const data =
+      await callAI({
+
+        exam_id:
+          selectedCollege,
+
+        exam_name:
+          selectedCollege,
+
+        category:
+          "College Study",
+
+        subject:
+          stream +
+          " - " +
+          subject,
+
+        topic:
+          topic,
+
+        difficulty:
+          "medium",
+
+        question_type:
+          "study",
+
+        pyq_year:
+          null,
+
+        count:
+          5,
+
+        language:
+          "Odia"
+
+      });
+
+
+    if(
+      Array.isArray(
+        data.questions
+      )
+      &&
+      data.questions.length
+    ){
+
+      output.textContent =
+        formatQuestions(
+          data.questions
+        );
+
+    }else{
+
+      output.textContent =
+        "ଏହି topic ପାଇଁ content ପ୍ରସ୍ତୁତ ହୋଇପାରିଲା ନାହିଁ।";
+
+    }
+
+  }catch(error){
+
+    output.textContent =
+      "❌ " +
+      error.message;
+
+  }
+
+}
+
+
+/* =====================================================
+   FORMAT
+===================================================== */
+
+function formatQuestions(list){
+
+  return list.map(
+    (q,index)=>{
+
+      return (
+        (index+1) +
+        ". " +
+        (q.question || "") +
+        "\n\n" +
+
+        "A. " +
+        (q.option_a || "") +
+        "\n" +
+
+        "B. " +
+        (q.option_b || "") +
+        "\n" +
+
+        "C. " +
+        (q.option_c || "") +
+        "\n" +
+
+        "D. " +
+        (q.option_d || "") +
+        "\n\n" +
+
+        "ଉତ୍ତର: " +
+        (q.correct_ans || "") +
+        "\n\n" +
+
+        "ବୁଝିବା ଭଳି explanation: " +
+        (q.explanation || "") +
+        "\n\n" +
+
+        "-------------------------\n\n"
+      );
+
+    }
+  ).join("");
+
+}
+
+
+/* =====================================================
+   MOCK START
+===================================================== */
+
+async function startMock(type){
+
+  previousPage =
+    "examDashboard";
+
+  showPage("mockPage");
+
+  document.getElementById(
+    "mockQuestion"
+  ).textContent =
+    "Questions ପ୍ରସ୍ତୁତ ହେଉଛି...";
+
+  document.getElementById(
+    "mockOptions"
+  ).innerHTML =
+    "";
+
+  try{
+
+    const subject =
+      "Mixed";
+
+    const data =
+      await callAI({
+
+        exam_id:
+          selectedExam,
+
+        exam_name:
+          selectedExam,
+
+        category:
+          "Government Exam",
+
+        subject:
+          subject,
+
+        topic:
+          "Mixed syllabus",
+
+        difficulty:
+          "medium",
+
+        question_type:
+          type.toLowerCase(),
+
+        pyq_year:
+          type === "PYQ"
+            ? null
+            : null,
+
+        count:
+          10,
+
+        language:
+          "Odia"
+
+      });
+
+
+    if(
+      data.success === true
+      &&
+      Array.isArray(
+        data.questions
+      )
+      &&
+      data.questions.length
+    ){
+
+      questions =
+        data.questions;
+
+      currentQuestion =
+        0;
+
+      score =
+        0;
+
+      showMockQuestion();
+
+    }else{
+
+      throw new Error(
+        "No questions received."
+      );
+
+    }
+
+  }catch(error){
+
+    document.getElementById(
+      "mockQuestion"
+    ).textContent =
+      "❌ " +
+      error.message;
+
+  }
+
+}
+
+
+/* =====================================================
+   LIVE TEST
+===================================================== */
+
+function startLiveTest(){
+
+  alert(
+    "⏱️ 1 Hour Live Test\n\n" +
+    "Daily live test system ready.\n" +
+    "Question generation ଓ timer system connected କରିପାରିବା।"
   );
 
+  startMock("Practice");
 
-  message.className =
-  "status success";
+}
 
-  message.innerHTML =
-  `
-  💎 <strong>${plan}</strong> selected.
 
-  <br><br>
+/* =====================================================
+   SHOW MOCK
+===================================================== */
 
-  Price:
-  <strong>₹${price}</strong>
+function showMockQuestion(){
 
-  <br><br>
+  if(
+    currentQuestion >=
+    questions.length
+  ){
 
-  Premium checkout/payment gateway
-  connect କଲେ payment success ପରେ
-  automatically premium access unlock
-  କରାଯିବ।
-  `;
+    showFinalResult();
 
-  message.classList.remove(
+    return;
+
+  }
+
+
+  answered =
+    false;
+
+
+  const q =
+    questions[
+      currentQuestion
+    ];
+
+
+  document.getElementById(
+    "mockProgress"
+  ).textContent =
+    "Question " +
+    (currentQuestion+1) +
+    " of " +
+    questions.length;
+
+
+  document.getElementById(
+    "mockQuestion"
+  ).textContent =
+    q.question ||
+    "Question";
+
+
+  const options =
+    document.getElementById(
+      "mockOptions"
+    );
+
+  options.innerHTML =
+    "";
+
+
+  [
+    ["A",q.option_a],
+    ["B",q.option_b],
+    ["C",q.option_c],
+    ["D",q.option_d]
+  ].forEach(item=>{
+
+    const btn =
+      document.createElement(
+        "button"
+      );
+
+    btn.className =
+      "option";
+
+    btn.textContent =
+      item[0] +
+      ". " +
+      (
+        item[1] || ""
+      );
+
+    btn.onclick =
+      ()=>{
+        selectMockAnswer(
+          item[0],
+          btn
+        );
+      };
+
+    options.appendChild(
+      btn
+    );
+
+  });
+
+
+  document.getElementById(
+    "mockExplanation"
+  ).classList.add(
+    "hidden"
+  );
+
+  document.getElementById(
+    "mockExplanation"
+  ).textContent =
+    "";
+
+  document.getElementById(
+    "mockNext"
+  ).classList.add(
     "hidden"
   );
 
@@ -3488,13 +2408,598 @@ function choosePremium(
 
 
 /* =====================================================
-ESCAPE
+   SELECT ANSWER
+===================================================== */
+
+function selectMockAnswer(
+  selected,
+  clicked
+){
+
+  if(answered)
+    return;
+
+  answered =
+    true;
+
+
+  const q =
+    questions[
+      currentQuestion
+    ];
+
+
+  const correct =
+    String(
+      q.correct_ans || ""
+    )
+    .trim()
+    .toUpperCase();
+
+
+  document
+    .querySelectorAll(
+      "#mockOptions .option"
+    )
+    .forEach(btn=>{
+
+      const letter =
+        btn.textContent
+          .trim()
+          .charAt(0)
+          .toUpperCase();
+
+      if(
+        letter ===
+        correct
+      ){
+
+        btn.classList.add(
+          "correct"
+        );
+
+      }
+
+    });
+
+
+  if(
+    selected ===
+    correct
+  ){
+
+    score++;
+
+    clicked.classList.add(
+      "correct"
+    );
+
+  }else{
+
+    clicked.classList.add(
+      "wrong"
+    );
+
+  }
+
+
+  const explanation =
+    document.getElementById(
+      "mockExplanation"
+    );
+
+  explanation.textContent =
+    "💡 Explanation: " +
+    (
+      q.explanation ||
+      "Explanation not available."
+    );
+
+  explanation.classList.remove(
+    "hidden"
+  );
+
+
+  document.getElementById(
+    "mockNext"
+  ).classList.remove(
+    "hidden"
+  );
+
+}
+
+
+/* =====================================================
+   NEXT
+===================================================== */
+
+function nextMockQuestion(){
+
+  currentQuestion++;
+
+  showMockQuestion();
+
+}
+
+
+/* =====================================================
+   FINAL RESULT
+===================================================== */
+
+function showFinalResult(){
+
+  const percentage =
+    Math.round(
+      (
+        score /
+        questions.length
+      ) * 100
+    );
+
+
+  document.getElementById(
+    "finalScore"
+  ).textContent =
+    score +
+    " / " +
+    questions.length +
+    " (" +
+    percentage +
+    "%)";
+
+
+  document.getElementById(
+    "resultMessage"
+  ).textContent =
+    percentage >= 80
+      ? "Excellent! 🌟"
+      : percentage >= 50
+      ? "Good Job! 👍"
+      : "ଆଉ practice କରନ୍ତୁ। 💪";
+
+
+  showPage("resultPage");
+
+}
+
+
+/* =====================================================
+   BACK
+===================================================== */
+
+function goBackFromMock(){
+
+  showPage(
+    previousPage ||
+    "examDashboard"
+  );
+
+}
+
+
+function goBackFromResult(){
+
+  showPage(
+    previousPage ||
+    "examDashboard"
+  );
+
+}
+
+
+/* =====================================================
+   RESULT
+===================================================== */
+
+function showResultPage(){
+
+  alert(
+    "📊 Result system\n\n" +
+    "Test complete ହେଲେ score ଏଠାରେ save/display ହେବ।"
+  );
+
+}
+
+
+/* =====================================================
+   COLLEGE PRACTICE
+===================================================== */
+
+function collegePractice(type){
+
+  const topic =
+    document.getElementById(
+      "collegeTopic"
+    ).value.trim()
+    || "General";
+
+  alert(
+    type === "short"
+      ? "📝 Short Question practice → " +
+        topic
+      : "📖 Long Question practice → " +
+        topic
+  );
+
+}
+
+
+/* =====================================================
+   COLLEGE MOCK
+===================================================== */
+
+function startCollegeMock(){
+
+  selectedExam =
+    selectedCollege === "plus2"
+      ? "+2 College"
+      : "+3 College";
+
+  previousPage =
+    "studyDashboard";
+
+  startMock("Practice");
+
+}
+
+
+/* =====================================================
+   DOUBT
+===================================================== */
+
+async function openDoubt(){
+
+  const doubt =
+    prompt(
+      "❓ ଆପଣଙ୍କ Doubt ଲେଖନ୍ତୁ:"
+    );
+
+  if(!doubt)
+    return;
+
+
+  try{
+
+    const data =
+      await callAI({
+
+        exam_id:
+          selectedExam,
+
+        exam_name:
+          selectedExam,
+
+        category:
+          "Doubt",
+
+        subject:
+          "General",
+
+        topic:
+          doubt,
+
+        difficulty:
+          "easy",
+
+        question_type:
+          "doubt",
+
+        pyq_year:
+          null,
+
+        count:
+          1,
+
+        language:
+          "Odia"
+
+      });
+
+
+    if(
+      data.questions
+      &&
+      data.questions.length
+    ){
+
+      alert(
+        formatQuestions(
+          data.questions
+        )
+      );
+
+    }else{
+
+      alert(
+        "Doubt answer ମିଳିଲା ନାହିଁ।"
+      );
+
+    }
+
+  }catch(error){
+
+    alert(
+      "❌ " +
+      error.message
+    );
+
+  }
+
+}
+
+
+async function openCollegeDoubt(){
+
+  const doubt =
+    prompt(
+      "❓ ଆପଣଙ୍କ College Study Doubt ଲେଖନ୍ତୁ:"
+    );
+
+  if(!doubt)
+    return;
+
+
+  try{
+
+    const data =
+      await callAI({
+
+        exam_id:
+          selectedCollege,
+
+        exam_name:
+          selectedCollege,
+
+        category:
+          "College Study",
+
+        subject:
+          "Student Doubt",
+
+        topic:
+          doubt,
+
+        difficulty:
+          "easy",
+
+        question_type:
+          "doubt",
+
+        pyq_year:
+          null,
+
+        count:
+          1,
+
+        language:
+          "Odia"
+
+      });
+
+
+    if(
+      data.questions
+      &&
+      data.questions.length
+    ){
+
+      alert(
+        formatQuestions(
+          data.questions
+        )
+      );
+
+    }else{
+
+      alert(
+        "Doubt answer ମିଳିଲା ନାହିଁ।"
+      );
+
+    }
+
+  }catch(error){
+
+    alert(
+      "❌ " +
+      error.message
+    );
+
+  }
+
+}
+
+
+/* =====================================================
+   PREMIUM WHATSAPP
+===================================================== */
+
+function premiumWhatsApp(type){
+
+  const message =
+    "ନମସ୍କାର, ମୁଁ " +
+    type +
+    " ନେବାକୁ ଚାହୁଁଛି।";
+
+  const url =
+    "https://wa.me/918249584734?text=" +
+    encodeURIComponent(
+      message
+    );
+
+  window.open(
+    url,
+    "_blank"
+  );
+
+}
+
+
+/* =====================================================
+   JOBMITRA
+===================================================== */
+
+function openJobMitra(){
+
+  /*
+    JobMitra AIର actual website URL
+    ତୁମେ ready କଲେ ଏଠାରେ replace କରିବ।
+  */
+
+  alert(
+    "🚀 JobMitra AI\n\n" +
+    "Job Apply + Scholarship + Student Services platform."
+  );
+
+}
+
+
+/* =====================================================
+   AUTOMATIC JOB LOADING
+===================================================== */
+
+async function loadJobs(){
+
+  try{
+
+    const response =
+      await fetch(
+        SUPABASE_URL +
+        "/rest/v1/jobs?select=*&order=created_at.desc&limit=12",
+        {
+          headers:{
+            "apikey":
+              SUPABASE_KEY,
+
+            "Authorization":
+              "Bearer " +
+              SUPABASE_KEY
+          }
+        }
+      );
+
+
+    if(!response.ok)
+      return;
+
+
+    const jobs =
+      await response.json();
+
+
+    if(
+      !Array.isArray(jobs)
+      ||
+      jobs.length === 0
+    )
+      return;
+
+
+    renderJobs(
+      jobs,
+      "homeJobs"
+    );
+
+    renderJobs(
+      jobs,
+      "allJobs"
+    );
+
+  }catch(error){
+
+    console.error(
+      "Jobs load error:",
+      error
+    );
+
+  }
+
+}
+
+
+/* =====================================================
+   RENDER JOBS
+===================================================== */
+
+function renderJobs(
+  jobs,
+  elementId
+){
+
+  const box =
+    document.getElementById(
+      elementId
+    );
+
+  if(!box)
+    return;
+
+
+  box.innerHTML =
+    "";
+
+
+  jobs.forEach(job=>{
+
+    const item =
+      document.createElement(
+        "div"
+      );
+
+    item.className =
+      "job-item";
+
+
+    item.innerHTML =
+      `
+        <span class="badge">
+          NEW
+        </span>
+
+        <strong>
+          ${
+            escapeHTML(
+              job.title ||
+              "Government Job"
+            )
+          }
+        </strong>
+
+        <div class="job-meta">
+          ${
+            escapeHTML(
+              job.organization ||
+              ""
+            )
+          }
+          ${
+            job.category
+              ? " • " +
+                escapeHTML(
+                  job.category
+                )
+              : ""
+          }
+        </div>
+      `;
+
+
+    box.appendChild(
+      item
+    );
+
+  });
+
+}
+
+
+/* =====================================================
+   HTML SAFETY
 ===================================================== */
 
 function escapeHTML(value){
 
   return String(
-    value ?? ""
+    value || ""
   )
   .replace(
     /&/g,
@@ -3520,35 +3025,11 @@ function escapeHTML(value){
 }
 
 
-function escapeAttribute(value){
-
-  return String(
-    value ?? ""
-  )
-  .replace(
-    /\\/g,
-    "\\\\"
-  )
-  .replace(
-    /'/g,
-    "\\'"
-  );
-
-}
-
-
 /* =====================================================
-INIT
+   START
 ===================================================== */
 
-document.addEventListener(
-  "DOMContentLoaded",
-  function(){
-
-    loadJobs();
-
-  }
-);
+loadJobs();
 
 </script>
 
