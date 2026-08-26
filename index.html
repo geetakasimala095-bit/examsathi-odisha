@@ -8,7 +8,7 @@
 <meta name="description" content="ExamSathi Odisha - Government Jobs, Study, PYQ, Mock Tests and AI Question Answer">
 <link rel="manifest" href="./manifest.json">
 <link rel="icon" href="./icon-192.png">
-<title>ExamSathi Odisha | Jobs • Study • Mock Test • PYQ</title>
+<title>ExamSathi Odisha | Jobs â€¢ Study â€¢ Mock Test â€¢ PYQ</title>
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -337,6 +337,36 @@ footer strong{font-size:19px;color:#fff}
   .latest-title{font-size:16px}
 }
 </style>
+
+<style id="inside-section-fix">
+#examPanel, #studyPanel { position: relative; overflow: hidden; }
+#examPanel .feature-inner, #studyPanel .feature-inner {
+  width: 100%;
+  box-sizing: border-box;
+}
+#examPanel .feature-inner .back, #studyPanel .feature-inner .back {
+  margin-bottom: 12px;
+}
+</style>
+
+<style id="inside-section-layout">
+#examPanel > #mockPanel,
+#examPanel > #contentPanel,
+#studyPanel > #studyTools,
+#studyPanel > #studyResult {
+  box-sizing: border-box;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+#mockPanel.active, #contentPanel.active, #studyTools.active {
+  animation: sectionOpen .18s ease;
+}
+@keyframes sectionOpen {
+  from { opacity: .25; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
 </head>
 
 <body>
@@ -345,10 +375,10 @@ footer strong{font-size:19px;color:#fff}
   <div class="header-inner">
     <div class="logo">
       ExamSathi Odisha
-      <small>JOB • STUDY • PYQ • MOCK TEST</small>
+      <small>JOB â€¢ STUDY â€¢ PYQ â€¢ MOCK TEST</small>
     </div>
     <button class="alert-btn" onclick="document.getElementById('live').scrollIntoView({behavior:'smooth'})">
-      🔔 Live Jobs
+      ðŸ”” Live Jobs
     </button>
   </div>
 </header>
@@ -363,14 +393,14 @@ footer strong{font-size:19px;color:#fff}
 <section class="hero">
   <div class="hero-box">
     <div class="hero-content">
-      <h1>ExamSathi Odisha 🚀</h1>
+      <h1>ExamSathi Odisha ðŸš€</h1>
       <p>Odisha Government Jobs + Smart Study + Daily Mock Test</p>
       <div class="badges">
-        <span class="badge">💼 Govt Jobs</span>
-        <span class="badge">📚 Study</span>
-        <span class="badge">📝 PYQ 2020–2026</span>
-        <span class="badge">⚡ Daily Live Mock</span>
-        <span class="badge">🤖 AI Q&A</span>
+        <span class="badge">ðŸ’¼ Govt Jobs</span>
+        <span class="badge">ðŸ“š Study</span>
+        <span class="badge">ðŸ“ PYQ 2020â€“2026</span>
+        <span class="badge">âš¡ Daily Live Mock</span>
+        <span class="badge">ðŸ¤– AI Q&A</span>
       </div>
     </div>
   </div>
@@ -379,29 +409,29 @@ footer strong{font-size:19px;color:#fff}
 <!-- ONLY TWO MAIN BOXES -->
 <section class="main-grid">
   <button class="main-card job-main" onclick="showMain('jobs')">
-    <div class="main-icon">💼</div>
+    <div class="main-icon">ðŸ’¼</div>
     <h2>JOB PREPARATION</h2>
-    <p>OPSC • OSSC • OSSSC • Police • Govt Exams</p>
-    <span class="main-open">OPEN JOB SECTION →</span>
+    <p>OPSC â€¢ OSSC â€¢ OSSSC â€¢ Police â€¢ Govt Exams</p>
+    <span class="main-open">OPEN JOB SECTION â†’</span>
   </button>
 
   <button class="main-card study-main" onclick="showMain('study')">
-    <div class="main-icon">📚</div>
+    <div class="main-icon">ðŸ“š</div>
     <h2>STUDY</h2>
-    <p>+2 • +3 • ITI/Diploma • Subject Wise Study</p>
-    <span class="main-open">OPEN STUDY SECTION →</span>
+    <p>+2 â€¢ +3 â€¢ ITI/Diploma â€¢ Subject Wise Study</p>
+    <span class="main-open">OPEN STUDY SECTION â†’</span>
   </button>
 </section>
 
 <!-- JOBMITRA OUTSIDE -->
 <section class="ai-box">
   <div class="ai-card">
-    <h2>🤖 JobMitra AI</h2>
+    <h2>ðŸ¤– JobMitra AI</h2>
     <p>Smart Job & Career Assistant</p>
     <a class="ai-link"
        href="https://github.com/geetakasimala095-bit/jobmitra-ai"
        target="_blank" rel="noopener">
-       OPEN JOBMITRA AI →
+       OPEN JOBMITRA AI â†’
     </a>
   </div>
 </section>
@@ -410,12 +440,12 @@ footer strong{font-size:19px;color:#fff}
 <section class="latest" id="live">
   <div class="latest-box">
     <div class="latest-head">
-      <div class="latest-title">🔴 Live New Job Notification</div>
+      <div class="latest-title">ðŸ”´ Live New Job Notification</div>
       <div class="live"><span class="dot"></span> LIVE</div>
     </div>
     <div class="notification-list" id="notificationList">
       <div class="notification">
-        <div class="ntype">⏳</div>
+        <div class="ntype">â³</div>
         <div class="nbody">
           <strong>Loading latest jobs...</strong>
           <p>New notifications are loading from Supabase.</p>
@@ -427,11 +457,11 @@ footer strong{font-size:19px;color:#fff}
 
 <!-- NEWS OUTSIDE -->
 <section class="news">
-  <div class="news-title">📰 News Papers</div>
+  <div class="news-title">ðŸ“° News Papers</div>
   <div class="news-grid">
-    <a href="https://sambad.in/" target="_blank" rel="noopener">📰 Sambad</a>
-    <a href="https://www.dharitri.com/" target="_blank" rel="noopener">📰 Dharitri</a>
-    <a href="https://timesofindia.indiatimes.com/" target="_blank" rel="noopener">📰 Times of India</a>
+    <a href="https://sambad.in/" target="_blank" rel="noopener">ðŸ“° Sambad</a>
+    <a href="https://www.dharitri.com/" target="_blank" rel="noopener">ðŸ“° Dharitri</a>
+    <a href="https://timesofindia.indiatimes.com/" target="_blank" rel="noopener">ðŸ“° Times of India</a>
   </div>
 </section>
 
@@ -441,63 +471,63 @@ footer strong{font-size:19px;color:#fff}
 <section class="section" id="jobsSection" style="display:none">
   <div class="section-head">
     <div>
-      <h2 class="section-title">💼 Job Preparation</h2>
-      <p class="section-sub">Choose an exam. All mock/PYQ/practice options stay inside that exam.</p>
+      <h2 class="section-title">ðŸ’¼ Job Preparation</h2>
+      <p class="section-sub">All Odisha Government Jobs â€¢ Select a job/exam and prepare inside that section.</p>
     </div>
     <span class="tag">JOB</span>
   </div>
 
   <div class="category-grid">
     <button class="category c1" onclick="openExam('OPSC','Government competitive exam')">
-      <div class="ico">🏛️</div><span>OPSC</span><small>Mock • PYQ • Practice</small>
+      <div class="ico">ðŸ›ï¸</div><span>OPSC</span><small>Mock â€¢ PYQ â€¢ Practice</small>
     </button>
     <button class="category c2" onclick="openExam('OSSC','Odisha Staff Selection Commission')">
-      <div class="ico">📋</div><span>OSSC</span><small>Mock • PYQ • Practice</small>
+      <div class="ico">ðŸ“‹</div><span>OSSC</span><small>Mock â€¢ PYQ â€¢ Practice</small>
     </button>
     <button class="category c3" onclick="openExam('OSSSC','Odisha Sub-Ordinate Staff Selection Commission')">
-      <div class="ico">📝</div><span>OSSSC</span><small>Mock • PYQ • Practice</small>
+      <div class="ico">ðŸ“</div><span>OSSSC</span><small>Mock â€¢ PYQ â€¢ Practice</small>
     </button>
     <button class="category c4" onclick="openExam('Odisha Police','Police recruitment')">
-      <div class="ico">👮</div><span>Odisha Police</span><small>Mock • PYQ • Practice</small>
+      <div class="ico">ðŸ‘®</div><span>Odisha Police</span><small>Mock â€¢ PYQ â€¢ Practice</small>
     </button>
     <button class="category c5" onclick="openExam('Health','Health department exams')">
-      <div class="ico">🏥</div><span>Health</span><small>Mock • PYQ • Practice</small>
+      <div class="ico">ðŸ¥</div><span>Health</span><small>Mock â€¢ PYQ â€¢ Practice</small>
     </button>
     <button class="category c6" onclick="openExam('Forest','Forest department exams')">
-      <div class="ico">🌳</div><span>Forest</span><small>Mock • PYQ • Practice</small>
+      <div class="ico">ðŸŒ³</div><span>Forest</span><small>Mock â€¢ PYQ â€¢ Practice</small>
     </button>
     <button class="category c7" onclick="openExam('Agriculture','Agriculture department exams')">
-      <div class="ico">🌾</div><span>Agriculture</span><small>Mock • PYQ • Practice</small>
+      <div class="ico">ðŸŒ¾</div><span>Agriculture</span><small>Mock â€¢ PYQ â€¢ Practice</small>
     </button>
     <button class="category c8" onclick="openExam('Revenue','Revenue department exams')">
-      <div class="ico">🏢</div><span>Revenue</span><small>Mock • PYQ • Practice</small>
+      <div class="ico">ðŸ¢</div><span>Revenue</span><small>Mock â€¢ PYQ â€¢ Practice</small>
     </button>
     <button class="category c1" onclick="openExam('Panchayati Raj','Panchayati Raj exams')">
-      <div class="ico">🏘️</div><span>Panchayati Raj</span><small>Mock • PYQ</small>
+      <div class="ico">ðŸ˜ï¸</div><span>Panchayati Raj</span><small>Mock â€¢ PYQ</small>
     </button>
     <button class="category c2" onclick="openExam('Technical','Technical government exams')">
-      <div class="ico">⚙️</div><span>Technical</span><small>Mock • PYQ</small>
+      <div class="ico">âš™ï¸</div><span>Technical</span><small>Mock â€¢ PYQ</small>
     </button>
     <button class="category c3" onclick="openExam('ITI Diploma','ITI / Diploma jobs')">
-      <div class="ico">🔧</div><span>ITI / Diploma</span><small>Mock • PYQ</small>
+      <div class="ico">ðŸ”§</div><span>ITI / Diploma</span><small>Mock â€¢ PYQ</small>
     </button>
     <button class="category c4" onclick="openExam('Graduate','Graduate level jobs')">
-      <div class="ico">🎓</div><span>Graduate Jobs</span><small>Mock • PYQ</small>
+      <div class="ico">ðŸŽ“</div><span>Graduate Jobs</span><small>Mock â€¢ PYQ</small>
     </button>
   </div>
 
   <div class="panel" id="examPanel">
-    <button class="back" onclick="closePanel('examPanel')">← Back to Jobs</button>
+    <button class="back" onclick="backFromExamOptions()">â† Back to Jobs</button>
     <div class="panel-title" id="examTitle">Exam</div>
     <div class="panel-sub" id="examSub">Choose what you want to practice.</div>
 
     <div class="option-grid">
-      <button class="option" onclick="startMock()"><b>📝</b>Daily Live Mock<small>New question set</small></button>
-      <button class="option" onclick="showPYQ()"><b>📜</b>PYQ 2020–2026<small>Previous year practice</small></button>
-      <button class="option" onclick="showPractice()"><b>⚡</b>Daily Practice<small>Practice questions</small></button>
-      <button class="option" onclick="askAI()"><b>🤖</b>AI Question & Answer<small>Ask inside section</small></button>
-      <button class="option" onclick="showJobRules()"><b>📊</b>Mock Rules<small>40/60 progress rule</small></button>
-      <button class="option" onclick="showJobSubjects()"><b>📚</b>Subjects<small>Subject-wise mock</small></button>
+      <button class="option" onclick="startMock()"><b>ðŸ“</b>Daily Live Mock<small>New question set</small></button>
+      <button class="option" onclick="showPYQ()"><b>ðŸ“œ</b>PYQ 2020â€“2026<small>Previous year practice</small></button>
+      <button class="option" onclick="showPractice()"><b>âš¡</b>Daily Practice<small>Practice questions</small></button>
+      <button class="option" onclick="askAI()"><b>ðŸ¤–</b>AI Question & Answer<small>Ask inside section</small></button>
+      <button class="option" onclick="showJobRules()"><b>ðŸ“Š</b>Mock Rules<small>40/60 progress rule</small></button>
+      <button class="option" onclick="showJobSubjects()"><b>ðŸ“š</b>Subjects<small>Subject-wise mock</small></button>
     </div>
 
     <div class="panel" id="mockPanel"></div>
@@ -509,32 +539,38 @@ footer strong{font-size:19px;color:#fff}
 <section class="section" id="studySection" style="display:none">
   <div class="section-head">
     <div>
-      <h2 class="section-title">📚 Study Section</h2>
-      <p class="section-sub">Choose your level. Every subject has short, long, PYQ, practice and mock.</p>
+      <h2 class="section-title">ðŸ“š Study Section</h2>
+      <p class="section-sub">Choose course â†’ stream â†’ subject. Every subject has Study, PYQ, Practice, Mock and AI.</p>
     </div>
     <span class="tag">STUDY</span>
   </div>
 
   <div class="category-grid">
     <button class="category c1" onclick="openStudy('Plus 2','CHSE / +2')">
-      <div class="ico">🎓</div><span>+2</span><small>All Subjects</small>
+      <div class="ico">ðŸŽ“</div><span>+2</span><small>All Subjects</small>
     </button>
     <button class="category c2" onclick="openStudy('Plus 3','Degree / +3')">
-      <div class="ico">📚</div><span>+3</span><small>All Subjects</small>
+      <div class="ico">ðŸ“š</div><span>+3</span><small>All Subjects</small>
     </button>
     <button class="category c3" onclick="openStudy('ITI','ITI Courses')">
-      <div class="ico">🔧</div><span>ITI</span><small>Trade Subjects</small>
+      <div class="ico">ðŸ”§</div><span>ITI</span><small>Trade Subjects</small>
     </button>
     <button class="category c4" onclick="openStudy('Diploma','Diploma Courses')">
-      <div class="ico">⚙️</div><span>Diploma</span><small>Technical Subjects</small>
+      <div class="ico">âš™ï¸</div><span>Diploma</span><small>Technical Subjects</small>
     </button>
-    <button class="category c5" onclick="openStudy('Competitive','Competitive Exam Study')">
-      <div class="ico">🏆</div><span>Competitive</span><small>GK • English • Maths</small>
+    <button class="category c5" onclick="openStudy('CT','CT Courses')">
+      <div class="ico">ðŸ‘©â€ðŸ«</div><span>CT</span><small>Teacher Training</small>
+    </button>
+    <button class="category c6" onclick="openStudy('B.Ed','B.Ed Courses')">
+      <div class="ico">ðŸŽ“</div><span>B.Ed</span><small>Teacher Education</small>
+    </button>
+    <button class="category c7" onclick="openStudy('Competitive','Competitive Exam Study')">
+      <div class="ico">ðŸ†</div><span>Competitive</span><small>GK â€¢ English â€¢ Maths</small>
     </button>
   </div>
 
   <div class="panel" id="studyPanel">
-    <button class="back" onclick="closePanel('studyPanel')">← Back to Study</button>
+    <button class="back" onclick="closePanel('studyPanel')">â† Back to Study</button>
     <div class="panel-title" id="studyTitle">Study</div>
     <div class="panel-sub" id="studySub">Choose a subject.</div>
     <div class="option-grid" id="subjectOptions"></div>
@@ -546,13 +582,13 @@ footer strong{font-size:19px;color:#fff}
 
 <footer>
   <strong>ExamSathi Odisha</strong><br><br>
-  Jobs • Study • PYQ • Daily Mock Test • AI Q&A
+  All Odisha Govt Jobs â€¢ +2 â€¢ +3 â€¢ CT â€¢ B.Ed â€¢ ITI â€¢ Diploma â€¢ PYQ â€¢ Mock â€¢ AI Q&A
   <br><br>
   <small>Always verify important recruitment information on the official department website.</small>
-  <div class="created">Created by Babulu Naik 💙</div>
+  <div class="created">Created by Babulu Naik ðŸ’™</div>
 </footer>
 
-<button class="top" id="topBtn">↑</button>
+<button class="top" id="topBtn">â†‘</button>
 
 <script>
 /* =========================================================
@@ -571,6 +607,9 @@ let mockQuestions=[];
 let mockIndex=0;
 let mockScore=0;
 let answered=false;
+let mockTimer=null;
+let mockRemaining=60*60; // 60 minutes
+let mockUsedKeys=[];
 
 /* =========================================================
    SAFE HTML
@@ -591,12 +630,12 @@ function updateDateTime(){
   const n=new Date();
 
   document.getElementById("currentDate").textContent=
-    "📅 "+n.toLocaleDateString("en-IN",{
+    "ðŸ“… "+n.toLocaleDateString("en-IN",{
       weekday:"long",year:"numeric",month:"long",day:"numeric"
     });
 
   document.getElementById("currentTime").textContent=
-    "🕐 "+n.toLocaleTimeString("en-IN",{
+    "ðŸ• "+n.toLocaleTimeString("en-IN",{
       hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:true
     });
 }
@@ -607,6 +646,13 @@ setInterval(updateDateTime,1000);
    MAIN NAVIGATION
 ========================================================= */
 function showMain(type){
+  // Always reset nested screens when switching main sections.
+  document.getElementById("mockPanel").classList.remove("active");
+  document.getElementById("contentPanel").classList.remove("active");
+  document.getElementById("examPanel").classList.remove("active");
+  document.getElementById("studyPanel").classList.remove("active");
+  document.getElementById("studyTools").classList.remove("active");
+
   document.getElementById("jobsSection").style.display=
     type==="jobs"?"block":"none";
 
@@ -624,16 +670,84 @@ function closePanel(id){
   document.getElementById(id).classList.remove("active");
 }
 
+function showExamFeature(){
+  const menu=document.querySelector("#examPanel > .option-grid");
+  if(menu) menu.style.display="none";
+}
+
+function backToExamOptions(){
+  stopMockTimer();
+  document.getElementById("mockPanel").classList.remove("active");
+  document.getElementById("contentPanel").classList.remove("active");
+
+  const menu=document.querySelector("#examPanel > .option-grid");
+  if(menu){
+    menu.style.display="grid";
+
+    // Back from a feature returns to the 4 main choices only.
+    const options=menu.querySelectorAll(".option");
+    options.forEach((btn,i)=>{
+      btn.style.display=i<4 ? "block" : "none";
+    });
+  }
+
+  document.getElementById("examPanel").scrollIntoView({
+    behavior:"smooth",block:"start"
+  });
+}
+
+window.addEventListener("popstate", function(e){
+  if(!document.getElementById("mockPanel").classList.contains("active")) return;
+  stopMockTimer();
+  document.getElementById("mockPanel").classList.remove("active");
+  document.getElementById("contentPanel").classList.remove("active");
+  const menu=document.querySelector("#examPanel > .option-grid");
+  if(menu){
+    menu.style.display="grid";
+    menu.querySelectorAll(".option").forEach((btn,i)=>{
+      btn.style.display=i<4 ? "block" : "none";
+    });
+  }
+  document.getElementById("examPanel").scrollIntoView({behavior:"smooth",block:"start"});
+});
+
+function backFromExamOptions(){
+  document.getElementById("mockPanel").classList.remove("active");
+  document.getElementById("contentPanel").classList.remove("active");
+  document.getElementById("examPanel").classList.remove("active");
+
+  const menu=document.querySelector("#examPanel > .option-grid");
+  if(menu){
+    menu.style.display="grid";
+    menu.querySelectorAll(".option").forEach((btn,i)=>{
+      btn.style.display=i<6 ? "block" : "none";
+    });
+  }
+
+  document.getElementById("jobsSection").scrollIntoView({
+    behavior:"smooth",block:"start"
+  });
+}
+
 /* =========================================================
    JOB EXAM
 ========================================================= */
 function openExam(name,description){
+  // Reset every child screen whenever a new exam is opened.
+  document.getElementById("mockPanel").classList.remove("active");
+  document.getElementById("contentPanel").classList.remove("active");
+  const menu=document.querySelector("#examPanel > .option-grid");
+  if(menu){
+    menu.style.display="grid";
+    menu.querySelectorAll(".option").forEach(btn=>btn.style.display="block");
+  }
+
   currentExam=name;
   currentExamDescription=description;
 
-  document.getElementById("examTitle").textContent="💼 "+name;
+  document.getElementById("examTitle").textContent="ðŸ’¼ "+name;
   document.getElementById("examSub").textContent=
-    description+" — choose mock, PYQ, practice or AI.";
+    description+" â€” choose mock, PYQ, practice or AI.";
 
   document.getElementById("examPanel").classList.add("active");
   document.getElementById("mockPanel").classList.remove("active");
@@ -647,15 +761,17 @@ function openExam(name,description){
    JOB SUBJECTS
 ========================================================= */
 function showJobSubjects(){
+  showExamFeature();
+  document.getElementById("mockPanel").classList.remove("active");
   const p=document.getElementById("contentPanel");
   p.innerHTML=`
-    <button class="back" onclick="closePanel('contentPanel')">← Back</button>
-    <div class="panel-title">📚 ${esc(currentExam)} Subjects</div>
+    <button class="back" onclick="backToExamOptions()">â† Back to Exam Options</button>
+    <div class="panel-title">ðŸ“š ${esc(currentExam)} Subjects</div>
     <div class="panel-sub">Choose a subject for practice/mock.</div>
     <div class="option-grid">
       ${["General Knowledge","Current Affairs","Odia","English","Mathematics","Reasoning","General Science","Computer","Odisha GK"].map((s,i)=>`
         <button class="option" onclick="subjectMock('${esc(s)}')">
-          <b>${["🌍","📰","ଓ","🔤","➗","🧠","🔬","💻","🏞️"][i]}</b>${esc(s)}
+          <b>${["ðŸŒ","ðŸ“°","à¬“","ðŸ”¤","âž—","ðŸ§ ","ðŸ”¬","ðŸ’»","ðŸžï¸"][i]}</b>${esc(s)}
         </button>`).join("")}
     </div>`;
   p.classList.add("active");
@@ -665,15 +781,17 @@ function showJobSubjects(){
    JOB RULE
 ========================================================= */
 function showJobRules(){
+  showExamFeature();
+  document.getElementById("mockPanel").classList.remove("active");
   const p=document.getElementById("contentPanel");
   p.innerHTML=`
-    <button class="back" onclick="closePanel('contentPanel')">← Back</button>
-    <div class="panel-title">📊 Daily Mock Rule</div>
+    <button class="back" onclick="backToExamOptions()">â† Back to Exam Options</button>
+    <div class="panel-title">ðŸ“Š Daily Mock Rule</div>
     <div class="qcard">
-      <h4>60 Questions • 60 Marks</h4>
+      <h4>60 Questions â€¢ 60 Minutes</h4>
       <p>
-        <b>40 or more correct</b> → next attempt gets a new question set.<br><br>
-        <b>Below 40</b> → same question set continues for practice until improvement.
+        Every attempt gets a fresh question set automatically.<br><br>
+        AI + question bank generate new questions so you can take unlimited tests. No manual Q&A entry is required.
       </p>
       <span class="qtag">SMART PRACTICE RULE</span>
     </div>`;
@@ -684,15 +802,17 @@ function showJobRules(){
    PYQ
 ========================================================= */
 function showPYQ(){
+  showExamFeature();
+  document.getElementById("mockPanel").classList.remove("active");
   const p=document.getElementById("contentPanel");
   p.innerHTML=`
-    <button class="back" onclick="closePanel('contentPanel')">← Back</button>
-    <div class="panel-title">📜 ${esc(currentExam)} PYQ</div>
-    <div class="panel-sub">Previous Year Questions 2020–2026.</div>
+    <button class="back" onclick="backToExamOptions()">â† Back to Exam Options</button>
+    <div class="panel-title">ðŸ“œ ${esc(currentExam)} PYQ</div>
+    <div class="panel-sub">Previous Year Questions 2020â€“2026.</div>
     <div class="option-grid">
       ${[2020,2021,2022,2023,2024,2025,2026].map(y=>`
         <button class="option" onclick="loadPYQ(${y})">
-          <b>📅</b>${y}<small>Previous Year Questions</small>
+          <b>ðŸ“…</b>${y}<small>Previous Year Questions</small>
         </button>`).join("")}
     </div>
     <div id="pyqResult"></div>`;
@@ -701,7 +821,7 @@ function showPYQ(){
 
 async function loadPYQ(year){
   const box=document.getElementById("pyqResult");
-  box.innerHTML=`<div class="qcard"><h4>⏳ Loading ${year} PYQ...</h4></div>`;
+  box.innerHTML=`<div class="qcard"><h4>â³ Loading ${year} PYQ...</h4></div>`;
 
   try{
     const url=SUPABASE_URL+
@@ -721,7 +841,7 @@ async function loadPYQ(year){
     if(!data.length){
       box.innerHTML=`
         <div class="qcard">
-          <h4>📭 ${year} PYQ not found</h4>
+          <h4>ðŸ“­ ${year} PYQ not found</h4>
           <p>More questions can be added to the Supabase questions table.</p>
         </div>`;
       return;
@@ -737,7 +857,7 @@ async function loadPYQ(year){
         <span class="qtag">PYQ ${year}</span>
       </div>`).join("");
   }catch(e){
-    box.innerHTML=`<div class="qcard"><h4>⚠️ Could not load PYQ</h4><p>${esc(e.message)}</p></div>`;
+    box.innerHTML=`<div class="qcard"><h4>âš ï¸ Could not load PYQ</h4><p>${esc(e.message)}</p></div>`;
   }
 }
 
@@ -745,10 +865,12 @@ async function loadPYQ(year){
    PRACTICE
 ========================================================= */
 function showPractice(){
+  showExamFeature();
+  document.getElementById("mockPanel").classList.remove("active");
   const p=document.getElementById("contentPanel");
   p.innerHTML=`
-    <button class="back" onclick="closePanel('contentPanel')">← Back</button>
-    <div class="panel-title">⚡ Daily Practice</div>
+    <button class="back" onclick="backToExamOptions()">â† Back to Exam Options</button>
+    <div class="panel-title">âš¡ Daily Practice</div>
     <div class="panel-sub">${esc(currentExam)} practice questions.</div>
     <div class="toolbar">
       <button class="tool" onclick="subjectMock('General Knowledge')">GK</button>
@@ -764,13 +886,15 @@ function showPractice(){
    AI ASK
 ========================================================= */
 async function askAI(){
+  showExamFeature();
+  document.getElementById("mockPanel").classList.remove("active");
   const p=document.getElementById("contentPanel");
   p.innerHTML=`
-    <button class="back" onclick="closePanel('contentPanel')">← Back</button>
-    <div class="panel-title">🤖 AI Question & Answer</div>
+    <button class="back" onclick="backToExamOptions()">â† Back to Exam Options</button>
+    <div class="panel-title">ðŸ¤– AI Question & Answer</div>
     <div class="panel-sub">Ask your question inside ${esc(currentExam)} section.</div>
     <input class="search" id="aiQuestion" placeholder="Type your question...">
-    <button class="tool purple" onclick="sendAI()">ASK AI →</button>
+    <button class="tool purple" onclick="sendAI()">ASK AI â†’</button>
     <div id="aiAnswer" style="margin-top:10px"></div>`;
   p.classList.add("active");
 }
@@ -780,11 +904,11 @@ async function sendAI(){
   const out=document.getElementById("aiAnswer");
 
   if(!q){
-    out.innerHTML=`<div class="qcard"><h4>✍️ Please type a question.</h4></div>`;
+    out.innerHTML=`<div class="qcard"><h4>âœï¸ Please type a question.</h4></div>`;
     return;
   }
 
-  out.innerHTML=`<div class="qcard"><h4>⏳ AI is preparing answer...</h4></div>`;
+  out.innerHTML=`<div class="qcard"><h4>â³ AI is preparing answer...</h4></div>`;
 
   try{
     const body={
@@ -814,7 +938,7 @@ async function sendAI(){
 
     out.innerHTML=`
       <div class="qcard">
-        <h4>🤖 AI Answer</h4>
+        <h4>ðŸ¤– AI Answer</h4>
         <p>${esc(
           data.answer||
           data.message||
@@ -825,7 +949,7 @@ async function sendAI(){
   }catch(e){
     out.innerHTML=`
       <div class="qcard">
-        <h4>⚠️ AI service unavailable</h4>
+        <h4>âš ï¸ AI service unavailable</h4>
         <p>${esc(e.message)}</p>
       </div>`;
   }
@@ -835,53 +959,58 @@ async function sendAI(){
    STUDY
 ========================================================= */
 const studySubjects={
-  "Plus 2":[
-    "Odia","English","Physics","Chemistry","Mathematics",
-    "Biology","Computer Science","History","Political Science",
-    "Economics","Geography"
-  ],
-  "Plus 3":[
-    "Odia","English","History","Political Science","Economics",
-    "Geography","Physics","Chemistry","Mathematics",
-    "Botany","Zoology","Computer Science"
-  ],
-  "ITI":[
-    "Trade Theory","Trade Practical","Engineering Drawing",
-    "Workshop Calculation","Employability Skills"
-  ],
-  "Diploma":[
-    "Engineering Mathematics","Engineering Physics",
-    "Engineering Chemistry","Mechanical","Electrical",
-    "Civil","Computer Science","Workshop"
-  ],
-  "Competitive":[
-    "General Knowledge","Current Affairs","Odia","English",
-    "Mathematics","Reasoning","General Science","Computer",
-    "Odisha GK"
-  ]
+  "Plus 2":{
+    "Arts":["Odia","English","History","Political Science","Economics","Geography","Logic","Education","Sociology"],
+    "Science":["Physics","Chemistry","Mathematics","Biology","Computer Science","English","Odia"],
+    "Commerce":["Accountancy","Business Studies","Economics","Mathematics","English","Odia","Computer Science"]
+  },
+  "Plus 3":{
+    "Arts":["Odia","English","History","Political Science","Economics","Geography","Education","Sociology","Philosophy"],
+    "Science":["Physics","Chemistry","Mathematics","Botany","Zoology","Computer Science","English"],
+    "Commerce":["Accountancy","Management","Economics","Business Law","Finance","Mathematics","English"]
+  },
+  "CT":["Child Development","Pedagogy","Odia","English","Mathematics","Environmental Studies","General Knowledge","Teaching Aptitude"],
+  "B.Ed":["Educational Psychology","Pedagogy","Assessment & Evaluation","Inclusive Education","School Management","Odia","English","ICT in Education"],
+  "ITI":["Trade Theory","Trade Practical","Engineering Drawing","Workshop Calculation","Employability Skills"],
+  "Diploma":["Engineering Mathematics","Engineering Physics","Engineering Chemistry","Mechanical","Electrical","Civil","Computer Science","Workshop"],
+  "Competitive":["General Knowledge","Current Affairs","Odia","English","Mathematics","Reasoning","General Science","Computer","Odisha GK"]
 };
 
 function openStudy(level,description){
+  document.getElementById("studyTools").classList.remove("active");
+  document.getElementById("studyResult").innerHTML="";
   currentStudy=level;
 
-  document.getElementById("studyTitle").textContent="📚 "+level;
-  document.getElementById("studySub").textContent=
-    description+" — choose your subject.";
-
+  document.getElementById("studyTitle").textContent="ðŸ“š "+level;
+  document.getElementById("studySub").textContent=description+" â€” choose your stream/subject.";
   document.getElementById("studyPanel").classList.add("active");
+
+  const data=studySubjects[level];
+  const listEl=document.getElementById("subjectOptions");
+  if(level==="Plus 2" || level==="Plus 3"){
+    const streams=Object.keys(data);
+    listEl.innerHTML=streams.map((s,i)=>`<button class="option" onclick="selectStudyStream('${esc(s)}')"><b>${["ðŸŽ¨","ðŸ”¬","ðŸ’¼"][i]}</b>${esc(s)}<small>${level} ${esc(s)} â€¢ All Subjects</small></button>`).join("");
+  }else{
+    listEl.innerHTML=(Array.isArray(data)?data:[]).map((s,i)=>`<button class="option" onclick="openSubject('${esc(s)}')"><b>${["ðŸ“–","ðŸ”¤","âš›ï¸","ðŸ§ª","âž—","ðŸ§¬","ðŸ’»","ðŸ›ï¸","ðŸŒ","ðŸ“","ðŸŒ±","ðŸ–¥ï¸"][i%12]}</b>${esc(s)}<small>Study â€¢ PYQ â€¢ Practice â€¢ Mock â€¢ AI</small></button>`).join("");
+  }
+  document.getElementById("studyPanel").scrollIntoView({behavior:"smooth",block:"start"});
+}
+
+function selectStudyStream(stream){
+  currentStudy=currentStudy+" â€¢ "+stream;
+  const base=currentStudy.split(" â€¢ ")[0];
+  const list=(studySubjects[base]&&studySubjects[base][stream])||[];
+  const listEl=document.getElementById("subjectOptions");
+  document.getElementById("studySub").textContent=base+" â€¢ "+stream+" â€” choose a subject.";
+  listEl.innerHTML=`<button class="back" onclick="openStudy('${esc(base)}','${esc(base==='Plus 2'?'CHSE / +2':'Degree / +3')}')">â† Back to Streams</button>`+
+    list.map((s,i)=>`<button class="option" onclick="openSubject('${esc(s)}')"><b>${["ðŸ“–","ðŸ”¤","âš›ï¸","ðŸ§ª","âž—","ðŸ§¬","ðŸ’»","ðŸ›ï¸","ðŸŒ","ðŸ“","ðŸŒ±","ðŸ–¥ï¸"][i%12]}</b>${esc(s)}<small>${esc(stream)} â€¢ Study â€¢ PYQ â€¢ Practice â€¢ Mock â€¢ AI</small></button>`).join("");
+}
+
+function backToStudyOptions(){
   document.getElementById("studyTools").classList.remove("active");
-
-  const list=studySubjects[level]||studySubjects["Competitive"];
-
-  document.getElementById("subjectOptions").innerHTML=list.map((s,i)=>`
-    <button class="option" onclick="openSubject('${esc(s)}')">
-      <b>${["📖","🔤","⚛️","🧪","➗","🧬","💻","🏛️","🌍","📐","🌱","🖥️"][i%12]}</b>
-      ${esc(s)}
-      <small>Short • Long • PYQ • Mock</small>
-    </button>`).join("");
-
-  document.getElementById("studyPanel")
-    .scrollIntoView({behavior:"smooth",block:"start"});
+  const panel=document.getElementById("studyPanel");
+  panel.classList.add("active");
+  panel.scrollIntoView({behavior:"smooth",block:"start"});
 }
 
 function openSubject(subject){
@@ -890,38 +1019,38 @@ function openSubject(subject){
   const p=document.getElementById("studyTools");
 
   p.innerHTML=`
-    <button class="back" onclick="closePanel('studyTools')">← Back</button>
-    <div class="panel-title">📖 ${esc(currentSubject)}</div>
-    <div class="panel-sub">${esc(currentStudy)} • All study options</div>
+    <button class="back" onclick="backToStudyOptions()">â† Back to Subjects</button>
+    <div class="panel-title">ðŸ“– ${esc(currentSubject)}</div>
+    <div class="panel-sub">${esc(currentStudy)} â€¢ All study options</div>
 
     <div class="option-grid">
       <button class="option" onclick="loadStudyQuestions('short')">
-        <b>📝</b>Short Questions
+        <b>ðŸ“</b>Short Questions
         <small>Practice short answer</small>
       </button>
 
       <button class="option" onclick="loadStudyQuestions('long')">
-        <b>📚</b>Long Questions
+        <b>ðŸ“š</b>Long Questions
         <small>Detailed answer practice</small>
       </button>
 
       <button class="option" onclick="loadStudyQuestions('pyq')">
-        <b>📜</b>Previous Year
-        <small>2020–2026</small>
+        <b>ðŸ“œ</b>Previous Year
+        <small>2020â€“2026</small>
       </button>
 
       <button class="option" onclick="startStudyMock()">
-        <b>⚡</b>Daily Mock Test
+        <b>âš¡</b>Daily Mock Test
         <small>Subject-wise mock</small>
       </button>
 
       <button class="option" onclick="askStudyAI()">
-        <b>🤖</b>AI Q&A
+        <b>ðŸ¤–</b>AI Q&A
         <small>Ask inside subject</small>
       </button>
 
       <button class="option" onclick="loadStudyPractice()">
-        <b>🎯</b>Daily Practice
+        <b>ðŸŽ¯</b>Daily Practice
         <small>New practice</small>
       </button>
     </div>
@@ -929,11 +1058,13 @@ function openSubject(subject){
     <div id="studyResult" style="margin-top:10px"></div>`;
 
   p.classList.add("active");
+  p.scrollIntoView({behavior:"smooth",block:"start"});
 }
 
 async function loadStudyQuestions(type){
   const out=document.getElementById("studyResult");
-  out.innerHTML=`<div class="qcard"><h4>⏳ Loading ${type} questions...</h4></div>`;
+  out.innerHTML="";
+  out.innerHTML=`<div class="qcard"><h4>â³ Loading ${type} questions...</h4></div>`;
 
   try{
     let url=SUPABASE_URL+
@@ -968,7 +1099,7 @@ async function loadStudyQuestions(type){
     if(!data.length){
       out.innerHTML=`
         <div class="qcard">
-          <h4>📭 Questions not available yet</h4>
+          <h4>ðŸ“­ Questions not available yet</h4>
           <p>Add questions for <b>${esc(currentSubject)}</b> in the Supabase questions table.</p>
         </div>`;
       return;
@@ -977,12 +1108,12 @@ async function loadStudyQuestions(type){
     out.innerHTML=data.map((q,i)=>`
       <div class="qcard" style="margin-top:8px">
         <h4>Q${i+1}. ${esc(q.question)}</h4>
-        ${type==="short"?`<p>✍️ Write a short answer.</p>`:""}
-        ${type==="long"?`<p>✍️ Write a detailed answer with explanation.</p>`:""}
+        ${type==="short"?`<p>âœï¸ Write a short answer.</p>`:""}
+        ${type==="long"?`<p>âœï¸ Write a detailed answer with explanation.</p>`:""}
         ${type==="pyq"?`<span class="qtag">PYQ ${esc(q.pyq_year||"")}</span>`:""}
       </div>`).join("");
   }catch(e){
-    out.innerHTML=`<div class="qcard"><h4>⚠️ Error</h4><p>${esc(e.message)}</p></div>`;
+    out.innerHTML=`<div class="qcard"><h4>âš ï¸ Error</h4><p>${esc(e.message)}</p></div>`;
   }
 }
 
@@ -990,9 +1121,9 @@ function loadStudyPractice(){
   const out=document.getElementById("studyResult");
   out.innerHTML=`
     <div class="qcard">
-      <h4>🎯 Daily Practice — ${esc(currentSubject)}</h4>
+      <h4>ðŸŽ¯ Daily Practice â€” ${esc(currentSubject)}</h4>
       <p>Practice questions will be loaded from your Supabase question bank.</p>
-      <button class="tool" style="margin-top:8px" onclick="startStudyMock()">START PRACTICE →</button>
+      <button class="tool" style="margin-top:8px" onclick="startStudyMock()">START PRACTICE â†’</button>
     </div>`;
 }
 
@@ -1009,19 +1140,114 @@ async function subjectMock(subject){
   startMock();
 }
 
+function mockStorageKey(){
+  return "examSathi_usedQuestions_"+(currentExam||currentStudy||"Daily")+"_"+(currentSubject||"all");
+}
+
+function questionKey(q){
+  return String(q.id ?? q.question_id ?? q.question ?? JSON.stringify(q));
+}
+
+function loadUsedMockKeys(){
+  try{
+    return JSON.parse(localStorage.getItem(mockStorageKey())||"[]");
+  }catch(e){ return []; }
+}
+
+function saveUsedMockKeys(){
+  try{
+    localStorage.setItem(mockStorageKey(),JSON.stringify(mockUsedKeys));
+  }catch(e){}
+}
+
+function startMockTimer(){
+  clearInterval(mockTimer);
+  mockRemaining=60*60;
+  updateMockTimer();
+  mockTimer=setInterval(()=>{
+    mockRemaining--;
+    updateMockTimer();
+    if(mockRemaining<=0){
+      clearInterval(mockTimer);
+      mockTimer=null;
+      finishMock(true);
+    }
+  },1000);
+}
+
+function updateMockTimer(){
+  const el=document.getElementById("mockTimer");
+  if(!el)return;
+  const m=Math.floor(Math.max(0,mockRemaining)/60);
+  const s=Math.max(0,mockRemaining)%60;
+  el.textContent=`â±ï¸ ${String(m).padStart(2,"0")}:${String(s).padStart(2,"0")}`;
+}
+
+function stopMockTimer(){
+  clearInterval(mockTimer);
+  mockTimer=null;
+}
+
+function pickFreshQuestions(pool,count=60){
+  const valid=Array.isArray(pool)?pool:[];
+  let used=loadUsedMockKeys();
+  let fresh=shuffle(valid.filter(q=>!used.includes(questionKey(q))));
+
+  // When the whole question bank has been used, start a new cycle.
+  if(fresh.length<count){
+    used=[];
+    fresh=shuffle(valid);
+  }
+
+  const selected=fresh.slice(0,count);
+  mockUsedKeys=used.concat(selected.map(questionKey));
+  saveUsedMockKeys();
+  return selected;
+}
+
+async function generateAIMockQuestions(count=60){
+  const context=currentSubject||currentExam||currentStudy||"Odisha Government Exam";
+  const body={
+    exam_id:"",
+    exam_name:currentExam||currentStudy||"ExamSathi",
+    category:currentStudy?"Study":"All Odisha Government Job Preparation",
+    subject:currentSubject||"Mixed",
+    topic:`Generate a fresh ${count}-question MCQ mock test for ${context}. Do not repeat previously used questions. Return only structured MCQs with question, option_a, option_b, option_c, option_d, correct_ans (A/B/C/D), explanation. Difficulty should match competitive/exam preparation.`,
+    difficulty:"mixed",
+    question_type:"mcq",
+    count:count,
+    language:"English/Odia"
+  };
+  const r=await fetch(AI_ENDPOINT,{method:"POST",headers:{apikey:SUPABASE_KEY,Authorization:"Bearer "+SUPABASE_KEY,"Content-Type":"application/json"},body:JSON.stringify(body)});
+  if(!r.ok) throw new Error(await r.text());
+  const data=await r.json();
+  const arr=data.questions||data.items||data.data||[];
+  if(!Array.isArray(arr)) return [];
+  return arr.map((q,i)=>({...q,id:q.id||"ai_"+Date.now()+"_"+i})).filter(q=>q.question&&q.option_a&&q.option_b&&q.option_c&&q.option_d&&q.correct_ans).slice(0,count);
+}
+
 async function startMock(){
+  // Add one browser-history step for the mock.
+  if(!history.state || history.state.examSathiMock !== true){
+    history.pushState({examSathiMock:true}, "", "#mock");
+  }
+  showExamFeature();
+  document.getElementById("contentPanel").classList.remove("active");
+
   const panel=document.getElementById("mockPanel");
   panel.classList.add("active");
+  panel.scrollIntoView({behavior:"smooth",block:"start"});
   panel.innerHTML=`
-    <div class="mock-box">
+    <div class="feature-inner"><div class="mock-box">
+      <button class="back" onclick="backToExamOptions()">â† Back</button>
       <div class="mock-top">
-        <span>📝 ${esc(currentExam||currentStudy||"Daily")} Mock</span>
+        <span>ðŸ“ ${esc(currentExam||currentStudy||"Daily")} Mock</span>
         <span>Loading...</span>
       </div>
     </div>`;
 
   try{
-    let url=SUPABASE_URL+"/rest/v1/questions?select=*&limit=60";
+    let url=SUPABASE_URL+"/rest/v1/questions?select=*&limit=1000";
 
     if(currentSubject){
       url+="&subject=eq."+encodeURIComponent(currentSubject);
@@ -1038,23 +1264,42 @@ async function startMock(){
 
     const data=await r.json();
 
-    if(data.length){
-      mockQuestions=shuffle(data).slice(0,Math.min(60,data.length));
+    if(data.length>=60){
+      mockQuestions=pickFreshQuestions(data,60);
     }else{
-      mockQuestions=demoQuestions();
+      // Automatically request a fresh 60-question set from the configured AI endpoint.
+      mockQuestions=await generateAIMockQuestions(60);
+      if(mockQuestions.length<60){
+        const demo=demoQuestions();
+        const demoPool=Array.from({length:60},(_,i)=>({
+          ...demo[i%demo.length],
+          id:"demo_"+i+"_"+demo[i%demo.length].question
+        }));
+        mockQuestions=pickFreshQuestions(demoPool,60);
+      }
     }
 
     mockIndex=0;
     mockScore=0;
     answered=false;
+    startMockTimer();
     renderMock();
 
   }catch(e){
     console.warn(e);
-    mockQuestions=demoQuestions();
+    try{ mockQuestions=await generateAIMockQuestions(60); }catch(_){ mockQuestions=[]; }
+    if(mockQuestions.length<60){
+      const demo=demoQuestions();
+      const demoPool=Array.from({length:60},(_,i)=>({
+        ...demo[i%demo.length],
+        id:"demo_"+i+"_"+demo[i%demo.length].question
+      }));
+      mockQuestions=pickFreshQuestions(demoPool,60);
+    }
     mockIndex=0;
     mockScore=0;
     answered=false;
+    startMockTimer();
     renderMock();
   }
 }
@@ -1079,7 +1324,7 @@ function demoQuestions(){
       correct_ans:"C",explanation:"Bhubaneswar is the capital of Odisha."
     },
     {
-      question:"2 + 2 × 3 = ?",
+      question:"2 + 2 Ã— 3 = ?",
       option_a:"12",option_b:"8",option_c:"10",option_d:"6",
       correct_ans:"B",explanation:"Multiplication is done before addition: 2 + 6 = 8."
     },
@@ -1118,10 +1363,11 @@ function renderMock(){
   );
 
   panel.innerHTML=`
-    <div class="mock-box">
+    <div class="feature-inner"><div class="mock-box">
       <div class="mock-top">
-        <span>📝 ${esc(currentSubject||currentExam||"Daily")} Mock</span>
+        <span>ðŸ“ ${esc(currentSubject||currentExam||"Daily")} Mock</span>
         <span>${mockIndex+1} / ${mockQuestions.length}</span>
+        <span id="mockTimer">â±ï¸ 60:00</span>
       </div>
 
       <div class="progress">
@@ -1144,7 +1390,7 @@ function renderMock(){
       </div>
 
       <div class="explanation" id="explanation">
-        💡 ${esc(q.explanation||"Explanation will be available after answering.")}
+        ðŸ’¡ ${esc(q.explanation||"Explanation will be available after answering.")}
       </div>
     </div>`;
 }
@@ -1187,30 +1433,21 @@ function answerQuestion(letter,button){
 /* =========================================================
    FINISH
 ========================================================= */
-function finishMock(){
+function finishMock(timeUp=false){
+  stopMockTimer();
   const panel=document.getElementById("mockPanel");
 
   const total=mockQuestions.length;
   const percent=total?Math.round((mockScore/total)*100):0;
 
-  /*
-    Main requested rule:
-    60/60 mock -> 40 or more correct = NEW SET
-    Below 40 = SAME SET for practice.
-  */
-  const newSet=mockScore>=40 || percent>=67;
-
-  const storageKey=
-    "examSathi_"+(currentExam||currentStudy)+"_"+(currentSubject||"all");
-
-  if(newSet){
-    localStorage.setItem(storageKey,String(Date.now()));
-  }
-
+  const resultTitle=timeUp?"â° Time Up!":"ðŸ Test Completed";
+  const resultNote=timeUp
+    ?"60 minutes completed. Your next test will automatically use fresh questions."
+    :"Your next test will automatically use a fresh set of questions.";
   panel.innerHTML=`
     <div class="mock-box" style="text-align:center">
-      <div style="font-size:42px">${newSet?"🏆":"📚"}</div>
-      <h2>${newSet?"Excellent! New Questions Unlocked":"Keep Practicing"}</h2>
+      <div style="font-size:42px">${timeUp?"â°":"ðŸ†"}</div>
+      <h2>${resultTitle}</h2>
 
       <p style="margin-top:6px">
         Score: <b>${mockScore} / ${total}</b>
@@ -1218,16 +1455,12 @@ function finishMock(){
       </p>
 
       <p style="margin-top:8px;font-size:12px">
-        ${
-          newSet
-          ?"✅ 40+ correct — next attempt will use a new question set."
-          :"🔁 Below 40 — same question set will remain for practice until you improve."
-        }
+        ðŸ”„ ${resultNote}
       </p>
 
       <div class="toolbar" style="justify-content:center;margin-top:12px">
         <button class="tool" onclick="startMock()">START AGAIN</button>
-        <button class="tool green" onclick="closePanel('mockPanel')">DONE</button>
+        <button class="tool green" onclick="backToExamOptions()">BACK</button>
       </div>
     </div>`;
 }
@@ -1281,7 +1514,7 @@ async function loadJobs(){
     if(!filtered.length){
       list.innerHTML=`
         <div class="notification">
-          <div class="ntype">🔎</div>
+          <div class="ntype">ðŸ”Ž</div>
           <div class="nbody">
             <strong>No new notification found</strong>
             <p>New government job notifications will appear here automatically.</p>
@@ -1291,18 +1524,18 @@ async function loadJobs(){
     }
 
     list.innerHTML=filtered.map(job=>{
-      let icon="💼";
+      let icon="ðŸ’¼";
       const t=((job.title||"")+" "+(job.category||"")).toLowerCase();
 
-      if(t.includes("police"))icon="👮";
-      else if(t.includes("admit"))icon="🎫";
-      else if(t.includes("result"))icon="🏆";
-      else if(t.includes("scholar"))icon="🎓";
-      else if(t.includes("exam"))icon="📝";
+      if(t.includes("police"))icon="ðŸ‘®";
+      else if(t.includes("admit"))icon="ðŸŽ«";
+      else if(t.includes("result"))icon="ðŸ†";
+      else if(t.includes("scholar"))icon="ðŸŽ“";
+      else if(t.includes("exam"))icon="ðŸ“";
 
       const link=job.apply_url&&
         String(job.apply_url).startsWith("http")
-        ?`<a class="job-link" href="${esc(job.apply_url)}" target="_blank" rel="noopener">Official / Apply →</a>`
+        ?`<a class="job-link" href="${esc(job.apply_url)}" target="_blank" rel="noopener">Official / Apply â†’</a>`
         :"";
 
       return `
@@ -1321,7 +1554,7 @@ async function loadJobs(){
     console.error(e);
     list.innerHTML=`
       <div class="notification">
-        <div class="ntype">⚠️</div>
+        <div class="ntype">âš ï¸</div>
         <div class="nbody">
           <strong>Notification loading problem</strong>
           <p>Please check Supabase connection.</p>
