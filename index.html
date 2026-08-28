@@ -2466,6 +2466,7 @@ Suggestion
 
 <div class="copy">
 
+<span style="display:inline-block;padding:8px 16px;border:1px solid rgba(255,213,74,.45);border-radius:999px;color:#ffd54a;font-weight:800;margin-bottom:10px">✨ Created by Babulu Naik</span><br>
 © 2026 ExamSathi Odisha
 • Created by Babulu Naik
 
@@ -3913,7 +3914,7 @@ toast(
 
 const payload = {
 
-exam_id:null,
+exam_id:(allExams.find(x=>String(x.name||"").toLowerCase().includes(String(selectedClass||"").toLowerCase()))||{}).id||null,
 
 exam_name:
 selectedClass,
@@ -3943,7 +3944,10 @@ type==="short"
 : 5,
 
 language:
-"odia"
+(english ? "English" : "Odia"),
+
+instruction:
+"Create study material strictly from the selected syllabus, class, stream and subject. Use the selected language. If Odia is selected, use simple Odia suitable for Odisha students."
 
 };
 
@@ -4518,178 +4522,49 @@ r.percentage || 0
 */
 
 
-async function getQuestionsForMock(
-examName
-){
+async function getQuestionsForMock(examName){
 
-let data = [];
+const exam=allExams.find(x=>{
+const n=String(x.name||'').toLowerCase().trim();
+const t=String(examName||'').toLowerCase().trim();
+return n===t||n.includes(t)||t.includes(n);
+});
 
+const examId=exam?.id||null;
+const subject=String(selectedSubject||'').trim();
+let data=[];
 
-/* ---------- Try exam_id ---------- */
-
-const exam =
-allExams.find(
-x=>
-String(x.name || "")
-.toLowerCase()
-.includes(
-String(examName || "")
-.toLowerCase()
-)
-);
-
-
-if(exam?.id){
-
-data =
-await supabaseFetch(
-"questions",
-"?select=*&exam_id=eq."+
-encodeURIComponent(exam.id)+
-"&question_type=eq.practice&limit=200"
-);
-
-}
-
-
-/* ---------- Try exam name ---------- */
-
+if(examId){
+data=await supabaseFetch('questions','?select=*&exam_id=eq.'+encodeURIComponent(examId)+'&question_type=eq.practice&limit=500');
 if(!data.length){
-
-data =
-await supabaseFetch(
-"questions",
-"?select=*&question_type=eq.practice&limit=200"
-);
-
+data=await supabaseFetch('questions','?select=*&exam_id=eq.'+encodeURIComponent(examId)+'&limit=500');
+}
 }
 
-
-/* ---------- Map database ---------- */
-
-let questions =
-Array.isArray(data)
-?
-
-data
-.map(q=>({
-
-q:q.question,
-
-options:[
-
-q.option_a,
-q.option_b,
-q.option_c,
-q.option_d
-
-],
-
-answer:
-
-[
-"a",
-"b",
-"c",
-"d"
-]
-.indexOf(
-String(
-q.correct_answer || ""
-)
-.toLowerCase()
-.trim()
-),
-
-explanation:
-q.explanation || "",
-
-id:
-q.id,
-
-exam_id:
-q.exam_id,
-
-subject:
-q.subject,
-
-topic:
-q.topic
-
-}))
-.filter(
-q=>
-q.q &&
-q.options.filter(Boolean).length===4 &&
-q.answer>=0
-)
-
-:
-
-[];
-
-
-/* ---------- Randomize ---------- */
-
-questions =
-shuffleArray(
-questions
-);
-
-
-/* ---------- 60 questions ---------- */
-
-if(questions.length >= 60){
-
-return questions.slice(
-0,
-60
-);
-
+if(!data.length&&subject){
+data=await supabaseFetch('questions','?select=*&subject=ilike.'+encodeURIComponent('*'+subject+'*')+'&limit=500');
 }
 
+let questions=(Array.isArray(data)?data:[]).map(q=>{
+const c=String(q.correct_answer??q.correct_ans??q.answer??'').trim().toLowerCase();
+const m={a:0,b:1,c:2,d:3,'0':0,'1':1,'2':2,'3':3};
+return {q:q.question||'',options:[q.option_a,q.option_b,q.option_c,q.option_d],answer:m[c]??-1,explanation:q.explanation||'',id:q.id,exam_id:q.exam_id||examId,subject:q.subject||subject,topic:q.topic||'',difficulty:q.difficulty||'mixed',pyq_year:q.pyq_year||null};
+}).filter(q=>q.q&&q.options.every(Boolean)&&q.answer>=0);
 
-/* ---------- AI fallback ---------- */
+const seen=new Set();
+questions=questions.filter(q=>{const k=String(q.q).trim().toLowerCase().replace(/\s+/g,' ');if(!k||seen.has(k))return false;seen.add(k);return true;});
+questions=shuffleArray(questions);
 
-const aiQuestions =
-await generateAIQuestions(
-examName,
-60
-);
-
-
-if(
-Array.isArray(aiQuestions) &&
-aiQuestions.length
-){
-
-questions =
-shuffleArray(
-[
-...questions,
-...aiQuestions
-]
-);
-
+if(questions.length<60){
+const ai=await generateAIQuestions(examName,60-questions.length,examId,subject||'Full Syllabus','Syllabus Based Topics');
+for(const q of (Array.isArray(ai)?ai:[])){
+const k=String(q.q||'').trim().toLowerCase().replace(/\s+/g,' ');
+if(k&&!seen.has(k)){seen.add(k);questions.push(q);}
+if(questions.length>=60)break;
+}
 }
 
-
-/* ---------- Final limit ---------- */
-
-if(questions.length){
-
-return questions.slice(
-0,
-60
-);
-
-}
-
-
-/* ---------- Fallback ---------- */
-
-return fallbackQuestions();
-
+return shuffleArray(questions).slice(0,60);
 }
 
 
@@ -4699,14 +4574,17 @@ return fallbackQuestions();
 
 async function generateAIQuestions(
 examName,
-count
+count,
+examId=null,
+subject="Full Syllabus",
+topic="Syllabus Based Topics"
 ){
 
 try{
 
 const payload = {
 
-exam_id:null,
+exam_id:examId,
 
 exam_name:
 examName,
@@ -4715,10 +4593,10 @@ category:
 "Competitive Exam",
 
 subject:
-"Full Syllabus",
+subject,
 
 topic:
-"Full Syllabus",
+topic,
 
 difficulty:
 "mixed",
@@ -4732,7 +4610,10 @@ count:
 count,
 
 language:
-"odia_english"
+(english ? "English" : "Odia"),
+
+instruction:
+"Generate questions strictly from the selected syllabus, exam, subject and topic. Do not mix other exams or subjects. Return question, four options, correct answer and explanation in the selected language. If Odia is selected, use simple Odia suitable for Odisha students."
 
 };
 
@@ -4895,131 +4776,13 @@ return [];
    ========================================================= */
 
 function fallbackQuestions(){
-
 return [
-
-{
-q:"Odisha ra capital kana?",
-options:[
-"Cuttack",
-"Bhubaneswar",
-"Puri",
-"Sambalpur"
-],
-answer:1,
-explanation:"Bhubaneswar is the capital of Odisha."
-},
-
-{
-q:"Odisha State Formation Day kete?",
-options:[
-"1 April",
-"15 August",
-"26 January",
-"2 October"
-],
-answer:0,
-explanation:"Odisha Day is observed on 1 April."
-},
-
-{
-q:"Odisha ra official language kana?",
-options:[
-"Hindi",
-"English",
-"Odia",
-"Bengali"
-],
-answer:2,
-explanation:"Odia is the official language of Odisha."
-},
-
-{
-q:"Konark Sun Temple keun district re?",
-options:[
-"Puri",
-"Khordha",
-"Cuttack",
-"Ganjam"
-],
-answer:0,
-explanation:"Konark Sun Temple is in Puri district."
-},
-
-{
-q:"Indian Constitution adopted heithila keun date re?",
-options:[
-"15 August 1947",
-"26 November 1949",
-"26 January 1950",
-"2 October 1950"
-],
-answer:1,
-explanation:"The Constitution was adopted on 26 November 1949."
-},
-
-{
-q:"India ra national animal kana?",
-options:[
-"Lion",
-"Tiger",
-"Elephant",
-"Peacock"
-],
-answer:1,
-explanation:"The tiger is India's national animal."
-},
-
-{
-q:"India ra national bird kana?",
-options:[
-"Peacock",
-"Eagle",
-"Sparrow",
-"Swan"
-],
-answer:0,
-explanation:"The Indian peacock is the national bird."
-},
-
-{
-q:"Odisha re famous classical dance kana?",
-options:[
-"Bharatanatyam",
-"Kathak",
-"Odissi",
-"Kathakali"
-],
-answer:2,
-explanation:"Odissi is the classical dance form of Odisha."
-},
-
-{
-q:"Indian Parliament ra lower house kana?",
-options:[
-"Rajya Sabha",
-"Lok Sabha",
-"Vidhan Sabha",
-"Supreme Court"
-],
-answer:1,
-explanation:"Lok Sabha is the lower house of Parliament."
-},
-
-{
-q:"Republic Day India re kete tarik re palana hue?",
-options:[
-"15 August",
-"26 January",
-"2 October",
-"14 April"
-],
-answer:1,
-explanation:"Republic Day is celebrated on 26 January."
-}
-
+{q:"ଓଡ଼ିଶାର ରାଜଧାନୀ କେଉଁଟି?",options:["କଟକ","ଭୁବନେଶ୍ୱର","ପୁରୀ","ସମ୍ବଲପୁର"],answer:1,explanation:"ଭୁବନେଶ୍ୱର ଓଡ଼ିଶାର ରାଜଧାନୀ।"},
+{q:"ଓଡ଼ିଶା ଦିବସ କେବେ ପାଳନ କରାଯାଏ?",options:["୧ ଏପ୍ରିଲ","୧୫ ଅଗଷ୍ଟ","୨୬ ଜାନୁଆରୀ","୨ ଅକ୍ଟୋବର"],answer:0,explanation:"ପ୍ରତିବର୍ଷ ୧ ଏପ୍ରିଲରେ ଓଡ଼ିଶା ଦିବସ ପାଳନ କରାଯାଏ।"},
+{q:"ଓଡ଼ିଶାର ସରକାରୀ ଭାଷା କେଉଁଟି?",options:["ହିନ୍ଦୀ","ଇଂରାଜୀ","ଓଡ଼ିଆ","ବଙ୍ଗଳା"],answer:2,explanation:"ଓଡ଼ିଆ ଓଡ଼ିଶାର ସରକାରୀ ଭାଷା।"},
+{q:"କୋଣାର୍କ ସୂର୍ଯ୍ୟ ମନ୍ଦିର କେଉଁ ଜିଲ୍ଲାରେ ଅବସ୍ଥିତ?",options:["ପୁରୀ","ଖୋର୍ଦ୍ଧା","କଟକ","ଗଞ୍ଜାମ"],answer:0,explanation:"କୋଣାର୍କ ସୂର୍ଯ୍ୟ ମନ୍ଦିର ପୁରୀ ଜିଲ୍ଲାରେ ଅବସ୍ଥିତ।"},
+{q:"ଭାରତୀୟ ସମ୍ବିଧାନ କେବେ ଗ୍ରହଣ କରାଯାଇଥିଲା?",options:["୧୫ ଅଗଷ୍ଟ ୧୯୪୭","୨୬ ନଭେମ୍ବର ୧୯୪୯","୨୬ ଜାନୁଆରୀ ୧୯୫୦","୨ ଅକ୍ଟୋବର ୧୯୫୦"],answer:1,explanation:"ଭାରତୀୟ ସମ୍ବିଧାନ ୨୬ ନଭେମ୍ବର ୧୯୪୯ରେ ଗ୍ରହଣ କରାଯାଇଥିଲା।"}
 ];
-
 }
 
 
@@ -5164,27 +4927,7 @@ return;
    so the mock can still run as 60 questions.
 */
 
-while(
-mockQuestions.length < 60
-){
 
-mockQuestions =
-mockQuestions.concat(
-shuffleArray(
-mockQuestions
-)
-);
-
-}
-
-
-mockQuestions =
-shuffleArray(
-mockQuestions
-).slice(
-0,
-60
-);
 
 
 mockSeconds =
